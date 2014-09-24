@@ -23,9 +23,11 @@
 	{fbvFormArea id="staticPagesFormArea" class="border"}
 		{fbvFormSection}
 			{fbvElement type="text" label="plugins.generic.staticPages.path" id="path" value=$path maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="40" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="40" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
+			{url|replace:"REPLACEME":"%PATH%"|assign:"exampleUrl" router=$smarty.const.ROUTE_PAGE path="page" op="view" path="REPLACEME"}
+			{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$exampleUrl}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.staticPages.content" for="content"}
 			{fbvElement type="textarea" multilingual=true name="content" id="content" value=$content rich=true height=$fbvStyles.height.TALL}

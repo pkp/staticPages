@@ -29,7 +29,7 @@ class StaticPageGridHandler extends GridHandler {
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete')
 		);
-		$this->plugin = PluginRegistry::getPlugin('generic', CUSTOMBLOCKMANAGER_PLUGIN_NAME);
+		$this->plugin = PluginRegistry::getPlugin('generic', STATICPAGES_PLUGIN_NAME);
 	}
 
 

@@ -104,7 +104,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	function setupGridHandler($hookName, $params) {
 		$component =& $params[0];
 		if ($component == 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler') {
-			define('CUSTOMBLOCKMANAGER_PLUGIN_NAME', $this->getName());
+			define('STATICPAGES_PLUGIN_NAME', $this->getName());
 			return true;
 		}
 		return false;
@@ -128,102 +128,38 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * @copydoc Plugin::getManagementVerbLinkAction()
 	 */
 	function getManagementVerbLinkAction($request, $verb) {
-		$router = $request->getRouter();
-
 		list($verbName, $verbLocalized) = $verb;
 
-		if ($verbName === 'settings') {
-			// Generate a link action for the "manage" action
-			import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
-			$actionRequest = new AjaxLegacyPluginModal(
-					$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
-					$this->getDisplayName()
-			);
-			return new LinkAction($verbName, $actionRequest, $verbLocalized, null);
+		switch ($verbName) {
+			case 'settings':
+				// Generate a link action for the "settings" action
+				$router = $request->getRouter();
+				import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
+				return new LinkAction(
+					$verbName,
+					new AjaxLegacyPluginModal(
+						$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => $this->getCategory())),
+						$this->getDisplayName()
+					),
+					$verbLocalized,
+					null
+				);
+			default:
+				return parent::getManagementVerbLinkAction($request, $verb);
 		}
-
-		return null;
 	}
 
  	/**
 	 * @copydoc Plugin::manage()
 	 */
 	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		$request = $this->getRequest();
-
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
-
 		switch ($verb) {
 			case 'settings':
+				$request = $this->getRequest();
 				$context = $request->getContext();
 				import('lib.pkp.classes.form.Form');
 				$form = new Form($this->getTemplatePath() . 'staticPages.tpl');
 				$pluginModalContent = $form->fetch($request);
-				return true;
-			case 'edit':
-			case 'add':
-				$templateMgr->assign('pagesPath', $request->url(null, 'pages', 'view', 'REPLACEME'));
-				$context = $request->getContext();
-
-				$this->import('StaticPagesEditForm');
-
-				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				$form = new StaticPagesEditForm($this, $context->getId(), $staticPageId);
-
-				if ($form->isLocaleResubmit()) {
-					$form->readInputData();
-					$form->addTinyMCE();
-				} else {
-					$form->initData();
-				}
-
-				$form->display();
-				return true;
-			case 'save':
-				$context = $request->getContext();
-
-				$this->import('StaticPagesEditForm');
-
-				$staticPageId = isset($args[0])?(int)$args[0]:null;
-				$form = new StaticPagesEditForm($this, $context->getId(), $staticPageId);
-
-				if ($request->getUserVar('edit')) {
-					$form->readInputData();
-					if ($form->validate()) {
-						$form->save();
-						$templateMgr->assign(array(
-							'currentUrl' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
-							'pageTitle' => 'plugins.generic.staticPages.displayName',
-							'message' => 'plugins.generic.staticPages.pageSaved',
-							'backLink' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
-							'backLinkLabel' => 'common.continue'
-						));
-						$templateMgr->display('common/message.tpl');
-						exit;
-					} else {
-						$form->addTinyMCE();
-						$form->display();
-						exit;
-					}
-				}
-				$request->redirect(null, null, 'manager', 'plugins');
-				return false;
-			case 'delete':
-				$context = $request->getContext();
-				$staticPageId = isset($args[0])?(int) $args[0]:null;
-				$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
-				$staticPagesDao->deleteById($staticPageId);
-
-				$templateMgr->assign(array(
-					'currentUrl' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
-					'pageTitle' => 'plugins.generic.staticPages.displayName',
-					'message' => 'plugins.generic.staticPages.pageDeleted',
-					'backLink' => $request->url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
-					'backLinkLabel' => 'common.continue'
-				));
-
-				$templateMgr->display('common/message.tpl');
 				return true;
 			default:
 				return parent::manage($verb, $args, $message, $messageParams);
@@ -236,6 +172,13 @@ class StaticPagesPlugin extends GenericPlugin {
 	 */
 	function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/schema.xml';
+	}
+
+	/**
+	 * @copydoc PKPPlugin::getTemplatePath
+	 */
+	function getTemplatePath() {
+		return parent::getTemplatePath() . 'templates/';
 	}
 }
 
