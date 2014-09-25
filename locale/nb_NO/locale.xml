@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Oversikten nedenfor viser alle statiske sider du har laget. Du kan redigere eller slette sidene ved å bruke lenkene på høyre side.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Bruk skjemaet nedenfor for å legge til eller endre innhold.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Sider kan deretter nås på: {$pagesPath}, hvor %PATH% er en verdi du velger. <strong>Merk:</strong> To sider kan ikke ha samme sti.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Denne stien finnes allerede for en annen statisk side.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Lagring av siden var vellykket.</message>

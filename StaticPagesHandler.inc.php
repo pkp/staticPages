@@ -18,12 +18,23 @@ class StaticPagesHandler extends Handler {
 	/** @var StaticPagesPlugin The static pages plugin */
 	static $plugin;
 
+	/** @var StaticPage The static page to view */
+	static $staticPage;
+
 	/**
 	 * Set the static pages plugin symbolic name.
 	 * @param $plugin StaticPagesPlugin
 	 */
 	static function setPlugin($plugin) {
 		self::$plugin = $plugin;
+	}
+
+	/**
+	 * Set a static page to view.
+	 * @param $staticPage StaticPage
+	 */
+	static function setPage($staticPage) {
+		self::$staticPage = $staticPage;
 	}
 
 	/**
@@ -50,15 +61,13 @@ class StaticPagesHandler extends Handler {
 		$templateMgr = TemplateManager::getManager($request);
 
 		// Get the requested page
-		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
-		$staticPage = $staticPagesDao->getByPath($contextId, $path);
-		if (!$staticPage) {
+		if (!self::$staticPage) {
 			$request->redirect(null, 'index');
 		}
 
 		// Assign the template vars needed and display
-		$templateMgr->assign('title', $staticPage->getLocalizedTitle());
-		$templateMgr->assign('content',  $staticPage->getLocalizedContent());
+		$templateMgr->assign('title', self::$staticPage->getLocalizedTitle());
+		$templateMgr->assign('content', self::$staticPage->getLocalizedContent());
 
 		$templateMgr->display(self::$plugin->getTemplatePath() . 'content.tpl');
 	}

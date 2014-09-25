@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Aşağıdaki form oluşturduğunuz tüm statik sayfaları gösterir. Sağ taraftaki bağlantıları kullanarak sayfaları düzenleyebilir veya silebilirsiniz.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Sayfa içeriği eklemek/düzeltmek için aşağıdaki formu kullanın.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Sayfalar daha sonra şu adresten ulaşılabilir: {$pagesPath}, %PATH% seçtiğiniz bir değerdir. <strong> Not:</ strong> İki ayrı sayfanın yolu anı olamaz.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Bu yol başka bir sabit sayfa için zaten açık.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Sayfa başarılı bir şekilde kaydedildi.</message>

@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Formularul de mai jos îți arată câte pagini statice ai creat. Poți edita sau șterge paginile folosing linkurile din bara din dreapta.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Folosește formularul de mai jos pentru a adăuga/edita conținut în pagină.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Paginile pot fi accesate la: {$pagesPath}, unde %PATH% este o valoare la alegerea ta. <strong>Notă:</strong> Două pagini nu pot avea aceeași cale.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Această cale există deja pentru o altă pagină statică.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Pagină salvată cu succes.</message>

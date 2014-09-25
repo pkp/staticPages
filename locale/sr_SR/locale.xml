@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">Dole su prikazane sve statičke stranice koje ste napravili. Možete ih menjati i brisati koristeći linkove sa desne strane.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Koristite formu ispod da biste dodali ili izmenili sadržaj.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Stranicama se može pristupiti: {$pagesPath}, gde je  %PATH% vrednost koju vi definišete. <strong>Napomena:</strong> Dve strane ne mogu imati istu putanju.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Ova putanja već postoji za drugu stranicu.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Stranica je uspešno sačuvana.</message>

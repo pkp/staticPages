@@ -31,7 +31,8 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Use the form below to add/edit page content.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>This page will be accessible at: <blockquote>{$pagesPath}</blockquote>...where %PATH% is the path entered above. <strong>Note:</strong> No two pages can have the same path.</p>]]></message>
+	<message key="plugins.generic.staticPages.pathRegEx">The path field must contain only alphanumeric characters plus '.', '/', '-', and '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>This page will be accessible at: <blockquote>{$pagesPath}</blockquote>...where %PATH% is the path entered above. <strong>Note:</strong> No two pages can have the same path. Using paths that are built into the system may cause you to lose access to important functions.</p>]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">This path already exists for another static page.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Page successfully saved.</message>

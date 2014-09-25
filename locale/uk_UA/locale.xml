@@ -31,7 +31,6 @@
 
        <message key="plugins.generic.staticPages.settingInstructions">У формі нижче відображаються всі створені Вами статичні сторінки.  Ви можете редагувати або видаляти ці сторінки, використовуючи посилання праворуч від них.</message>
        <message key="plugins.generic.staticPages.editInstructions">Використовуйте форму нижче для додавання/редагування змісту сторінки.</message>
-       <message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Сторінки стануть доступні за адресами: {$pagesPath}, де %PATH% - це обрагне Вами значення. <strong>Примітка:</strong> Різні сторінки не можуть мати однаковий шлях.]]></message>
        <message key="plugins.generic.staticPages.duplicatePath">Цей шлях вже використовується для іншої статичної сторінки.</message>
        
        <message key="plugins.generic.staticPages.pageSaved">Сторінка успішно записана.</message>

@@ -25,7 +25,7 @@
 			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="40" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{url|replace:"REPLACEME":"%PATH%"|assign:"exampleUrl" router=$smarty.const.ROUTE_PAGE path="page" op="view" path="REPLACEME"}
+			{url|replace:"REPLACEME":"%PATH%"|assign:"exampleUrl" router=$smarty.const.ROUTE_PAGE context=$currentContext->getPath() page="REPLACEME"}
 			{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$exampleUrl}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.staticPages.content" for="content"}

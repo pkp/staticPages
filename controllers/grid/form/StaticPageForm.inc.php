@@ -38,7 +38,7 @@ class StaticPageForm extends Form {
 		// Add form checks
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidator($this, 'title', 'required', 'plugins.generic.staticPages.nameRequired'));
-		$this->addCheck(new FormValidatorAlphaNum($this, 'path', 'required', 'plugins.generic.staticPages.pathRegEx'));
+		$this->addCheck(new FormValidatorRegExp($this, 'path', 'required', 'plugins.generic.staticPages.pathRegEx', '/^[a-zA-Z0-9\/._-]+$/'));
 		$this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'plugins.generic.staticPages.duplicatePath', create_function('$path,$form,$staticPagesDao', '$page = $staticPagesDao->getByPath($form->contextId, $path); return !$page || $page->getId()==$form->staticPageId;'), array($this, DAORegistry::getDAO('StaticPagesDAO'))));
 	}
 

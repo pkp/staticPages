@@ -29,7 +29,6 @@
 
 	<message key="plugins.generic.staticPages.settingInstructions">下面的表格显示出所有你创建的静态页面。你可以使用右手边的链接来编辑或删除页面。(The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.)</message>
 	<message key="plugins.generic.staticPages.editInstructions">使用下面的表单来添加/编辑页面内容。(Use the form below to add/edit page content.)</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Pages can then be accessed at: {$pagesPath}, where %PATH% is a value you choose. <strong>Note:</strong> No two pages can have the same path.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">该路径已经被其它静态页面使用。(This path already exists for another static page.)</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">页面已保存(Page successfully saved.)</message>

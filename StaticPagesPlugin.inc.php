@@ -84,14 +84,32 @@ class StaticPagesPlugin extends GenericPlugin {
 		$page =& $args[0];
 		$op =& $args[1];
 
+		// Construct a path to look for
+		$path = $page;
+		if ($op !== 'index') $path .= "/$op";
+		if ($ops = $request->getRequestedArgs()) $path .= '/' . implode('/', $ops);
+
+		// Look for a static page with the given path
+		$context = $request->getContext();
+		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
+		$staticPage = $staticPagesDao->getByPath(
+			$context?$context->getId():CONTEXT_ID_NONE,
+			$path
+		);
+
 		// Check if this is a request for a static page.
-		if ($page == 'pages' && in_array($op, array('index', 'view'))) {
+		if ($staticPage) {
+			// Trick the handler into dealing with it normally
+			$page = 'pages';
+			$op = 'view';
+
 			// It is -- attach the static pages handler.
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');
 
 			// Allow the static page grid handler to get the plugin object
 			StaticPagesHandler::setPlugin($this);
+			StaticPagesHandler::setPage($staticPage);
 			return true;
 		}
 		return false;

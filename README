@@ -20,6 +20,7 @@ This plugin is compatible with...
  - OJS 3.0.x
  - OMP 1.2.x
  - OMP 1.1.x
+It will NOT currently work with "path_info_disabled = On" in config.inc.php.
 
 Installation
 ------------
