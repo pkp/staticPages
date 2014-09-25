@@ -14,15 +14,10 @@
 import('lib.pkp.classes.db.DAO');
 
 class StaticPagesDAO extends DAO {
-	/** @var Name of parent plugin */
-	var $parentPluginName;
-
 	/**
 	 * Constructor
-	 * @param $parentPluginName string Name of static pages plugin
 	 */
-	function StaticPagesDAO($parentPluginName) {
-		$this->parentPluginName = $parentPluginName;
+	function StaticPagesDAO() {
 		parent::DAO();
 	}
 
@@ -152,8 +147,7 @@ class StaticPagesDAO extends DAO {
 	 * @return StaticPage
 	 */
 	function newDataObject() {
-		$staticPagesPlugin = PluginRegistry::getPlugin('generic', $this->parentPluginName);
-		$staticPagesPlugin->import('StaticPage');
+		import('plugins.generic.staticPages.classes.StaticPage');
 		return new StaticPage();
 	}
 

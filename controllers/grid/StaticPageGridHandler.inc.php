@@ -19,7 +19,15 @@ import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider'
 
 class StaticPageGridHandler extends GridHandler {
 	/** @var StaticPagesPlugin The static pages plugin */
-	var $plugin;
+	static $plugin;
+
+	/**
+	 * Set the static pages plugin symbolic name.
+	 * @param $plugin StaticPagesPlugin
+	 */
+	static function setPlugin($plugin) {
+		self::$plugin = $plugin;
+	}
 
 	/**
 	 * Constructor
@@ -30,7 +38,6 @@ class StaticPageGridHandler extends GridHandler {
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete')
 		);
-		$this->plugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
 	}
 
 
@@ -133,7 +140,7 @@ class StaticPageGridHandler extends GridHandler {
 
 		// Create and present the edit form
 		import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
-		$staticPagesPlugin = $this->plugin;
+		$staticPagesPlugin = self::$plugin;
 		$template = $staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl';
 		$staticPageForm = new StaticPageForm($template, $context->getId(), $staticPageId);
 		$staticPageForm->initData();
@@ -154,7 +161,7 @@ class StaticPageGridHandler extends GridHandler {
 
 		// Create and populate the form
 		import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
-		$staticPagesPlugin = $this->plugin;
+		$staticPagesPlugin = self::$plugin;
 		$template = $staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl';
 		$staticPageForm = new StaticPageForm($template, $context->getId(), $staticPageId);
 		$staticPageForm->readInputData();

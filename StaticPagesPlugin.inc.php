@@ -30,7 +30,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	function getDescription() {
 		$description = __('plugins.generic.staticPages.description');
 		if (!$this->isTinyMCEInstalled())
-			$description .= "<br />".__('plugins.generic.staticPages.requirement.tinymce');
+			$description .= __('plugins.generic.staticPages.requirement.tinymce');
 		return $description;
 	}
 
@@ -54,8 +54,8 @@ class StaticPagesPlugin extends GenericPlugin {
 		if (parent::register($category, $path)) {
 			if ($this->getEnabled()) {
 				// Register the static pages DAO.
-				$this->import('StaticPagesDAO');
-				$staticPagesDao = new StaticPagesDAO($this->getName());
+				import('plugins.generic.staticPages.classes.StaticPagesDAO');
+				$staticPagesDao = new StaticPagesDAO();
 				DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
 				// Intercept the LoadHandler hook to present
@@ -65,9 +65,6 @@ class StaticPagesPlugin extends GenericPlugin {
 				// Register the components this plugin implements to
 				// permit administration of static pages.
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
-
-				// Kludge to permit controllers to know the plugin name
-				define('STATIC_PAGES_PLUGIN_NAME', $this->getName());
 			}
 			return true;
 		}
@@ -92,6 +89,9 @@ class StaticPagesPlugin extends GenericPlugin {
 			// It is -- attach the static pages handler.
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');
+
+			// Allow the static page grid handler to get the plugin object
+			StaticPagesHandler::setPlugin($this);
 			return true;
 		}
 		return false;
@@ -105,6 +105,9 @@ class StaticPagesPlugin extends GenericPlugin {
 	function setupGridHandler($hookName, $params) {
 		$component =& $params[0];
 		if ($component == 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler') {
+			// Allow the static page grid handler to get the plugin object
+			import($component);
+			StaticPageGridHandler::setPlugin($this);
 			return true;
 		}
 		return false;

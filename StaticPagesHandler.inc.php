@@ -15,6 +15,17 @@
 import('classes.handler.Handler');
 
 class StaticPagesHandler extends Handler {
+	/** @var StaticPagesPlugin The static pages plugin */
+	static $plugin;
+
+	/**
+	 * Set the static pages plugin symbolic name.
+	 * @param $plugin StaticPagesPlugin
+	 */
+	static function setPlugin($plugin) {
+		self::$plugin = $plugin;
+	}
+
 	/**
 	 * Handle index request (redirect to "view")
 	 * @param $args array Arguments array.
@@ -49,8 +60,7 @@ class StaticPagesHandler extends Handler {
 		$templateMgr->assign('title', $staticPage->getLocalizedTitle());
 		$templateMgr->assign('content',  $staticPage->getLocalizedContent());
 
-		$staticPagesPlugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
-		$templateMgr->display($staticPagesPlugin->getTemplatePath() . 'content.tpl');
+		$templateMgr->display(self::$plugin->getTemplatePath() . 'content.tpl');
 	}
 }
 
