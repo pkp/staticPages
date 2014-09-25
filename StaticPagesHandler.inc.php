@@ -30,27 +30,27 @@ class StaticPagesHandler extends Handler {
 	 * @param $request PKPRequest Request object.
 	 */
 	function view($args, $request) {
-		if (count($args) > 0 ) {
-			AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
-			$context = $request->getContext();
-			$contextId = $context?$context->getId():CONTEXT_ID_NONE;
-			$path = $args[0];
+		$path = array_shift($args);
 
-			$staticPagesPlugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
-			$templateMgr = TemplateManager::getManager($request);
+		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
+		$context = $request->getContext();
+		$contextId = $context?$context->getId():CONTEXT_ID_NONE;
 
-			// Get the requested page
-			$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
-			$staticPage = $staticPagesDao->getByPath($contextId, $path);
-			if (!$staticPage) {
-				$request->redirect(null, 'index');
-			}
+		$templateMgr = TemplateManager::getManager($request);
 
-			// Assign the template vars needed and display
-			$templateMgr->assign('title', $staticPage->getLocalizedTitle());
-			$templateMgr->assign('content',  $staticPage->getLocalizedContent());
-			$templateMgr->display($staticPagesPlugin->getTemplatePath() . 'content.tpl');
+		// Get the requested page
+		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
+		$staticPage = $staticPagesDao->getByPath($contextId, $path);
+		if (!$staticPage) {
+			$request->redirect(null, 'index');
 		}
+
+		// Assign the template vars needed and display
+		$templateMgr->assign('title', $staticPage->getLocalizedTitle());
+		$templateMgr->assign('content',  $staticPage->getLocalizedContent());
+
+		$staticPagesPlugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
+		$templateMgr->display($staticPagesPlugin->getTemplatePath() . 'content.tpl');
 	}
 }
 

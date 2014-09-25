@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file controllers/grid/StaticPageGridCellProvider.inc.php
+ * @file StaticPageGridCellProvider.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2000-2014 John Willinsky
@@ -24,6 +24,10 @@ class StaticPageGridCellProvider extends GridCellProvider {
 		parent::GridCellProvider();
 	}
 
+
+	//
+	// Template methods from GridCellProvider
+	//
 	/**
 	 * Get cell actions associated with this row/column combination
 	 * @param $row GridRow
@@ -39,7 +43,8 @@ class StaticPageGridCellProvider extends GridCellProvider {
 				return array(new LinkAction(
 					'details',
 					new RedirectAction(
-						$url = $dispatcher->url($request, ROUTE_PAGE, null, 'pages', 'view', $staticPage->getPath())
+						$dispatcher->url($request, ROUTE_PAGE, null, 'pages', 'view', $staticPage->getPath()),
+						'_blank'
 					),
 					$staticPage->getPath()
 				));
@@ -48,10 +53,6 @@ class StaticPageGridCellProvider extends GridCellProvider {
 		}
 	}
 
-
-	//
-	// Template methods from GridCellProvider
-	//
 	/**
 	 * Extracts variables for a given column from a data element
 	 * so that they may be assigned to template before rendering.

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/staticPages/controllers/grid/StaticPageGridRow.inc.php
+ * @file controllers/grid/StaticPageGridRow.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky

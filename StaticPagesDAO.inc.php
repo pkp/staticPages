@@ -92,12 +92,9 @@ class StaticPagesDAO extends DAO {
 	 */
 	function insertObject($staticPage) {
 		$this->update(
-			'INSERT INTO static_pages
-				(context_id, path)
-				VALUES
-				(?, ?)',
+			'INSERT INTO static_pages (context_id, path) VALUES (?, ?)',
 			array(
-				$staticPage->getContextId(),
+				(int) $staticPage->getContextId(),
 				$staticPage->getPath()
 			)
 		);
@@ -114,17 +111,16 @@ class StaticPagesDAO extends DAO {
 	 */
 	function updateObject($staticPage) {
 		$this->update(
-			'UPDATE static_pages
-				SET
-					context_id = ?,
-					path = ?
-				WHERE static_page_id = ?',
-				array(
-					$staticPage->getContextId(),
-					$staticPage->getPath(),
-					$staticPage->getId()
-				)
-			);
+			'UPDATE	static_pages
+			SET	context_id = ?,
+				path = ?
+			WHERE	static_page_id = ?',
+			array(
+				(int) $staticPage->getContextId(),
+				$staticPage->getPath(),
+				(int) $staticPage->getId()
+			)
+		);
 		$this->updateLocaleFields($staticPage);
 	}
 
@@ -199,32 +195,6 @@ class StaticPagesDAO extends DAO {
 		$this->updateDataObjectSettings('static_page_settings', $staticPage, array(
 			'static_page_id' => $staticPage->getId()
 		));
-	}
-
-	/**
-	 * Find duplicate path
-	 * @param $path string Path to check
-	 * @param contextId int Context ID to check
-	 * @param $staticPageId	int Optional static page ID to exclude from test
-	 * @return boolean
-	 */
-	function duplicatePathExists ($path, $contextId, $staticPageId = null) {
-		$params = array((int) $contextId, $path);
-		if ($staticPageId) $params[] = (int) $staticPageId;
-
-		$result = $this->retrieve(
-			'SELECT	*
-			FROM	static_pages
-			WHERE	context_id = ?
-			AND	path = ?' .
-			($staticPageId?' AND static_page_id <> ?':''),
-			$params
-		);
-
-		if ($result->RecordCount() == 0) {
-			return false;
-		}
-		return true;
 	}
 }
 

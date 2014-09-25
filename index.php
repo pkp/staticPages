@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/staticPages/index.php
+ * @file index.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
@@ -14,7 +14,6 @@
  */
 
 require_once('StaticPagesPlugin.inc.php');
-
 return new StaticPagesPlugin();
 
 ?>

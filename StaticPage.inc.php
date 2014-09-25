@@ -13,6 +13,13 @@
  */
 
 class StaticPage extends DataObject {
+	/**
+	 * Constructor
+	 */
+	function StaticPage() {
+		parent::DataObject();
+	}
+
 	//
 	// Get/set methods
 	//
@@ -70,7 +77,7 @@ class StaticPage extends DataObject {
 	}
 
 	/**
-	 * Get content
+	 * Get page content
 	 * @param locale
 	 * @return string
 	 */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/staticPages/controllers/grid/StaticPageGridHandler.inc.php
+ * @file controllers/grid/StaticPageGridHandler.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
@@ -15,6 +15,7 @@
 
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridRow');
+import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider');
 
 class StaticPageGridHandler extends GridHandler {
 	/** @var StaticPagesPlugin The static pages plugin */
@@ -29,7 +30,7 @@ class StaticPageGridHandler extends GridHandler {
 			array(ROLE_ID_MANAGER),
 			array('fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete')
 		);
-		$this->plugin = PluginRegistry::getPlugin('generic', STATICPAGES_PLUGIN_NAME);
+		$this->plugin = PluginRegistry::getPlugin('generic', STATIC_PAGES_PLUGIN_NAME);
 	}
 
 
@@ -43,24 +44,14 @@ class StaticPageGridHandler extends GridHandler {
 		parent::initialize($request);
 		$context = $request->getContext();
 
-		// Set the grid title.
+		// Set the grid details.
 		$this->setTitle('plugins.generic.staticPages.staticPages');
-		// Set the grid instructions.
 		$this->setInstructions('plugins.generic.staticPages.introduction');
-		// Set the no items row text.
 		$this->setEmptyRowText('plugins.generic.staticPages.noneCreated');
 
 		// Get the pages and add the data to the grid
 		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
-		$pages = $staticPagesDao->getByContextId($context->getId());
-		$gridData = array();
-		while ($page = $pages->next()) {
-			$gridData[$page->getId()] = array(
-				'path' => $page->getPath(),
-				'title' => $page->getLocalizedTitle(),
-			);
-		}
-		$this->setGridDataElements($gridData);
+		$this->setGridDataElements($staticPagesDao->getByContextId($context->getId()));
 
 		// Add grid-level actions
 		$router = $request->getRouter();
@@ -79,17 +70,20 @@ class StaticPageGridHandler extends GridHandler {
 		);
 
 		// Columns
+		$cellProvider = new StaticPageGridCellProvider();
 		$this->addColumn(new GridColumn(
 			'title',
 			'plugins.generic.staticPages.pageTitle',
 			null,
-			'controllers/grid/gridCell.tpl'
+			'controllers/grid/gridCell.tpl', // Default null not supported in OMP 1.1
+			$cellProvider
 		));
 		$this->addColumn(new GridColumn(
 			'path',
 			'plugins.generic.staticPages.path',
 			null,
-			'controllers/grid/gridCell.tpl'
+			'controllers/grid/gridCell.tpl', // Default null not supported in OMP 1.1
+			$cellProvider
 		));
 	}
 

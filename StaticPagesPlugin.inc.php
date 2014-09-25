@@ -29,7 +29,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	 */
 	function getDescription() {
 		$description = __('plugins.generic.staticPages.description');
-		if ( !$this->isTinyMCEInstalled() )
+		if (!$this->isTinyMCEInstalled())
 			$description .= "<br />".__('plugins.generic.staticPages.requirement.tinymce');
 		return $description;
 	}
@@ -39,7 +39,6 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * @return boolean True iff TinyMCE is installed.
 	 */
 	function isTinyMCEInstalled() {
-		// If the thesis plugin isn't enabled, don't do anything.
 		$application = PKPApplication::getApplication();
 		$products = $application->getEnabledProducts('plugins.generic');
 		return (isset($products['tinymce']));
@@ -66,6 +65,9 @@ class StaticPagesPlugin extends GenericPlugin {
 				// Register the components this plugin implements to
 				// permit administration of static pages.
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
+
+				// Kludge to permit controllers to know the plugin name
+				define('STATIC_PAGES_PLUGIN_NAME', $this->getName());
 			}
 			return true;
 		}
@@ -88,7 +90,6 @@ class StaticPagesPlugin extends GenericPlugin {
 		// Check if this is a request for a static page.
 		if ($page == 'pages' && in_array($op, array('index', 'view'))) {
 			// It is -- attach the static pages handler.
-			define('STATIC_PAGES_PLUGIN_NAME', $this->getName());
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');
 			return true;
@@ -104,7 +105,6 @@ class StaticPagesPlugin extends GenericPlugin {
 	function setupGridHandler($hookName, $params) {
 		$component =& $params[0];
 		if ($component == 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler') {
-			define('STATICPAGES_PLUGIN_NAME', $this->getName());
 			return true;
 		}
 		return false;

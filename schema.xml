@@ -2,7 +2,7 @@
 <!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
 
 <!--
-  * plugins/generic/staticPages/schema.xml
+  * schema.xml
   *
   * Copyright (c) 2014 Simon Fraser University Library
   * Copyright (c) 2003-2014 John Willinsky
@@ -29,7 +29,7 @@
 		<field name="context_id" type="I8">
 			<NOTNULL/>
 		</field>
-		<descr>Static Pages</descr>
+		<descr>List of static pages for each context</descr>
 	</table>
 
 	<!--

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/generic/staticPages/controllers/grid/form/StaticPageForm.inc.php
+ * @file controllers/grid/form/StaticPageForm.inc.php
  *
  * Copyright (c) 2014 Simon Fraser University Library
  * Copyright (c) 2003-2014 John Willinsky
