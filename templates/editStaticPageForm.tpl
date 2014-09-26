@@ -7,10 +7,16 @@
  *
  * Form for editing a static page
  *}
+<script src="{$pluginJavaScriptURL}/StaticPageFormHandler.js"></script>
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
-		$('#staticPageForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
+		$('#staticPageForm').pkpHandler(
+			'$.pkp.controllers.form.staticPages.StaticPageFormHandler',
+			{ldelim}
+				previewUrl: '{url router=$smarty.const.ROUTE_PAGE page="pages" op="preview"}'
+			{rdelim}
+		);
 	{rdelim});
 </script>
 
@@ -32,5 +38,9 @@
 			{fbvElement type="textarea" multilingual=true name="content" id="content" value=$content rich=true height=$fbvStyles.height.TALL}
 		{/fbvFormSection}
 	{/fbvFormArea}
-	{fbvFormButtons submitText="common.save"}
+	{fbvFormSection class="formButtons"}
+		{fbvElement type="button" class="pkp_helpers_align_left" id="previewButton" label="common.preview"}
+		{assign var=buttonId value="submitFormButton"|concat:"-"|uniqid}
+		{fbvElement type="submit" class="submitFormButton" id=$buttonId label="common.save"}
+	{/fbvFormSection}
 </form>

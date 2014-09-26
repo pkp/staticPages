@@ -23,17 +23,21 @@ class StaticPageForm extends Form {
 	/** @var string Static page name */
 	var $staticPageId;
 
+	/** @var StaticPagesPlugin Static pages plugin */
+	var $plugin;
+
 	/**
 	 * Constructor
-	 * @param $template string the path to the form template file
+	 * @param $staticPagesPlugin StaticPagesPlugin The static page plugin
 	 * @param $contextId int Context ID
 	 * @param $staticPageId int Static page ID (if any)
 	 */
-	function StaticPageForm($template, $contextId, $staticPageId = null) {
-		parent::Form($template);
+	function StaticPageForm($staticPagesPlugin, $contextId, $staticPageId = null) {
+		parent::Form($staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl');
 
 		$this->contextId = $contextId;
 		$this->staticPageId = $staticPageId;
+		$this->plugin = $staticPagesPlugin;
 
 		// Add form checks
 		$this->addCheck(new FormValidatorPost($this));
@@ -70,6 +74,7 @@ class StaticPageForm extends Form {
 	function fetch($request) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('staticPageId', $this->staticPageId);
+		$templateMgr->assign('pluginJavaScriptURL', $this->plugin->getJavaScriptURL($request));
 		return parent::fetch($request);
 	}
 

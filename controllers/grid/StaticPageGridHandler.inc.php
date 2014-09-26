@@ -141,8 +141,7 @@ class StaticPageGridHandler extends GridHandler {
 		// Create and present the edit form
 		import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
 		$staticPagesPlugin = self::$plugin;
-		$template = $staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl';
-		$staticPageForm = new StaticPageForm($template, $context->getId(), $staticPageId);
+		$staticPageForm = new StaticPageForm(self::$plugin, $context->getId(), $staticPageId);
 		$staticPageForm->initData();
 		$json = new JSONMessage(true, $staticPageForm->fetch($request));
 		return $json->getString();
@@ -162,8 +161,7 @@ class StaticPageGridHandler extends GridHandler {
 		// Create and populate the form
 		import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
 		$staticPagesPlugin = self::$plugin;
-		$template = $staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl';
-		$staticPageForm = new StaticPageForm($template, $context->getId(), $staticPageId);
+		$staticPageForm = new StaticPageForm(self::$plugin, $context->getId(), $staticPageId);
 		$staticPageForm->readInputData();
 
 		// Check the results

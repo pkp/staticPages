@@ -84,20 +84,29 @@ class StaticPagesPlugin extends GenericPlugin {
 		$page =& $args[0];
 		$op =& $args[1];
 
-		// Construct a path to look for
-		$path = $page;
-		if ($op !== 'index') $path .= "/$op";
-		if ($ops = $request->getRequestedArgs()) $path .= '/' . implode('/', $ops);
-
-		// Look for a static page with the given path
-		$context = $request->getContext();
 		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
-		$staticPage = $staticPagesDao->getByPath(
-			$context?$context->getId():CONTEXT_ID_NONE,
-			$path
-		);
+		if ($page == 'pages' && $op == 'preview') {
+			// This is a preview request; mock up a static page to display.
+			// The handler class ensures that only managers and administrators
+			// can do this.
+			$staticPage = $staticPagesDao->newDataObject();
+			$staticPage->setContent((array) $request->getUserVar('content'), null);
+			$staticPage->setTitle((array) $request->getUserVar('title', null));
+		} else {
+			// Construct a path to look for
+			$path = $page;
+			if ($op !== 'index') $path .= "/$op";
+			if ($ops = $request->getRequestedArgs()) $path .= '/' . implode('/', $ops);
 
-		// Check if this is a request for a static page.
+			// Look for a static page with the given path
+			$context = $request->getContext();
+			$staticPage = $staticPagesDao->getByPath(
+				$context?$context->getId():CONTEXT_ID_NONE,
+				$path
+			);
+		}
+
+		// Check if this is a request for a static page or preview.
 		if ($staticPage) {
 			// Trick the handler into dealing with it normally
 			$page = 'pages';
@@ -200,6 +209,13 @@ class StaticPagesPlugin extends GenericPlugin {
 	 */
 	function getTemplatePath() {
 		return parent::getTemplatePath() . 'templates/';
+	}
+
+	/**
+	 * Get the JavaScript URL for this plugin.
+	 */
+	function getJavaScriptURL($request) {
+		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js';
 	}
 }
 

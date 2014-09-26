@@ -21,6 +21,14 @@ class StaticPagesHandler extends Handler {
 	/** @var StaticPage The static page to view */
 	static $staticPage;
 
+
+	/**
+	 * Constructor
+	 */
+	function StaticPagesHandler() {
+		parent::Handler();
+	}
+
 	/**
 	 * Set the static pages plugin symbolic name.
 	 * @param $plugin StaticPagesPlugin
@@ -58,17 +66,16 @@ class StaticPagesHandler extends Handler {
 		$context = $request->getContext();
 		$contextId = $context?$context->getId():CONTEXT_ID_NONE;
 
-		$templateMgr = TemplateManager::getManager($request);
-
-		// Get the requested page
-		if (!self::$staticPage) {
-			$request->redirect(null, 'index');
+		// Ensure that if we're previewing, the current user is a manager or admin.
+		$roles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+		if (!self::$staticPage->getId() && count(array_intersect(array(ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN), $roles))==0) {
+			fatalError('The current user is not permitted to preview.');
 		}
 
 		// Assign the template vars needed and display
+		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('title', self::$staticPage->getLocalizedTitle());
 		$templateMgr->assign('content', self::$staticPage->getLocalizedContent());
-
 		$templateMgr->display(self::$plugin->getTemplatePath() . 'content.tpl');
 	}
 }
