@@ -30,7 +30,7 @@ class StaticPagesHandler extends Handler {
 	}
 
 	/**
-	 * Set the static pages plugin symbolic name.
+	 * Provide the static pages plugin to the handler.
 	 * @param $plugin StaticPagesPlugin
 	 */
 	static function setPlugin($plugin) {
