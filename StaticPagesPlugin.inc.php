@@ -116,7 +116,7 @@ class StaticPagesPlugin extends GenericPlugin {
 			define('HANDLER_CLASS', 'StaticPagesHandler');
 			$this->import('StaticPagesHandler');
 
-			// Allow the static page grid handler to get the plugin object
+			// Allow the static pages page handler to get the plugin object
 			StaticPagesHandler::setPlugin($this);
 			StaticPagesHandler::setPage($staticPage);
 			return true;
