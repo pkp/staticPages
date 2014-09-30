@@ -58,6 +58,8 @@ class StaticPagesPlugin extends GenericPlugin {
 				$staticPagesDao = new StaticPagesDAO();
 				DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
+				HookRegistry::register('Templates::Management::Settings::website', array($this, 'callbackShowWebsiteSettingsTabs'));
+
 				// Intercept the LoadHandler hook to present
 				// static pages when requested.
 				HookRegistry::register('LoadHandler', array($this, 'callbackHandleContent'));
@@ -68,6 +70,24 @@ class StaticPagesPlugin extends GenericPlugin {
 			}
 			return true;
 		}
+		return false;
+	}
+
+	/**
+	 * Extend the website settings tabs to include static pages
+	 * @param $hookName string The name of the invoked hook
+	 * @param $args array Hook parameters
+	 * @return boolean Hook handling status
+	 */
+	function callbackShowWebsiteSettingsTabs($hookName, $args) {
+		$output =& $args[2];
+		$request =& Registry::get('request');
+		$dispatcher = $request->getDispatcher();
+
+		// Add a new tab for static pages
+		$output .= '<li><a name="staticPages" href="' . $dispatcher->url($request, ROUTE_COMPONENT, null, 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler', 'index') . '">' . __('plugins.generic.staticPages.staticPages') . '</a></li>';
+
+		// Permit other plugins to continue interacting with this hook
 		return false;
 	}
 
@@ -163,14 +183,16 @@ class StaticPagesPlugin extends GenericPlugin {
 		switch ($verbName) {
 			case 'settings':
 				// Generate a link action for the "settings" action
-				$router = $request->getRouter();
-				import('lib.pkp.classes.linkAction.request.AjaxLegacyPluginModal');
+				$dispatcher = $request->getDispatcher();
+				import('lib.pkp.classes.linkAction.request.RedirectAction');
 				return new LinkAction(
 					$verbName,
-					new AjaxLegacyPluginModal(
-						$router->url($request, null, null, 'plugin', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => $this->getCategory())),
-						$this->getDisplayName()
-					),
+					new RedirectAction($dispatcher->url(
+						$request, ROUTE_PAGE,
+						null, 'management', 'settings', 'website',
+						array('uid' => uniqid()), // Force reload
+						'staticPages' // Anchor for tab
+					)),
 					$verbLocalized,
 					null
 				);
