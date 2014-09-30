@@ -36,7 +36,7 @@ class StaticPageGridHandler extends GridHandler {
 		parent::GridHandler();
 		$this->addRoleAssignment(
 			array(ROLE_ID_MANAGER),
-			array('fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete')
+			array('index', 'fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete')
 		);
 	}
 
@@ -116,6 +116,19 @@ class StaticPageGridHandler extends GridHandler {
 	//
 	// Public Grid Actions
 	//
+	/**
+	 * Display the grid's containing page.
+	 * @param $args array
+	 * @param $request PKPRequest
+	 */
+	function index($args, $request) {
+		$context = $request->getContext();
+		import('lib.pkp.classes.form.Form');
+		$form = new Form(self::$plugin->getTemplatePath() . 'staticPages.tpl');
+		$json = new JSONMessage(true, $form->fetch($request));
+		return $json->getString();
+	}
+
 	/**
 	 * An action to add a new custom static page
 	 * @param $args array Arguments to the request

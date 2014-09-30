@@ -75,6 +75,15 @@ class StaticPageForm extends Form {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign('staticPageId', $this->staticPageId);
 		$templateMgr->assign('pluginJavaScriptURL', $this->plugin->getJavaScriptURL($request));
+
+		$context = $request->getContext();
+		if ($context) $templateMgr->assign('allowedVariables', array(
+			'contactName' => __('plugins.generic.tinymce.variables.principalContactName', array('value' => $context->getSetting('contactName'))),
+			'contactEmail' => __('plugins.generic.tinymce.variables.principalContactEmail', array('value' => $context->getSetting('contactEmail'))),
+			'supportName' => __('plugins.generic.tinymce.variables.supportContactName', array('value' => $context->getSetting('supportName'))),
+			'supportPhone' => __('plugins.generic.tinymce.variables.supportContactPhone', array('value' => $context->getSetting('supportPhone'))),
+			'supportEmail' => __('plugins.generic.tinymce.variables.supportContactEmail', array('value' => $context->getSetting('supportEmail'))),
+		));
 		return parent::fetch($request);
 	}
 
