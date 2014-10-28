@@ -22,7 +22,7 @@ class StaticPageGridHandler extends GridHandler {
 	static $plugin;
 
 	/**
-	 * Set the static pages plugin symbolic name.
+	 * Set the static pages plugin.
 	 * @param $plugin StaticPagesPlugin
 	 */
 	static function setPlugin($plugin) {

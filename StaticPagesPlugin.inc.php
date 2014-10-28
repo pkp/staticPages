@@ -179,23 +179,6 @@ class StaticPagesPlugin extends GenericPlugin {
 		}
 	}
 
- 	/**
-	 * @copydoc Plugin::manage()
-	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		switch ($verb) {
-			case 'settings':
-				$request = $this->getRequest();
-				$context = $request->getContext();
-				import('lib.pkp.classes.form.Form');
-				$form = new Form($this->getTemplatePath() . 'staticPages.tpl');
-				$pluginModalContent = $form->fetch($request);
-				return true;
-			default:
-				return parent::manage($verb, $args, $message, $messageParams);
-		}
-	}
-
 	/**
 	 * Get the filename of the ADODB schema for this plugin.
 	 * @return string Full path and filename to schema descriptor.

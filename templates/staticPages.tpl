@@ -8,4 +8,4 @@
  * Custom Block Manager -- displays the CustomBlockGrid.
  *}
 {url|assign:staticPageGridUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="fetchGrid" escape=false}
-{load_url_in_div id="staticPageGridUrlGridContainer" url=$staticPageGridUrl}
+{load_url_in_div id="staticPageGridContainer" url=$staticPageGridUrl}
