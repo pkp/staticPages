@@ -41,8 +41,8 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->waitForElementPresent('//div[contains(text(),\'The plugin "Static Pages Plugin" has been enabled.\')]');
 
 		// Check for a 404 on the page we are about to create
-		$this->open(self::$baseUrl . '/publicknowledge/flarm');
-		$this->assertText('css=h1', '404 - Not Found');
+		$this->open(self::$baseUrl . '/index.php/publicknowledge/flarm');
+		$this->assertText('css=h1', '404 Not Found');
 
 		// Find the plugin's tab
 		$this->open(self::$baseUrl);
