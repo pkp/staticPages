@@ -26,7 +26,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 	/**
 	 * Enable the plugin
 	 */
-	function testEnablePlugin() {
+	function testStaticPages() {
 		$this->open(self::$baseUrl);
 
 		$this->logIn('admin', 'admin');
@@ -39,17 +39,6 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->assertElementNotPresent('link=Static Pages'); // Plugin should be disabled
 		$this->click($selector); // Enable plugin
 		$this->waitForElementPresent('//div[contains(text(),\'The plugin "Static Pages Plugin" has been enabled.\')]');
-		$this->logOut();
-	}
-
-	/**
-	 * Test creating a static page
-	 */
-	function testCreateStaticPage() {
-		$this->open(self::$baseUrl);
-
-		// Go to plugin administration
-		$this->logIn('admin', 'admin');
 
 		// Check for a 404 on the page we are about to create
 		$this->open(self::$baseUrl . '/publicknowledge/flarm');
