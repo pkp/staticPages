@@ -10,6 +10,6 @@
 {assign var="pageTitleTranslated" value=$title}
 {include file="common/header.tpl"}
 
-{$content}
+<p>{$content}</p>
 
 {include file="common/footer.tpl"}

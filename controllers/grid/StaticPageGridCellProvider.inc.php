@@ -44,7 +44,7 @@ class StaticPageGridCellProvider extends GridCellProvider {
 					'details',
 					new RedirectAction(
 						$dispatcher->url($request, ROUTE_PAGE, null) . '/' . $staticPage->getPath(),
-						'_blank'
+						'staticPage'
 					),
 					$staticPage->getPath()
 				));
