@@ -75,7 +75,17 @@ class StaticPagesHandler extends Handler {
 		// Assign the template vars needed and display
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('title', self::$staticPage->getLocalizedTitle());
-		$templateMgr->assign('content', self::$staticPage->getLocalizedContent());
+
+		$vars = array();
+		if ($context) $vars = array(
+			'{$contactName}' => $context->getSetting('contactName'),
+			'{$contactEmail}' => $context->getSetting('contactEmail'),
+			'{$supportName}' => $context->getSetting('supportName'),
+			'{$supportPhone}' => $context->getSetting('supportPhone'),
+			'{$supportEmail}' => $context->getSetting('supportEmail'),
+		);
+		$templateMgr->assign('content', strtr(self::$staticPage->getLocalizedContent(), $vars));
+
 		$templateMgr->display(self::$plugin->getTemplatePath() . 'content.tpl');
 	}
 }
