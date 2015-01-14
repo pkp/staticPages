@@ -29,8 +29,8 @@ class StaticPageGridRow extends GridRow {
 	/**
 	 * @copydoc GridRow::initialize()
 	 */
-	function initialize($request) {
-		parent::initialize($request);
+	function initialize($request, $template = null) {
+		parent::initialize($request, $template);
 
 		$staticPageId = $this->getId();
 		if (!empty($staticPageId)) {
