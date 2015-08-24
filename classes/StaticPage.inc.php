@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file StaticPage.inc.php
+ * @file classes/StaticPage.inc.php
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file StaticPageGridCellProvider.inc.php
+ * @file controllers/grid/StaticPageGridCellProvider.inc.php
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2000-2015 John Willinsky

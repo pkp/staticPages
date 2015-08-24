@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file StaticPagesDAO.inc.php
+ * @file classes/StaticPagesDAO.inc.php
  *
  * Copyright (c) 2014-2015 Simon Fraser University Library
  * Copyright (c) 2003-2015 John Willinsky
@@ -11,7 +11,9 @@
  * @class StaticPagesDAO
  * Operations for retrieving and modifying StaticPages objects.
  */
+
 import('lib.pkp.classes.db.DAO');
+import('plugins.generic.staticPages.classes.StaticPage');
 
 class StaticPagesDAO extends DAO {
 	/**
@@ -147,7 +149,6 @@ class StaticPagesDAO extends DAO {
 	 * @return StaticPage
 	 */
 	function newDataObject() {
-		import('plugins.generic.staticPages.classes.StaticPage');
 		return new StaticPage();
 	}
 
