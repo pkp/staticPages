@@ -175,30 +175,27 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @copydoc Plugin::getManagementVerbLinkAction()
+	 * @copydoc Plugin::getActions()
 	 */
-	function getManagementVerbLinkAction($request, $verb) {
-		list($verbName, $verbLocalized) = $verb;
-
-		switch ($verbName) {
-			case 'settings':
-				// Generate a link action for the "settings" action
-				$dispatcher = $request->getDispatcher();
-				import('lib.pkp.classes.linkAction.request.RedirectAction');
-				return new LinkAction(
-					$verbName,
+	function getActions($request, $actionArgs) {
+		$dispatcher = $request->getDispatcher();
+		import('lib.pkp.classes.linkAction.request.RedirectAction');
+		return array_merge(
+			$this->getEnabled()?array(
+				new LinkAction(
+					'settings',
 					new RedirectAction($dispatcher->url(
 						$request, ROUTE_PAGE,
 						null, 'management', 'settings', 'website',
 						array('uid' => uniqid()), // Force reload
 						'staticPages' // Anchor for tab
 					)),
-					$verbLocalized,
+					__('plugins.generic.staticPages.editAddContent'),
 					null
-				);
-			default:
-				return parent::getManagementVerbLinkAction($request, $verb);
-		}
+				),
+			):array(),
+			parent::getActions($request, $actionArgs)
+		);
 	}
 
 	/**
