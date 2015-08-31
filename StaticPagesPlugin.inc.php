@@ -181,7 +181,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		$dispatcher = $request->getDispatcher();
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		return array_merge(
-			array(
+			$this->getEnabled()?array(
 				new LinkAction(
 					'settings',
 					new RedirectAction($dispatcher->url(
@@ -193,7 +193,7 @@ class StaticPagesPlugin extends GenericPlugin {
 					__('plugins.generic.staticPages.editAddContent'),
 					null
 				),
-			),
+			):array(),
 			parent::getActions($request, $actionArgs)
 		);
 	}
