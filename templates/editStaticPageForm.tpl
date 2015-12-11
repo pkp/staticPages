@@ -14,7 +14,7 @@
 		$('#staticPageForm').pkpHandler(
 			'$.pkp.controllers.form.staticPages.StaticPageFormHandler',
 			{ldelim}
-				previewUrl: '{url router=$smarty.const.ROUTE_PAGE page="pages" op="preview"}'
+				previewUrl: {url|json_encode router=$smarty.const.ROUTE_PAGE page="pages" op="preview"}
 			{rdelim}
 		);
 	{rdelim});
