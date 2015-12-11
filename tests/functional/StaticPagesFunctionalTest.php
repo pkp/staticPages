@@ -39,7 +39,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->waitForElementPresent($selector = '//input[@id=\'select-cell-staticpagesplugin-enabled\']');
 		$this->assertElementNotPresent('link=Static Pages'); // Plugin should be disabled
 		$this->click($selector); // Enable plugin
-		$this->waitJQuery();
+		$this->waitForElementPresent('//div[contains(.,\'The plugin "Static Pages Plugin" has been enabled.\')]');
 
 		// Check for a 404 on the page we are about to create
 		$this->open(self::$baseUrl . '/index.php/publicknowledge/flarm');
