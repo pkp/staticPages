@@ -7,9 +7,10 @@
  *
  * Display Static Page content
  *}
-{assign var="pageTitleTranslated" value=$title}
-{include file="common/header.tpl"}
+{include file="frontend/components/header.tpl" pageTitleTranslated=$title}
 
-<p>{$content}</p>
+<div class="page">
+    {$content}
+</div>
 
-{include file="common/footer.tpl"}
+{include file="frontend/components/footer.tpl"}
