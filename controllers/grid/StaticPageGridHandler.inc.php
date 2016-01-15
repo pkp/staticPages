@@ -53,7 +53,6 @@ class StaticPageGridHandler extends GridHandler {
 
 		// Set the grid details.
 		$this->setTitle('plugins.generic.staticPages.staticPages');
-		$this->setInstructions('plugins.generic.staticPages.introduction');
 		$this->setEmptyRowText('plugins.generic.staticPages.noneCreated');
 
 		// Get the pages and add the data to the grid

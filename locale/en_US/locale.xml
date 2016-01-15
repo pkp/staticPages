@@ -14,7 +14,6 @@
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.generic.staticPages.displayName">Static Pages Plugin</message>
 	<message key="plugins.generic.staticPages.description">This plugin allows Static Content Management.</message>
-	<message key="plugins.generic.staticPages.introduction">The Static Pages Plugin allows the creation and management of pages of static content. Managers can link to these pages to permit the expansion of static content in the system beyond the regular fields defined in Setup.</message>
 	<message key="plugins.generic.staticPages.staticPages">Static Pages</message>
 	<message key="plugins.generic.staticPages.pageTitle">Title</message>
 	<message key="plugins.generic.staticPages.content">Content</message>
