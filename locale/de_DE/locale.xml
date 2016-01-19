@@ -14,7 +14,6 @@
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
 	<message key="plugins.generic.staticPages.displayName">Statische-Seiten-Plug-In</message>
 	<message key="plugins.generic.staticPages.description">Dieses Plug-In erlaubt die Verwaltung statischer Inhalte.</message>
-	<message key="plugins.generic.staticPages.introduction">Das Statische-Seiten-Plug-In ermöglicht das Anlegen und Verwalten von Seiten mit statischem Inhalt. Verwalter/innen können auf diese Seiten verlinken, um den statischen Inhalt des Systems über die regulären, im Setup gefüllten Felder hinaus zu erweitern.</message>
 	<message key="plugins.generic.staticPages.staticPages">Statische Seiten</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
 	<message key="plugins.generic.staticPages.content">Inhalt</message>
