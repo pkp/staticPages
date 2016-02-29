@@ -47,7 +47,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 
 		// Find the plugin's tab
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='link=Submissions');
+		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='link=Website');
 		$this->clickAndWait($selector);
@@ -55,13 +55,14 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->click($selector);
 
 		// Create a static page
-		$this->waitForElementPresent('//tbody[@class=\'empty\']');
-		$this->click('//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
+		$this->waitForElementPresent($selector = '//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
+		$this->click($selector);
 		$this->waitForElementPresent($selector='//input[starts-with(@id, \'path-\')]');
 		$this->type($selector, 'flarm');
 		$this->type($selector='//input[starts-with(@id, \'title-\')]', 'Test Static Page');
 		$this->typeTinyMCE('content', 'Here is my new static page.');
-		$this->click('//button[starts-with(@id, \'submitFormButton-\')]');
+		$this->waitForElementPresent($selector = '//button[starts-with(@id, \'submitFormButton-\')]');
+		$this->click($selector);
 
 		// View the static page
 		$this->waitForElementPresent($selector='//a[text()=\'flarm\']');
