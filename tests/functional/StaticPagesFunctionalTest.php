@@ -30,7 +30,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		$this->logIn('admin', 'admin');
-		$this->clickAndWait('css=li.profile a:contains(\'Submissions\')');
+		$this->clickAndWait('link=Submissions');
 		$this->waitForElementPresent($selector='link=Website');
 		$this->clickAndWait($selector);
 		$this->click('link=Plugins');
@@ -47,7 +47,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 
 		// Find the plugin's tab
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
+		$this->waitForElementPresent($selector='link=Submissions');
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='link=Website');
 		$this->clickAndWait($selector);
