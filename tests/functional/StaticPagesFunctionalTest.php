@@ -35,7 +35,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->click('link=Plugins');
 
 		// Find and enable the plugin
-		$this->waitForElementPresent($selector = '//input[@id=\'select-cell-staticpagesplugin-enabled\']');
+		$this->waitForElementPresent($selector = '//input[starts-with(@id, \'select-cell-staticpagesplugin-enabled\')]');
 		$this->assertElementNotPresent('link=Static Pages'); // Plugin should be disabled
 		$this->click($selector); // Enable plugin
 		$this->waitForElementPresent('//div[contains(.,\'The plugin "Static Pages Plugin" has been enabled.\')]');
