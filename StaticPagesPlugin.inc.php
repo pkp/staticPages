@@ -111,7 +111,7 @@ class StaticPagesPlugin extends GenericPlugin {
 			// can do this.
 			$staticPage = $staticPagesDao->newDataObject();
 			$staticPage->setContent((array) $request->getUserVar('content'), null);
-			$staticPage->setTitle((array) $request->getUserVar('title', null));
+			$staticPage->setTitle((array) $request->getUserVar('title'), null);
 		} else {
 			// Construct a path to look for
 			$path = $page;
