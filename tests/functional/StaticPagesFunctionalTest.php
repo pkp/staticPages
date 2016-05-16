@@ -46,7 +46,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 
 		// Find the plugin's tab
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Submissions\')');
+		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
 		$this->clickAndWait($selector);
 		$this->waitForElementPresent($selector='link=Website');
 		$this->clickAndWait($selector);
