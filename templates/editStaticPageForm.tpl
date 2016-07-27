@@ -22,6 +22,7 @@
 
 {url|assign:actionUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="updateStaticPage" existingPageName=$blockName escape=false}
 <form class="pkp_form" id="staticPageForm" method="post" action="{$actionUrl}">
+	{csrf}
 	{if $staticPageId}
 		<input type="hidden" name="staticPageId" value="{$staticPageId|escape}" />
 	{/if}

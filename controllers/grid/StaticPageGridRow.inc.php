@@ -57,6 +57,7 @@ class StaticPageGridRow extends GridRow {
 				new LinkAction(
 					'delete',
 					new RemoteActionConfirmationModal(
+						$request->getSession(),
 						__('common.confirmDelete'),
 						__('grid.action.delete'),
 						$router->url($request, null, null, 'delete', null, array('staticPageId' => $staticPageId)), 'modal_delete'
