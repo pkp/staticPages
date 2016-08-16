@@ -35,4 +35,8 @@
 	<message key="plugins.generic.staticPages.pageDeleted">Página excluída com sucesso.</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">Nenhuma página criada.</message>
+	<message key="plugins.generic.staticPages.staticPages">Páginas Estáticas</message>
+	<message key="plugins.generic.staticPages.noneCreated">Não há páginas estáticas criadas.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">O campo caminho deve conter apenas caracteres alfanuméricos mais, '/', '.' '-' e '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<P> Esta página será acessível em: <blockquote> {$pagesPath} </blockquote> ... onde %PATH% é o caminho digitado acima. <Strong> Nota: </ strong> Duas páginas não podem ter o mesmo caminho. Usar caminhos que já existem no sistema pode causar a perda de acesso a funções importantes. </P>]]></message>
 </locale>
