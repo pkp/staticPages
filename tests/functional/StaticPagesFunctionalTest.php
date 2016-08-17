@@ -67,7 +67,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->waitForElementPresent($selector='//a[text()=\'flarm\']');
 		$this->click($selector);
 		$this->waitForPopUp('staticPage', 10000);
-		$this->selectWindow('title=Test Static Page');
+		$this->selectWindow('name=staticPage');
 		$this->waitForElementPresent('//h2[contains(text(),\'Test Static Page\')]');
 		$this->waitForElementPresent('//p[contains(text(),\'Here is my new static page.\')]');
 		$this->close();
