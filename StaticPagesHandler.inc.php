@@ -75,6 +75,8 @@ class StaticPagesHandler extends Handler {
 		// Assign the template vars needed and display
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('title', self::$staticPage->getLocalizedTitle());
+		
+		self::setupTemplate($request);
 
 		$vars = array();
 		if ($context) $vars = array(
