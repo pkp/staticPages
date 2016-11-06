@@ -19,8 +19,8 @@ class StaticPagesDAO extends DAO {
 	/**
 	 * Constructor
 	 */
-	function StaticPagesDAO() {
-		parent::DAO();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**

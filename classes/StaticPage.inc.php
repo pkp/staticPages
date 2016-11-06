@@ -16,8 +16,8 @@ class StaticPage extends DataObject {
 	/**
 	 * Constructor
 	 */
-	function StaticPage() {
-		parent::DataObject();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

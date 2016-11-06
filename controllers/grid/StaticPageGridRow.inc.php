@@ -19,8 +19,8 @@ class StaticPageGridRow extends GridRow {
 	/**
 	 * Constructor
 	 */
-	function StaticPageGridRow() {
-		parent::GridRow();
+	function __construct() {
+		parent::__construct();
 	}
 
 	//

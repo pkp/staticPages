@@ -20,8 +20,8 @@ class StaticPageGridCellProvider extends GridCellProvider {
 	/**
 	 * Constructor
 	 */
-	function StaticPageGridCellProvider() {
-		parent::GridCellProvider();
+	function __construct() {
+		parent::__construct();
 	}
 
 

@@ -25,8 +25,8 @@ class StaticPagesHandler extends Handler {
 	/**
 	 * Constructor
 	 */
-	function StaticPagesHandler() {
-		parent::Handler();
+	function __construct() {
+		parent::__construct();
 	}
 
 	/**
