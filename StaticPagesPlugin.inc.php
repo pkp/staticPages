@@ -161,20 +161,6 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Display verbs for the management interface.
-	 * @return array Management verbs
-	 */
-	function getManagementVerbs() {
-		$verbs = parent::getManagementVerbs();
-		if ($this->getEnabled()) {
-			if ($this->isTinyMCEInstalled()) {
-				$verbs[] = array('settings', __('plugins.generic.staticPages.editAddContent'));
-			}
-		}
-		return $verbs;
-	}
-
-	/**
 	 * @copydoc Plugin::getActions()
 	 */
 	function getActions($request, $actionArgs) {
