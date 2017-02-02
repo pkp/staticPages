@@ -29,7 +29,7 @@
 	{fbvFormArea id="staticPagesFormArea" class="border"}
 		{fbvFormSection}
 			{fbvElement type="text" label="plugins.generic.staticPages.path" id="path" value=$path maxlength="40" inline=true size=$fbvStyles.size.MEDIUM}
-			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="40" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="80" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection}
 			{url|replace:"REPLACEME":"%PATH%"|assign:"exampleUrl" router=$smarty.const.ROUTE_PAGE context=$currentContext->getPath() page="REPLACEME"}
