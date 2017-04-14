@@ -17,13 +17,6 @@ import('lib.pkp.classes.controllers.grid.GridCellProvider');
 import('lib.pkp.classes.linkAction.request.RedirectAction');
 
 class StaticPageGridCellProvider extends GridCellProvider {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
 
 	//
 	// Template methods from GridCellProvider
@@ -32,6 +25,7 @@ class StaticPageGridCellProvider extends GridCellProvider {
 	 * Get cell actions associated with this row/column combination
 	 * @param $row GridRow
 	 * @param $column GridColumn
+	 * @param $position int GRID_ACTION_POSITION_...
 	 * @return array an array of LinkAction instances
 	 */
 	function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT) {
