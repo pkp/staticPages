@@ -16,12 +16,6 @@ import('lib.pkp.classes.db.DAO');
 import('plugins.generic.staticPages.classes.StaticPage');
 
 class StaticPagesDAO extends DAO {
-	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
 
 	/**
 	 * Get a static page by ID

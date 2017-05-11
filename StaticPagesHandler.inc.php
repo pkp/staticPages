@@ -23,13 +23,6 @@ class StaticPagesHandler extends Handler {
 
 
 	/**
-	 * Constructor
-	 */
-	function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * Provide the static pages plugin to the handler.
 	 * @param $plugin StaticPagesPlugin
 	 */
