@@ -8,8 +8,7 @@
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the cs_CZ locale.
-  *
+  * Localization strings
   -->
  
 <locale name="cs_CZ" full_name="Čeština">
@@ -35,4 +34,8 @@
 	<message key="plugins.generic.staticPages.pageDeleted">Stránka úspěšně smazána.</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">Nebyly vytvořeny žádné stránky</message>
+	<message key="plugins.generic.staticPages.staticPages">Statické stránky</message>
+	<message key="plugins.generic.staticPages.noneCreated">Nebyly vytvořeny žádné statické stránky.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Cesta musí obsahovat pouze alfanumerické znaky a znaky '.', '/', '-'  a '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Tato stránka bude dostupná na adrese:<blockquote>{$pagesPath}</ blockquote> ... kde %PATH% je cesta zadaná výše. <Strong> Poznámka:</strong>Žádná dvě stránky nemohou mít stejnou cestu. Použití cest vestavěných do systému může způsobit ztrátu přístupu k důležitým funkcím.</p>]]></message>
 </locale>
