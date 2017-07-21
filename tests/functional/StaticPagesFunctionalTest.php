@@ -62,6 +62,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->typeTinyMCE('content', 'Here is my new static page.');
 		$this->waitForElementPresent($selector = '//button[starts-with(@id, \'submitFormButton-\')]');
 		$this->click($selector);
+		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// View the static page
 		$this->waitForElementPresent($selector='//a[text()=\'flarm\']');
