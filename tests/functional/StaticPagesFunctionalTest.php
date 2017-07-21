@@ -56,11 +56,11 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		// Create a static page
 		$this->waitForElementPresent($selector = '//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
 		$this->click($selector);
-		$this->waitForElementPresent($selector='//input[starts-with(@id, \'path-\')]');
+		$this->waitForElementPresent($selector='//form[@id=\'staticPageForm\']//input[starts-with(@id, \'path-\')]');
 		$this->type($selector, 'flarm');
-		$this->type($selector='//input[starts-with(@id, \'title-\')]', 'Test Static Page');
+		$this->type($selector='//form[@id=\'staticPageForm\']//input[starts-with(@id, \'title-\')]', 'Test Static Page');
 		$this->typeTinyMCE('content', 'Here is my new static page.');
-		$this->waitForElementPresent($selector = '//button[starts-with(@id, \'submitFormButton-\')]');
+		$this->waitForElementPresent($selector = '//form[@id=\'staticPageForm\']//button[starts-with(@id, \'submitFormButton-\')]');
 		$this->click($selector);
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
