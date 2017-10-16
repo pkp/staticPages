@@ -35,4 +35,8 @@
 	<message key="plugins.generic.staticPages.pageDeleted">Siden er slettet</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">Ingen sider er blevet oprettet</message>
+	<message key="plugins.generic.staticPages.staticPages">Statiske sider</message>
+	<message key="plugins.generic.staticPages.noneCreated">Ingen statisk side er blevet oprettet.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Siden kan tilgås via: <blockquote>{$pagesPath}</blockquote>...hvor %PATH% er den sti, du vælger. <strong>Bemærk:</strong> to sider kan ikke have den same sti. Brugen af stier, der er indbygget i systemet, kan medføre, at du mister adgang til vigtige funktioner.</p>]]></message>
+	<message key="plugins.generic.staticPages.pathRegEx">Sti-feltet må kun indeholde alfanumeriske karakterer samt '.', '/', '-', og '_'.</message>
 </locale>
