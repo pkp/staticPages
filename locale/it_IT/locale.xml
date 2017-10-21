@@ -8,13 +8,13 @@
   * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the it_IT (Italiano) locale.
-  *
+  * Localization strings
   -->
  
 <locale name="it_IT" full_name="Italiano">
 	<message key="plugins.generic.staticPages.displayName">Pagine statiche</message>
 	<message key="plugins.generic.staticPages.description">Questo plugin permette la creazione e la gestione di pagine statiche.</message>
+	<message key="plugins.generic.staticPages.staticPages">Pagine statiche</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titolo</message>
 	<message key="plugins.generic.staticPages.content">Contenuto</message>
 
@@ -26,9 +26,11 @@
 	<message key="plugins.generic.staticPages.addStaticPage">Aggiungi una pagina Statica</message>
 	<message key="plugins.generic.staticPages.addNewPage">Aggiungi una nuova pagina</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Modifica la Pagina Statica</message>	
+	<message key="plugins.generic.staticPages.noneCreated">Nessuna pagina statica è stata creata.</message>
 
 	<message key="plugins.generic.staticPages.settingInstructions">Qui di seguito l'elenco delle pagine statiche create. Puoi modificare o cancellare le pagine utilizzando i links sulla destra.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Utilizza il form seguente per aggiungere/editare contenuti.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Il campo indirizzo può contenere solo caratteri alfanumerici e . , / e _</message>
 	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[Le pagine possono essere raggiunte all'indirizzo: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path.]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Questo path esiste già per una diversa pagina.</message>
 	
