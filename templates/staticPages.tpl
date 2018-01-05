@@ -7,5 +7,5 @@
  *
  * Static pages plugin -- displays the StaticPagesGrid.
  *}
-{url|assign:staticPageGridUrl router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="fetchGrid" escape=false}
+{capture assign=staticPageGridUrl}{url router=$smarty.const.ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="fetchGrid" escape=false}{/capture}
 {load_url_in_div id="staticPageGridContainer" url=$staticPageGridUrl}
