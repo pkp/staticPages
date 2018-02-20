@@ -35,4 +35,8 @@
 	<message key="plugins.generic.staticPages.pageDeleted">Page supprimée avec succès.</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">Aucune page n'a été créée</message>
+	<message key="plugins.generic.staticPages.staticPages">Pages statiques</message>
+	<message key="plugins.generic.staticPages.noneCreated">Aucune page statique n'a été créée.</message>
+	<message key="plugins.generic.staticPages.pathRegEx"><![CDATA[Le chemin d'accès ne peut contenir que des caractères alphanumériques, plus &quot;.&quot;, &quot;/&quot; et &quot;_&quot;.]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Cette page sera accessible à: <blockquote>{$pagesPath} </blockquote> ... où %PATH% est le chemin d'accès  inscrit plus haut. <strong>Note:</ strong> Deux pages ne peuvent pas avoir le même chemin d'accès. L'utilisation de chemins d'accès intégrés au système peut vous faire perdre l'accès à des fonctionnalités importantes.</p>]]></message>
 </locale>
