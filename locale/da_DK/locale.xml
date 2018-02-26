@@ -13,13 +13,13 @@
   -->
  
 <locale name="da_DK" full_name="Dansk">
-	<message key="plugins.generic.staticPages.displayName">Statisk sideplugin</message>
-	<message key="plugins.generic.staticPages.description">Dette plugin tillader håndtering af statisk indhold</message>
+	<message key="plugins.generic.staticPages.displayName">Statisk sideplug-in</message>
+	<message key="plugins.generic.staticPages.description">Denne plug-in tillader håndtering af statisk indhold</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
 	<message key="plugins.generic.staticPages.content">Indhold</message>
 
 	<message key="plugins.generic.staticPages.path">Sti</message>
-	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>The TinyMCE Plugin skal installers og aktiveres for at gøre det muligt at tilføje og redigere indhold.</strong>]]></message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>TinyMCE Plug-innet skal installers og aktiveres for at gøre det muligt at tilføje og redigere indhold.</strong>]]></message>
 
 	<message key="plugins.generic.staticPages.editAddContent">Redigér/Tilføj indhold</message>
 
