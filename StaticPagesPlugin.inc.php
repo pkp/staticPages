@@ -16,16 +16,14 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class StaticPagesPlugin extends GenericPlugin {
 	/**
-	 * Get the plugin's display (human-readable) name.
-	 * @return string
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	function getDisplayName() {
 		return __('plugins.generic.staticPages.displayName');
 	}
 
 	/**
-	 * Get the plugin's display (human-readable) description.
-	 * @return string
+	 * @copydoc Plugin::getDescription()
 	 */
 	function getDescription() {
 		$description = __('plugins.generic.staticPages.description');
@@ -45,14 +43,11 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Register the plugin, attaching to hooks as necessary.
-	 * @param $category string
-	 * @param $path string
-	 * @return boolean
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		if (parent::register($category, $path)) {
-			if ($this->getEnabled()) {
+	function register($category, $path, $mainContextId = null) {
+		if (parent::register($category, $path, $mainContextId)) {
+			if ($this->getEnabled($mainContextId)) {
 				// Register the static pages DAO.
 				import('plugins.generic.staticPages.classes.StaticPagesDAO');
 				$staticPagesDao = new StaticPagesDAO();
