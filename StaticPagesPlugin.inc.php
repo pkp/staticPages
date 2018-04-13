@@ -62,8 +62,6 @@ class StaticPagesPlugin extends GenericPlugin {
 				// Register the components this plugin implements to
 				// permit administration of static pages.
 				HookRegistry::register('LoadComponentHandler', array($this, 'setupGridHandler'));
-
-				$this->_registerTemplateResource();
 			}
 			return true;
 		}
@@ -187,13 +185,6 @@ class StaticPagesPlugin extends GenericPlugin {
 	 */
 	function getInstallSchemaFile() {
 		return $this->getPluginPath() . '/schema.xml';
-	}
-
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**
