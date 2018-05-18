@@ -77,7 +77,7 @@ class StaticPageForm extends Form {
 	/**
 	 * @see Form::fetch
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager();
 		$templateMgr->assign(array(
 			'staticPageId' => $this->staticPageId,
@@ -92,7 +92,7 @@ class StaticPageForm extends Form {
 			'supportEmail' => __('plugins.generic.tinymce.variables.supportContactEmail', array('value' => $context->getSetting('supportEmail'))),
 		));
 
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
