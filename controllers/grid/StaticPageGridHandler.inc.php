@@ -114,7 +114,7 @@ class StaticPageGridHandler extends GridHandler {
 	function index($args, $request) {
 		$context = $request->getContext();
 		import('lib.pkp.classes.form.Form');
-		$form = new Form(self::$plugin->getTemplatePath() . 'staticPages.tpl');
+		$form = new Form(self::$plugin->getTemplateResource('staticPages.tpl'));
 		$json = new JSONMessage(true, $form->fetch($request));
 		return $json->getString();
 	}

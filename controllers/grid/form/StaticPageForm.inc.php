@@ -33,7 +33,7 @@ class StaticPageForm extends Form {
 	 * @param $staticPageId int Static page ID (if any)
 	 */
 	function __construct($staticPagesPlugin, $contextId, $staticPageId = null) {
-		parent::__construct($staticPagesPlugin->getTemplatePath() . 'editStaticPageForm.tpl');
+		parent::__construct($staticPagesPlugin->getTemplateResource('editStaticPageForm.tpl'));
 
 		$this->contextId = $contextId;
 		$this->staticPageId = $staticPageId;

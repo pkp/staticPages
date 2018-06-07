@@ -80,7 +80,7 @@ class StaticPagesHandler extends Handler {
 		);
 		$templateMgr->assign('content', strtr(self::$staticPage->getLocalizedContent(), $vars));
 
-		$templateMgr->display(self::$plugin->getTemplatePath() . 'content.tpl');
+		$templateMgr->display(self::$plugin->getTemplateResource('content.tpl'));
 	}
 }
 
