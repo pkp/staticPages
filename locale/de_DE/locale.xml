@@ -12,14 +12,14 @@
   -->
  
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-	<message key="plugins.generic.staticPages.displayName">Statische-Seiten-Plug-In</message>
-	<message key="plugins.generic.staticPages.description">Dieses Plug-In erlaubt die Verwaltung statischer Inhalte.</message>
+	<message key="plugins.generic.staticPages.displayName">Statische-Seiten-Plugin</message>
+	<message key="plugins.generic.staticPages.description">Dieses Plugin erlaubt die Verwaltung statischer Inhalte.</message>
 	<message key="plugins.generic.staticPages.staticPages">Statische Seiten</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
 	<message key="plugins.generic.staticPages.content">Inhalt</message>
 
 	<message key="plugins.generic.staticPages.path">Pfad</message>
-	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Das TinyMCE-Plug-In muss installiert und aktiviert sein, damit Sie Inhalte hinzufügen/bearbeiten können.</strong>]]></message>
+	<message key="plugins.generic.staticPages.requirement.tinymce"><![CDATA[<strong>Das TinyMCE-Plugin muss installiert und aktiviert sein, damit Sie Inhalte hinzufügen/bearbeiten können.</strong>]]></message>
 
 	<message key="plugins.generic.staticPages.editAddContent">Inhalt bearbeiten/hinzufügen</message>
 
