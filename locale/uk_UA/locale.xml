@@ -11,10 +11,11 @@
   * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Ukrainian_(uk_UA)
   * Localization strings for the uk_UA (Українська) locale.
   -->
- 
+
 <locale name="uk_UA" full_name="Українська">
 	<message key="plugins.generic.staticPages.displayName">Модуль статичних сторінок</message>
 	<message key="plugins.generic.staticPages.description">Цей модуль дозволяє керування статичним змістом.</message>
+	<message key="plugins.generic.staticPages.staticPages">Статичні сторінки</message>
 	<message key="plugins.generic.staticPages.pageTitle">Назва</message>
 	<message key="plugins.generic.staticPages.content">Зміст</message>
 
