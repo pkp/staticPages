@@ -115,8 +115,7 @@ class StaticPageGridHandler extends GridHandler {
 		$context = $request->getContext();
 		import('lib.pkp.classes.form.Form');
 		$form = new Form(self::$plugin->getTemplateResource('staticPages.tpl'));
-		$json = new JSONMessage(true, $form->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $form->fetch($request));
 	}
 
 	/**
@@ -146,8 +145,7 @@ class StaticPageGridHandler extends GridHandler {
 		$staticPagesPlugin = self::$plugin;
 		$staticPageForm = new StaticPageForm(self::$plugin, $context->getId(), $staticPageId);
 		$staticPageForm->initData();
-		$json = new JSONMessage(true, $staticPageForm->fetch($request));
-		return $json->getString();
+		return new JSONMessage(true, $staticPageForm->fetch($request));
 	}
 
 	/**
@@ -174,8 +172,7 @@ class StaticPageGridHandler extends GridHandler {
  			return DAO::getDataChangedEvent();
 		} else {
 			// Present any errors
-			$json = new JSONMessage(true, $staticPageForm->fetch($request));
-			return $json->getString();
+			return new JSONMessage(true, $staticPageForm->fetch($request));
 		}
 	}
 
