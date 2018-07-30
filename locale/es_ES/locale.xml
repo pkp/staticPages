@@ -23,7 +23,7 @@
 
 	<message key="plugins.generic.staticPages.editAddContent">Editar/Añadir contenido</message>
 
-	<message key="plugins.generic.staticPages.addStaticPage">Aadñir página estática</message>
+	<message key="plugins.generic.staticPages.addStaticPage">Añadir página estática</message>
 	<message key="plugins.generic.staticPages.addNewPage">Añadir nueva página</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Editar página estática</message>	
 	<message key="plugins.generic.staticPages.noneCreated">No se creó ninguna página estática.</message>
