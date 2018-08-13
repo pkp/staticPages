@@ -12,7 +12,7 @@
   -->
 
 <locale name="es_ES" full_name="Español (España)">
-	<message key="plugins.generic.staticPages.displayName">Módulo de Páginas estáticas</message>
+	<message key="plugins.generic.staticPages.displayName">Módulo de páginas estáticas</message>
 	<message key="plugins.generic.staticPages.description">Este módulo permite el manejo de contenido estático.</message>
 	<message key="plugins.generic.staticPages.staticPages">Páginas estáticas</message>
 	<message key="plugins.generic.staticPages.pageTitle">Título</message>
@@ -31,11 +31,11 @@
 	<message key="plugins.generic.staticPages.settingInstructions">El formulario que aparece a continuación muestra todas las páginas estáticas creadas.  Puede editar o eliminar las páginas usando los enlaces que se muestran a la derecha.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Use el formulario a continuación para añadir/editar una página de contenido.</message>
 	<message key="plugins.generic.staticPages.pathRegEx">El campo de ruta debe contener solo caracteres alfanuméricos además de &apos;.&apos;, &apos;/&apos;, &apos;-&apos;, y &apos;_&apos;.</message>
-	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Está página será accesible en:<blockquote>{$pagesPath}</blockquote>...donde %PATH% es la ruta introducida anteriormente. <strong>Nota:</strong> dos páginas no pueden tener la misma ruta. El uso de rutas integradas en el sistema puede provocar pérdidas de acceso a funciones importantes.</p>]]></message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Esta página será accesible en:<blockquote>{$pagesPath}</blockquote>... donde %PATH% es la ruta introducida anteriormente. <strong>Nota:</strong> dos páginas no pueden tener la misma ruta. El uso de rutas integradas en el sistema puede provocar pérdidas de acceso a funciones importantes.</p>]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Esta ruta ya existe para otra página estática.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Página guardada con éxito.</message>
-	<message key="plugins.generic.staticPages.pageDeleted">Página borrada con éxito.</message>
+	<message key="plugins.generic.staticPages.pageDeleted">Página eliminada con éxito.</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">No hay páginas creadas.</message>
 </locale>
