@@ -35,4 +35,8 @@
 	<message key="plugins.generic.staticPages.pageDeleted">Sayfa başarılı bir şekilde silindi.</message>
 	
 	<message key="plugins.generic.staticPages.noneExist">Sayfa oluşturulamadı</message>
+	<message key="plugins.generic.staticPages.staticPages">Sabit Sayfalar</message>
+	<message key="plugins.generic.staticPages.noneCreated">Hiçbir sabit sayfa oluşturulmadı.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Yol alanı sadece alfanümerik karakterler ile '.', '/', '-' ve '_' içermelidir.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Bu sayfaya şu adresten erişilebilir: <blockquote>{$pagesPath}</blockquote> ... %PATH yukarıda girilen yoldur. <strong>Not:</strong> İki sayfa aynı yola sahip olamaz. Sisteme yerleşik yolları kullanmak, önemli işlevlere erişiminizi kaybetmenize neden olabilir.]]></message>
 </locale>
