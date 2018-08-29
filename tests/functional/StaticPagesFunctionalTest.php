@@ -77,3 +77,4 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->logOut();
 	}
 }
+

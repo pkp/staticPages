@@ -16,4 +16,3 @@
 require_once('StaticPagesPlugin.inc.php');
 return new StaticPagesPlugin();
 
-?>

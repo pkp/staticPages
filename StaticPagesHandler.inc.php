@@ -84,4 +84,3 @@ class StaticPagesHandler extends Handler {
 	}
 }
 
-?>

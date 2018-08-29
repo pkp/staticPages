@@ -187,4 +187,3 @@ class StaticPagesDAO extends DAO {
 	}
 }
 
-?>

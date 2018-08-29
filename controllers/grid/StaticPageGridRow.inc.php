@@ -64,4 +64,3 @@ class StaticPageGridRow extends GridRow {
 	}
 }
 
-?>

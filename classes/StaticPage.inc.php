@@ -104,4 +104,3 @@ class StaticPage extends DataObject {
 	}
 }
 
-?>

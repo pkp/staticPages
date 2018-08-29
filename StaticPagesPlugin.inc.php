@@ -195,4 +195,3 @@ class StaticPagesPlugin extends GenericPlugin {
 	}
 }
 
-?>

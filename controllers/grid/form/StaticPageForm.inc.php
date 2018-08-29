@@ -121,4 +121,3 @@ class StaticPageForm extends Form {
 	}
 }
 
-?>

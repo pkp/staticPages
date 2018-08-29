@@ -195,4 +195,3 @@ class StaticPageGridHandler extends GridHandler {
 	}
 }
 
-?>
