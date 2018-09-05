@@ -75,7 +75,7 @@ class StaticPageForm extends Form {
 	}
 
 	/**
-	 * @see Form::fetch
+	 * @copydoc Form::fetch
 	 */
 	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager();
