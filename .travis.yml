@@ -21,7 +21,7 @@ env:
 
 install:
   # Prepare OJS environment
-  - git clone -b ${BRANCH} https://github.com/pkp/{$APPLICATION} ~/${APPLICATION}
+  - git clone -b ${BRANCH} https://github.com/pkp/${APPLICATION} ~/${APPLICATION}
   - cd ~/${APPLICATION}
   - git submodule update --init --recursive
   - source lib/pkp/tools/travis/prepare-tests.sh
