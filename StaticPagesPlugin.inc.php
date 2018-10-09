@@ -53,7 +53,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				$staticPagesDao = new StaticPagesDAO();
 				DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
-				HookRegistry::register('Templates::Management::Settings::website', array($this, 'callbackShowWebsiteSettingsTabs'));
+				HookRegistry::register('Template::Settings::website', array($this, 'callbackShowWebsiteSettingsTabs'));
 
 				// Intercept the LoadHandler hook to present
 				// static pages when requested.
@@ -75,12 +75,12 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * @return boolean Hook handling status
 	 */
 	function callbackShowWebsiteSettingsTabs($hookName, $args) {
+		$templateMgr = $args[1];
 		$output =& $args[2];
 		$request =& Registry::get('request');
 		$dispatcher = $request->getDispatcher();
 
-		// Add a new tab for static pages
-		$output .= '<li><a name="staticPages" href="' . $dispatcher->url($request, ROUTE_COMPONENT, null, 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler', 'index') . '">' . __('plugins.generic.staticPages.staticPages') . '</a></li>';
+		$output .= $templateMgr->fetch($this->getTemplateResource('staticPagesTab.tpl'));
 
 		// Permit other plugins to continue interacting with this hook
 		return false;
@@ -194,4 +194,3 @@ class StaticPagesPlugin extends GenericPlugin {
 		return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js';
 	}
 }
-
