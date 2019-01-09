@@ -72,11 +72,11 @@ class StaticPagesHandler extends Handler {
 
 		$vars = array();
 		if ($context) $vars = array(
-			'{$contactName}' => $context->getSetting('contactName'),
-			'{$contactEmail}' => $context->getSetting('contactEmail'),
-			'{$supportName}' => $context->getSetting('supportName'),
-			'{$supportPhone}' => $context->getSetting('supportPhone'),
-			'{$supportEmail}' => $context->getSetting('supportEmail'),
+			'{$contactName}' => $context->getData('contactName'),
+			'{$contactEmail}' => $context->getData('contactEmail'),
+			'{$supportName}' => $context->getData('supportName'),
+			'{$supportPhone}' => $context->getData('supportPhone'),
+			'{$supportEmail}' => $context->getData('supportEmail'),
 		);
 		$templateMgr->assign('content', strtr(self::$staticPage->getLocalizedContent(), $vars));
 
