@@ -40,7 +40,7 @@ class StaticPageGridCellProvider extends GridCellProvider {
 						$dispatcher->url($request, ROUTE_PAGE, null) . '/' . $staticPage->getPath(),
 						'staticPage'
 					),
-					$staticPage->getPath()
+					htmlspecialchars($staticPage->getPath())
 				));
 			default:
 				return parent::getCellActions($request, $row, $column, $position);
