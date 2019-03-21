@@ -15,6 +15,13 @@
 
 import('lib.pkp.tests.WebTestCase');
 
+use Facebook\WebDriver\Remote\DesiredCapabilities;
+use Facebook\WebDriver\Remote\RemoteWebDriver;
+use Facebook\WebDriver\Interactions\WebDriverActions;
+use Facebook\WebDriver\WebDriverExpectedCondition;
+use Facebook\WebDriver\WebDriverBy;
+use Facebook\WebDriver\WebDriverSelect;
+
 class StaticPagesFunctionalTest extends WebTestCase {
 	/**
 	 * @copydoc WebTestCase::getAffectedTables
@@ -30,51 +37,51 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$this->open(self::$baseUrl);
 
 		$this->logIn('admin', 'admin');
-		$this->waitForElementPresent($selector='link=Website');
-		$this->clickAndWait($selector);
-		$this->click('link=Plugins');
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Settings")]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Website")]'))
+			->perform();
+		$this->click('//a[text()="Plugins"]');
 
 		// Find and enable the plugin
 		$this->waitForElementPresent($selector = '//input[starts-with(@id, \'select-cell-staticpagesplugin-enabled\')]');
-		$this->assertElementNotPresent('link=Static Pages'); // Plugin should be disabled
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::xpath('//a[contains(text(),"Static Pages")]')));
 		$this->click($selector); // Enable plugin
 		$this->waitForElementPresent('//div[contains(.,\'The plugin "Static Pages Plugin" has been enabled.\')]');
 
 		// Check for a 404 on the page we are about to create
 		$this->open(self::$baseUrl . '/index.php/publicknowledge/flarm');
-		$this->assertText('css=h1', '404 Not Found');
+		$this->waitForElementPresent('//h1[contains(text(),"404 Not Found")]');
 
 		// Find the plugin's tab
 		$this->open(self::$baseUrl);
-		$this->waitForElementPresent($selector='css=li.profile a:contains(\'Dashboard\')');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector='link=Website');
-		$this->clickAndWait($selector);
-		$this->waitForElementPresent($selector = 'link=Static Pages');
-		$this->click($selector);
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('css=ul#navigationUser>li.profile>a'))
+			->click($this->waitForElementPresent('//ul[@id="navigationUser"]//a[contains(text(),"Dashboard")]'))
+			->perform();
+		$actions = new WebDriverActions(self::$driver);
+		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Settings")]'))
+			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Website")]'))
+			->perform();
+		$this->click('//a[text()="Static Pages"]');
 
 		// Create a static page
-		$this->waitForElementPresent($selector = '//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
-		$this->click($selector);
+		$this->click('//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
 		$this->waitForElementPresent($selector='//form[@id=\'staticPageForm\']//input[starts-with(@id, \'path-\')]');
 		$this->type($selector, 'flarm');
 		$this->type($selector='//form[@id=\'staticPageForm\']//input[starts-with(@id, \'title-\')]', 'Test Static Page');
 		$this->typeTinyMCE('content', 'Here is my new static page.');
-		$this->waitForElementPresent($selector = '//form[@id=\'staticPageForm\']//button[starts-with(@id, \'submitFormButton-\')]');
-		$this->click($selector);
-		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
+		$this->click('//form[@id=\'staticPageForm\']//button[starts-with(@id, \'submitFormButton-\')]');
+		self::$driver->wait()->until(WebDriverExpectedCondition::invisibilityOfElementLocated(WebDriverBy::cssSelector('div.pkp_modal_panel')));
 
 		// View the static page
-		$this->waitForElementPresent($selector='//a[text()=\'flarm\']');
-		$this->click($selector);
-		$this->waitForPopUp('staticPage', 10000);
-		$this->selectWindow('name=staticPage');
+		$this->click('//a[text()=\'flarm\']');
+		self::$driver->wait()->until(WebDriverExpectedCondition::numberOfWindowsToBe(2));
+		$handles = self::$driver->getWindowHandles();
+		self::$driver->switchTo()->window(end($handles));
 		$this->waitForElementPresent('//h2[contains(text(),\'Test Static Page\')]');
 		$this->waitForElementPresent('//p[contains(text(),\'Here is my new static page.\')]');
-		$this->close();
-		$this->selectWindow(null);
-
-		$this->logOut();
+		self::$driver->close();
 	}
 }
 
