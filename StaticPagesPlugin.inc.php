@@ -93,7 +93,7 @@ class StaticPagesPlugin extends GenericPlugin {
 	 * @return boolean Hook handling status
 	 */
 	function callbackHandleContent($hookName, $args) {
-		$request = Application::getRequest();
+		$request = Application::get()->getRequest();
 		$templateMgr = TemplateManager::getManager($request);
 
 		$page =& $args[0];
