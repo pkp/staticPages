@@ -15,6 +15,7 @@
 <locale name="nl_NL" full_name="Nederlands">
 	<message key="plugins.generic.staticPages.displayName">Statische pagina's plugin</message>
 	<message key="plugins.generic.staticPages.description">Met deze plugin kunt u statische inhoud toevoegen.</message>
+	<message key="plugins.generic.staticPages.staticPages">Statische pagina's</message>
 	<message key="plugins.generic.staticPages.pageTitle">Titel</message>
 	<message key="plugins.generic.staticPages.content">Inhoud</message>
 
@@ -26,9 +27,12 @@
 	<message key="plugins.generic.staticPages.addStaticPage">Statische pagina toevoegen</message>
 	<message key="plugins.generic.staticPages.addNewPage">Nieuwe pagina toevoegen</message>
 	<message key="plugins.generic.staticPages.editStaticPage">Statische pagina bewerken</message>	
+	<message key="plugins.generic.staticPages.noneCreated">Er zijn geen statische pagina's gemaakt.</message>
 
 	<message key="plugins.generic.staticPages.settingInstructions">Het formulier hieronder toont alle statische pagina's die u aangemaakt heeft. Gebruik de links aan de rechterkant om de pagina's te bewerken of te verwijderen.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Gebruik het formulier hieronder om pagina-inhoud toe te voegen of te bewerken.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Het pad mag uitsluitend alfanumerieke tekens bevatten en '.', '/', '-', en '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Dit pad zal toegankelijk zijn op: <blockquote>{$pagesPath}</blockquote>... waar %PATH% het hierboven opgegeven pad is. <strong>Opmerking:</strong> paden moeten uniek zijn. Als paden worden gebruikt die door het systeem worden gebruikt, kan toegang tot belangrijke functies verloren gaan.</p>]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Dit pad is al in gebruik bij een andere pagina.</message>
 	
 	<message key="plugins.generic.staticPages.pageSaved">Pagina met succes opgeslagen.</message>
