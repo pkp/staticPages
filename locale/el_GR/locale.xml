@@ -9,12 +9,12 @@
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the el_GR locale.
-  *
   -->
- 
+
 <locale name="el_GR" full_name="ελληνικά">
-	<message key="plugins.generic.staticPages.displayName">Plugin Στατικών Σελίδων</message>
-	<message key="plugins.generic.staticPages.description">Αυτό το plugin επιτρέπει την δημιουργία και διαχείριση στατικών σελίδων.</message>
+	<message key="plugins.generic.staticPages.displayName">Διαχείριση Στατικών Σελίδων</message>
+	<message key="plugins.generic.staticPages.description">Αυτό το Πρόσθετο επιτρέπει τη δημιουργία και διαχείριση στατικών σελίδων.</message>
+	<message key="plugins.generic.staticPages.staticPages">Στατικές Σελίδες</message>
 	<message key="plugins.generic.staticPages.pageTitle">Τίτλος</message>
 	<message key="plugins.generic.staticPages.content">Περιεχόμενο</message>
 
@@ -23,16 +23,19 @@
 
 	<message key="plugins.generic.staticPages.editAddContent">Προσθήκη/επεξεργασία περιεχομένου</message>
 
-	<message key="plugins.generic.staticPages.addStaticPage">Προσθήκη Στατικής Σελίδας</message>
-	<message key="plugins.generic.staticPages.addNewPage">Προσθήκη Νέας Σελίδας</message>
-	<message key="plugins.generic.staticPages.editStaticPage">Επεξεργασία Στατικής Σελίδας</message>	
+	<message key="plugins.generic.staticPages.addStaticPage">Προσθήκη στατικής σελίδας</message>
+	<message key="plugins.generic.staticPages.addNewPage">Προσθήκη νέας σελίδας</message>
+	<message key="plugins.generic.staticPages.editStaticPage">Επεξεργασία στατικής σελίδας</message>
+	<message key="plugins.generic.staticPages.noneCreated">Δεν έχουν δημιουργηθεί στατικές σελίδες.</message>
 
-	<message key="plugins.generic.staticPages.settingInstructions">Η παρακάτω φόρμα παρουσίαζει όλες τις στατικές σελίδες που έχετε δημιουργήσει. Μπορείτε να επεξεργαστείτε ή διαγράψετε τις σελίδες χρησιμοποιώντας τους συνδέσμους στην δεξιά πλευρά.</message>
+	<message key="plugins.generic.staticPages.settingInstructions">Η παρακάτω φόρμα παρουσίαζει όλες τις στατικές σελίδες που έχετε δημιουργήσει. Μπορείτε να επεξεργαστείτε ή διαγράψετε τις σελίδες χρησιμοποιώντας τους συνδέσμους στη δεξιά πλευρά.</message>
 	<message key="plugins.generic.staticPages.editInstructions">Χρησιμοποιήστε την παρακάτω φόρμα για την προσθήκη/επεξεργασία του περιεχομένου μιας στατικής σελίδας.</message>
+	<message key="plugins.generic.staticPages.pathRegEx">Το πεδίο της διαδρομής πρέπει να περιλαμβάνει μόνο αλφαριθμητικούς χαρακτήρες ή '.', '/', '-', και '_'.</message>
+	<message key="plugins.generic.staticPages.viewInstructions"><![CDATA[<p>Η σελίδα αυτή θα είναι διαθέσιμη στο: <blockquote>{$pagesPath}</blockquote>...όπου %PATH% είναι η διαδρομή που εισάγατε προηγουμένως. <strong>Σημείωση:</strong> Δεν δύναται 2 σείδες να έχουν την ίδια διαδρομή.</p>]]></message>
 	<message key="plugins.generic.staticPages.duplicatePath">Αυτή η διαδρομή (path) χρησιμοποιείται ήδη από άλλη στατική σελίδα.</message>
-	
+
 	<message key="plugins.generic.staticPages.pageSaved">Η σελίδα αποθηκεύτηκε με επιτυχία.</message>
 	<message key="plugins.generic.staticPages.pageDeleted">Η σελίδα διαγράφηκε με επιτυχία.</message>
-	
-	<message key="plugins.generic.staticPages.noneExist">Δεν έχουν δημιουργηθεί σελίδες</message>
+
+	<message key="plugins.generic.staticPages.noneExist">Δεν έχουν δημιουργηθεί στατικές σελίδες.</message>
 </locale>
