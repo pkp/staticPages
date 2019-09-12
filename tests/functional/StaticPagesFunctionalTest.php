@@ -41,7 +41,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Settings")]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Website")]'))
 			->perform();
-		$this->click('//a[text()="Plugins"]');
+		$this->click('//button[@id="plugins-button"]');
 
 		// Find and enable the plugin
 		$this->waitForElementPresent($selector = '//input[starts-with(@id, \'select-cell-staticpagesplugin-enabled\')]');
@@ -63,7 +63,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		$actions->moveToElement($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Settings")]'))
 			->click($this->waitForElementPresent('//ul[@id="navigationPrimary"]//a[contains(text(),"Website")]'))
 			->perform();
-		$this->click('//a[text()="Static Pages"]');
+		$this->click('//button[@id="staticPages-button"]');
 
 		// Create a static page
 		$this->click('//a[starts-with(@id, \'component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-\')]');
