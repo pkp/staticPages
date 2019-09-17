@@ -79,7 +79,7 @@ class StaticPagesFunctionalTest extends WebTestCase {
 		self::$driver->wait()->until(WebDriverExpectedCondition::numberOfWindowsToBe(2));
 		$handles = self::$driver->getWindowHandles();
 		self::$driver->switchTo()->window(end($handles));
-		$this->waitForElementPresent('//h2[contains(text(),\'Test Static Page\')]');
+		$this->waitForElementPresent('//nav//li.current//h1[contains(text(),\'Test Static Page\')]');
 		$this->waitForElementPresent('//p[contains(text(),\'Here is my new static page.\')]');
 		self::$driver->close();
 	}
