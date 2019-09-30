@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T15:50:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T15:50:45-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Statische-Seiten-Plugin"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Dieses Plugin erlaubt die Verwaltung statischer Inhalte."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statische Seiten"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Titel"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Inhalt"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Pfad"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Das TinyMCE-Plugin muss installiert und aktiviert sein, damit Sie Inhalte hinzufügen/bearbeiten können.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Inhalt bearbeiten/hinzufügen"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Statische Seite hinzufügen"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Neue Seite hinzufügen"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Statische Seite bearbeiten"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Bisher wurden keine statischen Seiten angelegt."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Das unten stehende Formular zeigt Ihnen alle statischen Seiten, die Sie angelegt haben. Sie können die Seiten mittels der Links auf der rechten Seite bearbeiten oder löschen."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Benutzen Sie das unten stehende Formular, um Seiteninhalte hinzuzufügen/zu bearbeiten."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Die Pfadangabe darf nur Buchstaben und Ziffern sowie '.', '/', '-' und '_' enthalten."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Diese Seite wird erreichbar sein unter : <blockquote>{$pagesPath}</blockquote>...wobei %PATH% der oben angegebene Pfad ist. <strong>Hinweis:</strong> Zwei Seiten dürfen nicht den gleichen Pfad haben. Wenn Sie Pfade benutzen, die auch vom System verwendet werden, könnten Sie Zugriff auf wichtige Funktionen verlieren.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Dieser Pfad wird bereits für eine andere statische Seite verwendet."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Seite erfolgreich gespeichert."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Seite erfolgreich gelöscht."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Es wurden keine Seiten angelegt."
