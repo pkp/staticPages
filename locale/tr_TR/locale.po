@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:25+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Sabit Sayflar Eklentisi"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Bu eklenti Sabit İçerik Yönetimini sağlar."
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Başlık"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "İçerik"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Yol"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>TinyMCE Eklentisi içerik eklemek/düzenlemek için yüklü ve etkinleştirilmiş olmalıdır.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "İçerik Düzelt/Ekle"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Sabit Sayfa Ekle"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Yeni Sayfa Ekle"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Sabit Sayfa Düzelt"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Aşağıdaki form oluşturduğunuz tüm statik sayfaları gösterir. Sağ taraftaki bağlantıları kullanarak sayfaları düzenleyebilir veya silebilirsiniz."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Sayfa içeriği eklemek/düzeltmek için aşağıdaki formu kullanın."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Bu yol başka bir sabit sayfa için zaten açık."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Sayfa başarılı bir şekilde kaydedildi."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Sayfa başarılı bir şekilde silindi."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Sayfa oluşturulamadı"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Sabit Sayfalar"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Hiçbir sabit sayfa oluşturulmadı."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Yol alanı sadece alfanümerik karakterler ile '.', '/', '-' ve '_' içermelidir."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Bu sayfaya şu adresten erişilebilir: <blockquote>{$pagesPath}</blockquote> ... %PATH yukarıda girilen yoldur. <strong>Not:</strong> İki sayfa aynı yola sahip olamaz. Sisteme yerleşik yolları kullanmak, önemli işlevlere erişiminizi kaybetmenize neden olabilir."

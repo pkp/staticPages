@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Programutvidelse for statiske sider"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Denne programutvidselsen lar deg administrere statiske sider."
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Tittel"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Innhold"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Sti"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>TinyMCE-programutvidelsen må være installert og slått på for at du skal kunne legge til eller redigere innhold.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Rediger/legg til innhold"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Legg til statisk side"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Legg til ny side"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Rediger statisk side"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Oversikten nedenfor viser alle statiske sider du har laget. Du kan redigere eller slette sidene ved å bruke lenkene på høyre side."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Bruk skjemaet nedenfor for å legge til eller endre innhold."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Denne stien finnes allerede for en annen statisk side."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Lagring av siden var vellykket."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Sletting av siden var vellykket."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Ingen sider har blitt opprettet"

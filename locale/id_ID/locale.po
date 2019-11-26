@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Plugin Halaman Statis"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Plugin ini memudahkan Manajemen Konten Statis."
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Judul"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Konten"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Jalan"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Plugin TinyMCE Plugin harus diinstal dan diaktifkan untuk menambah/ mengedit konten.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Edit/Tambah Konten"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Tambah Halaman Statis"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Tambah Halaman Baru"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Edit Halaman Statis"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Formulir di bawah ini menunjukkan Anda semua halaman statis yang dapat Anda buat. Anda dapat mengedit atau menghapus halaman dengan menggunakan link di sisi tangan kanan."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Gunakan formulir di bawah ini untuk menambah/ mengedit konten halaman. "
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Jalan ini sudah ada untuk halaman statis lainnya. This path already exists for another static page."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Halaman sukses disimpan."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Halaman sukses dihapus."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Tidak ada halaman yang dibuat."

@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:25+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Dodatak Statičke strane"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Ovaj dodatak omogućuje uređivanje statičkog sadržaja."
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Naslov"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Sadržaj"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Putanja"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>TinyMCE dodatak mora biti instaliran i omogućen da biste uređivali sadržaj.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Izmeni/dodaj sadržaj"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Dodaj statičku stranicu"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Dodaj novu stranicu"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Izmeni statičku stranicu"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Dole su prikazane sve statičke stranice koje ste napravili. Možete ih menjati i brisati koristeći linkove sa desne strane."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Koristite formu ispod da biste dodali ili izmenili sadržaj."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Ova putanja već postoji za drugu stranicu."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Stranica je uspešno sačuvana."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Stranica je uspešno obrisana."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Stranica nije napravljena."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statične strane"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Nema statičnih strana."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Putanja može sadržati samo alfanumeričke karaktere i  '.', '/', '-', i '_' znake."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Stranica će biti dostupna na: <blockquote>{$pagesPath}</blockquote>...gde je  %PATH% putanja definiasna iznad. <strong>Napomena:</strong> Dve strane ne mogu imati istu putanju. Korišćenje sistemskih putanja može dovesti do gubitka pristupa bitnim funkcijama i podešavanjima sistema.</p>"

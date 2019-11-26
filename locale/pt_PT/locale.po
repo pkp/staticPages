@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Plugin de Páginas Estáticas"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Este plugin permite gerir páginas estáticas"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Título"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Conteúdo"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Caminho"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>O Plugin TinyMCE deve estar instalado e activado para incluir/editar conteúdo.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Editar/Adicionar Conteúdo"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Adicionar página estática"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Adicionar nova página"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Editar página estática"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "O formulário a seguir mostra todas as páginas estáticas já criadas. Poderá editar ou eliminar as páginas através dos links disponíveis à direita."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Use o formulário para incluir/editar o conteúdo."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Este caminho já existe para outra página estática."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Página guardada com sucesso."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Página eliminada com sucesso."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Nenhuma página criada."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Páginas Estáticas"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Nenhuma página estática foi criada."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "O caminho deve conter apenas carateres alfanuméricos, e '.', '/', '-' e '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Esta página ficará acessível em: <blockquote>{$pagesPath}</blockquote>... onde %PATH% é o caminho introduzido acima. <strong>Note:</strong> Não pode ter duas páginas com o mesmo caminho. Usar caminhos já existentes no sistema pode fazê-lo perder acesso a funcionalidades importantes.</p>"

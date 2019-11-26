@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Statische pagina's plugin"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Met deze plugin kunt u statische inhoud toevoegen."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statische pagina's"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Titel"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Inhoud"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Pad"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>De TinyMCE plugin moet geïnstalleerd en geactiveerd zijn om inhoud toe te voegen of te bewerken.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Inhoud bewerken/toevoegen"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Statische pagina toevoegen"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Nieuwe pagina toevoegen"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Statische pagina bewerken"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Er zijn geen statische pagina's gemaakt."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Het formulier hieronder toont alle statische pagina's die u aangemaakt heeft. Gebruik de links aan de rechterkant om de pagina's te bewerken of te verwijderen."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Gebruik het formulier hieronder om pagina-inhoud toe te voegen of te bewerken."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Het pad mag uitsluitend alfanumerieke tekens bevatten en '.', '/', '-', en '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Dit pad zal toegankelijk zijn op: <blockquote>{$pagesPath}</blockquote>... waar %PATH% het hierboven opgegeven pad is. <strong>Opmerking:</strong> paden moeten uniek zijn. Als paden worden gebruikt die door het systeem worden gebruikt, kan toegang tot belangrijke functies verloren gaan.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Dit pad is al in gebruik bij een andere pagina."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Pagina met succes opgeslagen."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Pagina met succes verwijderd."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Geen pagina's aangemaakt"

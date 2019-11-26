@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Modul pentru pagini statice"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Acest modul permite managementul paginilor statice."
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Titlu"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Conținut"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Cale"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Modulul TinyMCE trebuie să fie instalat și activat pentru a adăuga/edita conținut.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Editează/Adugă conținut"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Adaugă o pagină statică"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Adaugă o pagină nouă"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Editează o pagină statică"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Formularul de mai jos îți arată câte pagini statice ai creat. Poți edita sau șterge paginile folosing linkurile din bara din dreapta."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Folosește formularul de mai jos pentru a adăuga/edita conținut în pagină."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Această cale există deja pentru o altă pagină statică."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Pagină salvată cu succes."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Pagină ștearsă."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Nu au fost create pagini"
