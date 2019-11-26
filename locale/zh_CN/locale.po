@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:25+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "静态页面插件(Static Pages Plugin)"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "该插件允许管理静态内容(This plugin allows Static Content Management.)"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "标题"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "内容"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "路径"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>The TinyMCE Plugin must be installed and enabled in order to add/edit content.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "编辑/添加内容"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "添加静态页面(Add Static Page)"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "添加新的页面(Add New Page)"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "编辑静态页面(Edit Static Page)"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "下面的表格显示出所有你创建的静态页面。你可以使用右手边的链接来编辑或删除页面。(The form below shows you all the static pages you have created.  You can edit or delete the pages using the links on the right-hand side.)"
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "使用下面的表单来添加/编辑页面内容。(Use the form below to add/edit page content.)"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "该路径已经被其它静态页面使用。(This path already exists for another static page.)"
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "页面已保存(Page successfully saved.)"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "页面已删除(Page successfully deleted.)"
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "没有页面被生成(No pages have been created)"

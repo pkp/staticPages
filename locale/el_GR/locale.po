@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:23+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Διαχείριση Στατικών Σελίδων"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Αυτό το Πρόσθετο επιτρέπει τη δημιουργία και διαχείριση στατικών σελίδων."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Στατικές Σελίδες"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Τίτλος"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Περιεχόμενο"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Διαδρομή"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Θα πρέπει να εγκατασταθεί και ενεργοποιηθεί το TinyMCE Plugin για να είναι δυνατή η προσθήκη/επεξεργασία του περιεχομένου.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Προσθήκη/επεξεργασία περιεχομένου"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Προσθήκη στατικής σελίδας"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Προσθήκη νέας σελίδας"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Επεξεργασία στατικής σελίδας"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Δεν έχουν δημιουργηθεί στατικές σελίδες."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Η παρακάτω φόρμα παρουσίαζει όλες τις στατικές σελίδες που έχετε δημιουργήσει. Μπορείτε να επεξεργαστείτε ή διαγράψετε τις σελίδες χρησιμοποιώντας τους συνδέσμους στη δεξιά πλευρά."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Χρησιμοποιήστε την παρακάτω φόρμα για την προσθήκη/επεξεργασία του περιεχομένου μιας στατικής σελίδας."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Το πεδίο της διαδρομής πρέπει να περιλαμβάνει μόνο αλφαριθμητικούς χαρακτήρες ή '.', '/', '-', και '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Η σελίδα αυτή θα είναι διαθέσιμη στο: <blockquote>{$pagesPath}</blockquote>...όπου %PATH% είναι η διαδρομή που εισάγατε προηγουμένως. <strong>Σημείωση:</strong> Δεν δύναται 2 σείδες να έχουν την ίδια διαδρομή.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Αυτή η διαδρομή (path) χρησιμοποιείται ήδη από άλλη στατική σελίδα."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Η σελίδα αποθηκεύτηκε με επιτυχία."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Η σελίδα διαγράφηκε με επιτυχία."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Δεν έχουν δημιουργηθεί στατικές σελίδες."

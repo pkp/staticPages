@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Pagine statiche"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Questo plugin permette la creazione e la gestione di pagine statiche."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Pagine statiche"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Titolo"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Contenuto"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Path"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Bisogna aver installato e abilitato il plugin TinyMCE per aggiungere e/o modificare contenuti.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Modifica/Aggiungi Contenuto"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Aggiungi una pagina Statica"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Aggiungi una nuova pagina"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Modifica la Pagina Statica"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Nessuna pagina statica è stata creata."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Qui di seguito l'elenco delle pagine statiche create. Puoi modificare o cancellare le pagine utilizzando i links sulla destra."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Utilizza il form seguente per aggiungere/editare contenuti."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Il campo indirizzo può contenere solo caratteri alfanumerici e . , / e _"
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "Le pagine possono essere raggiunte all'indirizzo: {$pagesPath}, dove %PATH% &egrave; il valore scelto. <strong>Nota:</strong> Due pagine non possono avere lo stesso path."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Questo path esiste già per una diversa pagina."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Pagina salvata con successo."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Pagina cancellata con successo."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Nessuna pagina creata"

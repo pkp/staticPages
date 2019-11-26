@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:23+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "پلاگین صفحات استاتیک"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "با این پلاگین میتوان محتوای استاتیک را اداره کرد"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "عنوان"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "محتوا"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "مسیر"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>قبل از اینکه بتوانیم محتوائی را اضافه یا حذف کنیم باید پلاگین تینی ام سی ای را فعال سازیم.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "ویرایش یا افزودن محتوا"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "افزودن صفحه استاتیک"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "افزودن صفحه جدید"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "ویرایش صفجه استاتیک"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "در فرم زیر تمام صفحات استاتیک ایجاد شده را میبینید. با استفاده از لینک های سمت راست میتوانید صفحات را ویرایش یا حذف کنید."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "با استفاده از فرم زیر میتوانید محتوای صفحه را اضافه یا ویرایش کنید"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "مسیر مشخص شده هم اکنون وجود دارد."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "صفحه با موفقیت ذخیره شده."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "صفحه با موفقیت حذف شد."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "هیج صفحه ای ایجاد نشده است"

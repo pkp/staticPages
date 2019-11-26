@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:23+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "إضافة الصفحات الثابتة"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "هذه الإضافة تتيح إدارة المحتوى الثابت."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "الصفحات الثابتة"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "العنوان"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "المحتوى"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "المسار"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>إن إضافة TinyMCE ينبغي أن تكون منصبة وممكنة من أجل إضافة/تعديل المحتوى.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "تعديل/إضافة المحتوى"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "إضافة صفحة ثابتة"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "إضافة صفحة جديدة"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "تعديل صفحة ثابتة"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "لم يتم إنشاء أي صفحة ثابتة بعد."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "النموذج أدناه يعرض لك كل الصفحات الثابتة التي قمت بإنشائها. بإمكانك تعديل أو حذف الصفحات مستعملاً الروابط على الجانب الأيمن."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "استعمل النموذج أدناه لغرض إضافة/تعديل محتوى الصفحة."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "حقل المسار لا بد أن يقتصر على حروف وأرقام فضلاً عن '.'، '/'، '-'، و '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>هذه الصفحة ستكون متاحة على الرابط: <blockquote>{$pagesPath}</blockquote>...حيث أن %PATH% هو المسار الذي أدخلته أعلاه. <strong>Note:</strong> لا يمكن لصفحتين أن يكون لهما نفس المسار. استعمالك لتسميات مسارات خاصة بالنظام قد يفقدك إمكانية الوصول إلى بعض وظائفه الهامة.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "هذا المسار موجود مسبقاً لصفحة ثابتة أخرى."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "تم حفظ الصفحة بنجاح."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "حذفت الصفحة بنجاح."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "لم يسبق إنشاء أي صفحة ثابتة"

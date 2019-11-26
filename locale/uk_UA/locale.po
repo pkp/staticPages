@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:25+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:25+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Модуль статичних сторінок"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Цей модуль дозволяє керування статичним змістом."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Статичні сторінки"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Назва"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Зміст"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Шлях"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>Для отримання можливостей додавання/редагування змісту потрібно встановити та дозволити модуль TinyMCE.</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Редагувати/додати зміст"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Додати статичну сторінку"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Додати нову сторінку"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Редагувати статичну сторінку"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Статичні сторінки не були створені."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "У формі нижче відображаються всі створені Вами статичні сторінки.  Ви можете редагувати або видаляти ці сторінки, використовуючи посилання праворуч від них."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Використовуйте форму нижче для додавання/редагування змісту сторінки."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Поле шляху має містити лише латинські літери, цифри та знаки '.', '/', '-', і '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Ця сторінка буде доступна за адресою: <blockquote>{$pagesPath}</blockquote>..., де %PATH% - це шлях, введений вище. <strong>Примітка:</strong> Не може існувати двох сторінок з однаковим шляхом. Використання шляхів, вбудованих у систему, може призвести до втрати доступу до важливих функцій.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Цей шлях вже використовується для іншої статичної сторінки."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Сторінка успішно збережена."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Сторінка успішно видалена."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Жодних сторінок не було створено"

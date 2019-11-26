@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:23+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Staattiset sivut -lisäosa"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Tämä lisäosa sallii staattisen sisällön hallinnoinnin."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Staattiset sivut"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Otsikko"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Sisältö"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Polku"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<p><strong>TinyMCE-lisäosa pitää olla asennettuna ja käytössä, jotta sisältöä voidaan lisätä tai muokata.</strong></p>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Muokkaa/Lisää sisältöä"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Lisää staattinen sivu"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Lisää uusi sivu"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Muokkaa staattista sivua"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Staattisia sivuja ei ole luotu."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Alla oleva lomake näyttää kaikki luomasi staattiset sivut. Voit muokata tai poistaa sivuja oikealla olevia linkkejä käyttäen."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Käytä alla olevaa lomaketta lisätäksesi tai muokataksesi sivun sisältöä."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Polkukenttä voi sisältää vain alfanumeerisia merkkejä sekä “.”, “/”, “-” ja “_”-merkkejä."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Tämä sivu tulee olemaan käytettävissä osoitteessa: <blockquote>{$pagesPath}</blockquote>...missä %PATH% on polku, joka annettiin yllä. <strong>Huom.</strong> Kahdella sivulla ei saa olla samaa polkua. Järjestelmän sisään rakennettujen polkujen käyttäminen saattaa aiheuttaa sen, että menetät pääsyn tärkeisiin toimintoihin.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Tämä polku on jo toisen staattisen sivun käytössä."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Sivu tallennettiin onnistuneesti."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Sivu poistettiin onnistuneesti."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Sivuja ei ole luotu"

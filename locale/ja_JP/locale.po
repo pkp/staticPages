@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
+"PO-Revision-Date: 2019-11-19T11:05:24+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "統計ページプラグイン"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "このプラグインは統計のコンテンツ管理ができます。"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "タイトル"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "コンテンツ"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "パス"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<strong>コンテンツを編集・追加するためには，TinyMCE プラグインがインストールされていなければなりません。</strong>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "コンテンツの編集・追加"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "統計ページの追加"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "新規ページの作成"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "統計ページの編集"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "下記のフォームには作成された全ての統計ページが表示されています。右のリンクを使用してページの編集および削除が可能です。"
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "ページを追加・編集するために下記のフォームを使用してください。"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "この path は他の統計ページで既に使用されています。"
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "ページは正常に保存されました。"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "ページは正常に削除されました。"
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "ページが作成されていません。"
