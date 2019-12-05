@@ -98,7 +98,9 @@ class StaticPageForm extends Form {
 	/**
 	 * Save form values into the database
 	 */
-	function execute() {
+	function execute(...$functionParams) {
+		parent::execute(...$functionParams);
+
 		$staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
 		if ($this->staticPageId) {
 			// Load and update an existing page
