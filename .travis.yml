@@ -2,7 +2,6 @@
 # .travis.yml - PKP Plugins Integration
 
 language: php
-dist: trusty
 
 addons:
   apt:
@@ -12,6 +11,8 @@ sudo: required
 
 php:
   - 7.2
+  - 7.3
+  - 7.4
 env:
   - APPLICATION=ojs BRANCH=master TEST=mysql
   - APPLICATION=ojs BRANCH=master TEST=pgsql
@@ -24,12 +25,13 @@ install:
   - cd ~/${APPLICATION}
   - git submodule update --init --recursive
   - source lib/pkp/tools/travis/prepare-tests.sh
-  - lib/pkp/tools/travis/install-composer-dependencies.sh
-  - npm i g -npm && npm install && npm run build
   # Prepare server environment
   - source lib/pkp/tools/travis/start-xvfb.sh
   - lib/pkp/tools/travis/start-selenium.sh
   - lib/pkp/tools/travis/prepare-webserver.sh
+  # Build/install dependencies
+  - lib/pkp/tools/travis/install-composer-dependencies.sh
+  - npm i g -npm && npm install && npm run build
   # Make sure we're using the current checkout of this repo rather than the built-in OJS/OMP version
   - rm -rf ~/${APPLICATION}/plugins/generic/staticPages
   - ln -s ${TRAVIS_BUILD_DIR} ~/${APPLICATION}/plugins/generic/staticPages
