@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-30T15:49:00-07:00\n"
+"PO-Revision-Date: 2019-09-30T15:49:00-07:00\n"
+"Language: \n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Добавка за статични страници"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Тази добавка позволява управляване на статично съдържание."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Статични страници"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Заглавие"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Съдържание"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Път"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<p><strong>Добавката TinyMCE трябва да е инсталирана и активирана за да може да добавяте/редактирате съдържание.</strong></p>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Редактиране/добавяне на съдържание"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Добавяне на статична страница"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Добавяне на нова страница"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Редактиране на статична страница"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Не са създадени статични страници."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "Формулярът по-долу показва всички статични страници, които сте създали. Вие можете да ги редактирате или изтриете, използвайки хипервръзките отдясно."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Използвайте формуляра по-долу за да добавите/редактирате съдържанието на страниците."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Полето Път трябва да съдържа само бекви и цифри и семволите '.', '/', '-', и '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Тази страница ще бъде достъпна на адрес: <blockquote>{$pagesPath}</blockquote>...където %PATH% е въведеният по-горе път. <strong>Бележка:</strong> Не може две страници да имат еднакъв път. Използването на използван за системата път може да предизвика изгубване на достъп до важни функции.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Този път вече съществува за друга статична страница."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Страницата беше съхранена успешно."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Страницата беше изтрита успешно."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Не бяха създадени страници"
