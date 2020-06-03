@@ -34,9 +34,7 @@ msgid "plugins.generic.staticPages.path"
 msgstr "Путь"
 
 msgid "plugins.generic.staticPages.requirement.tinymce"
-msgstr ""
-"<p>2<strong>Модуль «TinyMCE» должен быть установлен и включен для добавления/"
-"редактирования контента.</strong>4</p>"
+msgstr "<p><strong>Модуль «TinyMCE» должен быть установлен и включен для добавления/редактирования контента.</strong></p>"
 
 msgid "plugins.generic.staticPages.editAddContent"
 msgstr "Редактировать/Добавить контент"
