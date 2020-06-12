@@ -14,10 +14,10 @@ php:
   - 7.3
   - 7.4
 env:
-  - APPLICATION=ojs BRANCH=master TEST=mysql
-  - APPLICATION=ojs BRANCH=master TEST=pgsql
-  - APPLICATION=omp BRANCH=master TEST=mysql
-  - APPLICATION=omp BRANCH=master TEST=pgsql
+  - APPLICATION=ojs BRANCH=stable-3_2_0 TEST=mysql
+  - APPLICATION=ojs BRANCH=stable-3_2_0 TEST=pgsql
+  - APPLICATION=omp BRANCH=stable-3_2_0 TEST=mysql
+  - APPLICATION=omp BRANCH=stable-3_2_0 TEST=pgsql
 
 install:
   # Prepare OJS/OMP environment
