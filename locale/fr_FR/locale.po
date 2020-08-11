@@ -1,10 +1,11 @@
+# Paul Heckler <paul.d.heckler@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
 "PO-Revision-Date: 2023-02-17 03:02+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/plugins/"
 "static-pages-plugin/fr_FR/>\n"
 "Language: fr_FR\n"
