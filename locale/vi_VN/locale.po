@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-07-11 18:40+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Không có trang nào được tạo"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Trang đã xóa thành công."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Trang được lưu thành công."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Đường dẫn này đã tồn tại cho một trang tĩnh khác."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p> Trang này sẽ có thể truy cập tại: <blockquote>{$pagesPath}</blockquote>"
+"...trong đó %PATH% là đường dẫn được nhập ở trên.<strong>Lưu ý:</strong> "
+"Không có hai trang có thể có cùng một đường dẫn. Sử dụng các đường dẫn được "
+"tích hợp vào hệ thống có thể khiến bạn mất quyền truy cập vào các chức năng "
+"quan trọng.</p>"
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Trường đường dẫn phải chỉ chứa các ký tự chữ và số cộng với '.', '/', '-' và "
+"'_'."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Sử dụng mẫu dưới đây để thêm/chỉnh sửa nội dung trang."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Biểu mẫu bên dưới hiển thị cho bạn tất cả các trang tĩnh bạn đã tạo. Bạn có "
+"thể chỉnh sửa hoặc xóa các trang bằng các liên kết ở phía bên tay phải."
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Không có trang tĩnh nào được tạo."
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Chỉnh sửa trang tĩnh"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Thêm trang mới"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Thêm trang tĩnh"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Chỉnh sửa/Thêm nội dung"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>Plugin TinyMCE phải được cài đặt và bật để thêm/chỉnh sửa nội "
+"dung</strong></p>"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Đường dẫn"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Nội dung"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Tiêu đề"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Trang tĩnh"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Plugin này cho phép Quản lý nội dung tĩnh."
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Plugin trang tĩnh"
