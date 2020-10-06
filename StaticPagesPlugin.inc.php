@@ -162,7 +162,7 @@ class StaticPagesPlugin extends GenericPlugin {
 		$dispatcher = $request->getDispatcher();
 		import('lib.pkp.classes.linkAction.request.RedirectAction');
 		return array_merge(
-			$this->getEnabled()?array(
+			$this->getEnabled()?[
 				new LinkAction(
 					'settings',
 					new RedirectAction($dispatcher->url(
@@ -174,17 +174,17 @@ class StaticPagesPlugin extends GenericPlugin {
 					__('plugins.generic.staticPages.editAddContent'),
 					null
 				),
-			):array(),
+			]:[],
 			parent::getActions($request, $actionArgs)
 		);
 	}
 
 	/**
-	 * Get the filename of the ADODB schema for this plugin.
-	 * @return string Full path and filename to schema descriptor.
+	 * @copydoc Plugin::getInstallMigration()
 	 */
-	function getInstallSchemaFile() {
-		return $this->getPluginPath() . '/schema.xml';
+	function getInstallMigration() {
+		$this->import('StaticPagesSchemaMigration');
+		return new StaticPagesSchemaMigration();
 	}
 
 	/**
