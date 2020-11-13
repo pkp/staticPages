@@ -23,21 +23,16 @@ class StaticPagesDAO extends DAO {
 	 * @param $contextId int Optional context ID
 	 */
 	function getById($staticPageId, $contextId = null) {
-		$params = array((int) $staticPageId);
-		if ($contextId) $params[] = $contextId;
+		$params = [(int) $staticPageId];
+		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
 			'SELECT * FROM static_pages WHERE static_page_id = ?'
 			. ($contextId?' AND context_id = ?':''),
 			$params
 		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -49,10 +44,9 @@ class StaticPagesDAO extends DAO {
 	function getByContextId($contextId, $rangeInfo = null) {
 		$result = $this->retrieveRange(
 			'SELECT * FROM static_pages WHERE context_id = ?',
-			(int) $contextId,
+			[(int) $contextId],
 			$rangeInfo
 		);
-
 		return new DAOResultFactory($result, $this, '_fromRow');
 	}
 
@@ -65,15 +59,10 @@ class StaticPagesDAO extends DAO {
 	function getByPath($contextId, $path) {
 		$result = $this->retrieve(
 			'SELECT * FROM static_pages WHERE context_id = ? AND path = ?',
-			array((int) $contextId, $path)
+			[(int) $contextId, $path]
 		);
-
-		$returner = null;
-		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
-		}
-		$result->Close();
-		return $returner;
+		$row = $result->current();
+		return $row ? $this->_fromRow((array) $row) : null;
 	}
 
 	/**
@@ -84,10 +73,7 @@ class StaticPagesDAO extends DAO {
 	function insertObject($staticPage) {
 		$this->update(
 			'INSERT INTO static_pages (context_id, path) VALUES (?, ?)',
-			array(
-				(int) $staticPage->getContextId(),
-				$staticPage->getPath()
-			)
+			[(int) $staticPage->getContextId(), $staticPage->getPath()]
 		);
 
 		$staticPage->setId($this->getInsertId());
@@ -106,11 +92,11 @@ class StaticPagesDAO extends DAO {
 			SET	context_id = ?,
 				path = ?
 			WHERE	static_page_id = ?',
-			array(
+			[
 				(int) $staticPage->getContextId(),
 				$staticPage->getPath(),
 				(int) $staticPage->getId()
-			)
+			]
 		);
 		$this->updateLocaleFields($staticPage);
 	}
@@ -122,11 +108,11 @@ class StaticPagesDAO extends DAO {
 	function deleteById($staticPageId) {
 		$this->update(
 			'DELETE FROM static_pages WHERE static_page_id = ?',
-			(int) $staticPageId
+			[(int) $staticPageId]
 		);
 		$this->update(
 			'DELETE FROM static_page_settings WHERE static_page_id = ?',
-			(int) $staticPageId
+			[(int) $staticPageId]
 		);
 	}
 
@@ -173,7 +159,7 @@ class StaticPagesDAO extends DAO {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'content');
+		return ['title', 'content'];
 	}
 
 	/**
@@ -181,9 +167,9 @@ class StaticPagesDAO extends DAO {
 	 * @param $author object
 	 */
 	function updateLocaleFields(&$staticPage) {
-		$this->updateDataObjectSettings('static_page_settings', $staticPage, array(
-			'static_page_id' => $staticPage->getId()
-		));
+		$this->updateDataObjectSettings('static_page_settings', $staticPage,
+			['static_page_id' => $staticPage->getId()]
+		);
 	}
 }
 
