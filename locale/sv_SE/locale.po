@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-18 01:22+0000\n"
+"PO-Revision-Date: 2020-12-15 10:52+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/"
-"static-pages-plugin/sv/>\n"
+"static-pages-plugin/sv_SE/>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -56,3 +56,16 @@ msgstr "Titel"
 
 msgid "plugins.generic.staticPages.staticPages"
 msgstr "Statiska sidor"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Redigera en statisk sida"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Lägg till en statisk sida"
+
+msgid "plugins.generic.staticPages.description"
+msgstr ""
+"Detta plugin gör det möjligt att administrera innehållet på statiska sidor."
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Plugin för statiska sidor"
