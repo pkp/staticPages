@@ -1,11 +1,13 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2023.
+# FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
 "PO-Revision-Date: 2023-02-17 03:02+0000\n"
-"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
+"no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
 "plugins/static-pages-plugin/nb_NO/>\n"
 "Language: nb\n"
