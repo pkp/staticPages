@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-02-12 15:53+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/mk_MK/>\n"
+"Language: mk_MK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Нема создадено страници"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Страницата е успешно избришана."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Страницата е успешно зачувана."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Оваа патека веќе постои за друга статична страна."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Оваа страница ќе биде достапна на: <blockquote>{$pagesPath}</blockquote>"
+"...каде %PATH% е патеката внесена погоре. <strong>Забелешка:</strong> Две "
+"или повеќе страници не можат да ја имаат истата патека. Користењето на "
+"патеки кои се вградени во системот може да доведе до губиток на вашиот "
+"пристап до важни функции.</p>"
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Полето за патека мора да соджи само алфанумерички знаци плус '.', '/', '-', "
+"и '_'."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr ""
+"Користете го формуларот подолу за да додадете/уредите содржина на страницата."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Формуларот подолу ви ги прикажува сите статички страници кои ги имате "
+"создадено. Можете да ги уредите или избришете страниците користејќи ги "
+"линковите на десната страна."
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Нема создадени статички страници."
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Уреди статичка страница"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Додади нова страница"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Додади статичка страница"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Уреди/додади содржина"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>TinyMCE плагинот мора да биде инсталиран и овозможен како би "
+"додавале/уредувале содржина.</strong></p>"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Патека"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Содржина"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Наслов"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Статички страници"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Овој плагин овозможува управување со статичка содржина."
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Плагин за статични страници"
