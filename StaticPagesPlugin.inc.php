@@ -166,7 +166,7 @@ class StaticPagesPlugin extends GenericPlugin {
 				new LinkAction(
 					'settings',
 					new RedirectAction($dispatcher->url(
-						$request, ROUTE_PAGE,
+						$request, PKPApplication::ROUTE_PAGE,
 						null, 'management', 'settings', 'website',
 						array('uid' => uniqid()), // Force reload
 						'staticPages' // Anchor for tab
