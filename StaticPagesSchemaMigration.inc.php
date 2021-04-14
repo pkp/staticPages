@@ -14,7 +14,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Support\Facades\Schema;
 
 class StaticPagesSchemaMigration extends Migration {
         /**
@@ -23,14 +23,14 @@ class StaticPagesSchemaMigration extends Migration {
          */
         public function up() {
 		// List of static pages for each context
-		Capsule::schema()->create('static_pages', function (Blueprint $table) {
+		Schema::create('static_pages', function (Blueprint $table) {
 			$table->bigInteger('static_page_id')->autoIncrement();
 			$table->string('path', 255);
 			$table->bigInteger('context_id');
 		});
 
 		// Static Page settings.
-		Capsule::schema()->create('static_page_settings', function (Blueprint $table) {
+		Schema::create('static_page_settings', function (Blueprint $table) {
 			$table->bigInteger('static_page_id');
 			$table->string('locale', 14)->default('');
 			$table->string('setting_name', 255);
