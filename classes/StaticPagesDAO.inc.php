@@ -12,10 +12,9 @@
  * Operations for retrieving and modifying StaticPages objects.
  */
 
-import('lib.pkp.classes.db.DAO');
 import('plugins.generic.staticPages.classes.StaticPage');
 
-class StaticPagesDAO extends DAO
+class StaticPagesDAO extends \PKP\db\DAO
 {
     /**
      * Get a static page by ID
