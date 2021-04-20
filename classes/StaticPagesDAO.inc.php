@@ -15,161 +15,189 @@
 import('lib.pkp.classes.db.DAO');
 import('plugins.generic.staticPages.classes.StaticPage');
 
-class StaticPagesDAO extends DAO {
+class StaticPagesDAO extends DAO
+{
+    /**
+     * Get a static page by ID
+     *
+     * @param $staticPageId int Static page ID
+     * @param $contextId int Optional context ID
+     */
+    public function getById($staticPageId, $contextId = null)
+    {
+        $params = [(int) $staticPageId];
+        if ($contextId) {
+            $params[] = (int) $contextId;
+        }
 
-	/**
-	 * Get a static page by ID
-	 * @param $staticPageId int Static page ID
-	 * @param $contextId int Optional context ID
-	 */
-	function getById($staticPageId, $contextId = null) {
-		$params = [(int) $staticPageId];
-		if ($contextId) $params[] = (int) $contextId;
+        $result = $this->retrieve(
+            'SELECT * FROM static_pages WHERE static_page_id = ?'
+            . ($contextId ? ' AND context_id = ?' : ''),
+            $params
+        );
+        $row = $result->current();
+        return $row ? $this->_fromRow((array) $row) : null;
+    }
 
-		$result = $this->retrieve(
-			'SELECT * FROM static_pages WHERE static_page_id = ?'
-			. ($contextId?' AND context_id = ?':''),
-			$params
-		);
-		$row = $result->current();
-		return $row ? $this->_fromRow((array) $row) : null;
-	}
+    /**
+     * Get a set of static pages by context ID
+     *
+     * @param $contextId int
+     * @param $rangeInfo Object optional
+     *
+     * @return DAOResultFactory
+     */
+    public function getByContextId($contextId, $rangeInfo = null)
+    {
+        $result = $this->retrieveRange(
+            'SELECT * FROM static_pages WHERE context_id = ?',
+            [(int) $contextId],
+            $rangeInfo
+        );
+        return new DAOResultFactory($result, $this, '_fromRow');
+    }
 
-	/**
-	 * Get a set of static pages by context ID
-	 * @param $contextId int
-	 * @param $rangeInfo Object optional
-	 * @return DAOResultFactory
-	 */
-	function getByContextId($contextId, $rangeInfo = null) {
-		$result = $this->retrieveRange(
-			'SELECT * FROM static_pages WHERE context_id = ?',
-			[(int) $contextId],
-			$rangeInfo
-		);
-		return new DAOResultFactory($result, $this, '_fromRow');
-	}
+    /**
+     * Get a static page by path.
+     *
+     * @param $contextId int Context ID
+     * @param $path string Path
+     *
+     * @return StaticPage
+     */
+    public function getByPath($contextId, $path)
+    {
+        $result = $this->retrieve(
+            'SELECT * FROM static_pages WHERE context_id = ? AND path = ?',
+            [(int) $contextId, $path]
+        );
+        $row = $result->current();
+        return $row ? $this->_fromRow((array) $row) : null;
+    }
 
-	/**
-	 * Get a static page by path.
-	 * @param $contextId int Context ID
-	 * @param $path string Path
-	 * @return StaticPage
-	 */
-	function getByPath($contextId, $path) {
-		$result = $this->retrieve(
-			'SELECT * FROM static_pages WHERE context_id = ? AND path = ?',
-			[(int) $contextId, $path]
-		);
-		$row = $result->current();
-		return $row ? $this->_fromRow((array) $row) : null;
-	}
+    /**
+     * Insert a static page.
+     *
+     * @param $staticPage StaticPage
+     *
+     * @return int Inserted static page ID
+     */
+    public function insertObject($staticPage)
+    {
+        $this->update(
+            'INSERT INTO static_pages (context_id, path) VALUES (?, ?)',
+            [(int) $staticPage->getContextId(), $staticPage->getPath()]
+        );
 
-	/**
-	 * Insert a static page.
-	 * @param $staticPage StaticPage
-	 * @return int Inserted static page ID
-	 */
-	function insertObject($staticPage) {
-		$this->update(
-			'INSERT INTO static_pages (context_id, path) VALUES (?, ?)',
-			[(int) $staticPage->getContextId(), $staticPage->getPath()]
-		);
+        $staticPage->setId($this->getInsertId());
+        $this->updateLocaleFields($staticPage);
 
-		$staticPage->setId($this->getInsertId());
-		$this->updateLocaleFields($staticPage);
+        return $staticPage->getId();
+    }
 
-		return $staticPage->getId();
-	}
-
-	/**
-	 * Update the database with a static page object
-	 * @param $staticPage StaticPage
-	 */
-	function updateObject($staticPage) {
-		$this->update(
-			'UPDATE	static_pages
+    /**
+     * Update the database with a static page object
+     *
+     * @param $staticPage StaticPage
+     */
+    public function updateObject($staticPage)
+    {
+        $this->update(
+            'UPDATE	static_pages
 			SET	context_id = ?,
 				path = ?
 			WHERE	static_page_id = ?',
-			[
-				(int) $staticPage->getContextId(),
-				$staticPage->getPath(),
-				(int) $staticPage->getId()
-			]
-		);
-		$this->updateLocaleFields($staticPage);
-	}
+            [
+                (int) $staticPage->getContextId(),
+                $staticPage->getPath(),
+                (int) $staticPage->getId()
+            ]
+        );
+        $this->updateLocaleFields($staticPage);
+    }
 
-	/**
-	 * Delete a static page by ID.
-	 * @param $staticPageId int
-	 */
-	function deleteById($staticPageId) {
-		$this->update(
-			'DELETE FROM static_pages WHERE static_page_id = ?',
-			[(int) $staticPageId]
-		);
-		$this->update(
-			'DELETE FROM static_page_settings WHERE static_page_id = ?',
-			[(int) $staticPageId]
-		);
-	}
+    /**
+     * Delete a static page by ID.
+     *
+     * @param $staticPageId int
+     */
+    public function deleteById($staticPageId)
+    {
+        $this->update(
+            'DELETE FROM static_pages WHERE static_page_id = ?',
+            [(int) $staticPageId]
+        );
+        $this->update(
+            'DELETE FROM static_page_settings WHERE static_page_id = ?',
+            [(int) $staticPageId]
+        );
+    }
 
-	/**
-	 * Delete a static page object.
-	 * @param $staticPage StaticPage
-	 */
-	function deleteObject($staticPage) {
-		$this->deleteById($staticPage->getId());
-	}
+    /**
+     * Delete a static page object.
+     *
+     * @param $staticPage StaticPage
+     */
+    public function deleteObject($staticPage)
+    {
+        $this->deleteById($staticPage->getId());
+    }
 
-	/**
-	 * Generate a new static page object.
-	 * @return StaticPage
-	 */
-	function newDataObject() {
-		return new StaticPage();
-	}
+    /**
+     * Generate a new static page object.
+     *
+     * @return StaticPage
+     */
+    public function newDataObject()
+    {
+        return new StaticPage();
+    }
 
-	/**
-	 * Return a new static pages object from a given row.
-	 * @return StaticPage
-	 */
-	function _fromRow($row) {
-		$staticPage = $this->newDataObject();
-		$staticPage->setId($row['static_page_id']);
-		$staticPage->setPath($row['path']);
-		$staticPage->setContextId($row['context_id']);
+    /**
+     * Return a new static pages object from a given row.
+     *
+     * @return StaticPage
+     */
+    public function _fromRow($row)
+    {
+        $staticPage = $this->newDataObject();
+        $staticPage->setId($row['static_page_id']);
+        $staticPage->setPath($row['path']);
+        $staticPage->setContextId($row['context_id']);
 
-		$this->getDataObjectSettings('static_page_settings', 'static_page_id', $row['static_page_id'], $staticPage);
-		return $staticPage;
-	}
+        $this->getDataObjectSettings('static_page_settings', 'static_page_id', $row['static_page_id'], $staticPage);
+        return $staticPage;
+    }
 
-	/**
-	 * Get the insert ID for the last inserted static page.
-	 * @return int
-	 */
-	function getInsertId() {
-		return $this->_getInsertId('static_pages', 'static_page_id');
-	}
+    /**
+     * Get the insert ID for the last inserted static page.
+     *
+     * @return int
+     */
+    public function getInsertId()
+    {
+        return $this->_getInsertId('static_pages', 'static_page_id');
+    }
 
-	/**
-	 * Get field names for which data is localized.
-	 * @return array
-	 */
-	function getLocaleFieldNames() {
-		return ['title', 'content'];
-	}
+    /**
+     * Get field names for which data is localized.
+     *
+     * @return array
+     */
+    public function getLocaleFieldNames()
+    {
+        return ['title', 'content'];
+    }
 
-	/**
-	 * Update the localized data for this object
-	 * @param $author object
-	 */
-	function updateLocaleFields(&$staticPage) {
-		$this->updateDataObjectSettings('static_page_settings', $staticPage,
-			['static_page_id' => $staticPage->getId()]
-		);
-	}
+    /**
+     * Update the localized data for this object
+     */
+    public function updateLocaleFields(&$staticPage)
+    {
+        $this->updateDataObjectSettings(
+            'static_page_settings',
+            $staticPage,
+            ['static_page_id' => $staticPage->getId()]
+        );
+    }
 }
-

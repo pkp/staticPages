@@ -15,52 +15,56 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
-class StaticPageGridRow extends GridRow {
+class StaticPageGridRow extends GridRow
+{
+    //
+    // Overridden template methods
+    //
+    /**
+     * @copydoc GridRow::initialize()
+     *
+     * @param null|mixed $template
+     */
+    public function initialize($request, $template = null)
+    {
+        parent::initialize($request, $template);
 
-	//
-	// Overridden template methods
-	//
-	/**
-	 * @copydoc GridRow::initialize()
-	 */
-	function initialize($request, $template = null) {
-		parent::initialize($request, $template);
+        $staticPageId = $this->getId();
+        if (!empty($staticPageId)) {
+            $router = $request->getRouter();
 
-		$staticPageId = $this->getId();
-		if (!empty($staticPageId)) {
-			$router = $request->getRouter();
+            // Create the "edit static page" action
+            import('lib.pkp.classes.linkAction.request.AjaxModal');
+            $this->addAction(
+                new LinkAction(
+                    'editStaticPage',
+                    new AjaxModal(
+                        $router->url($request, null, null, 'editStaticPage', null, ['staticPageId' => $staticPageId]),
+                        __('grid.action.edit'),
+                        'modal_edit',
+                        true
+                    ),
+                    __('grid.action.edit'),
+                    'edit'
+                )
+            );
 
-			// Create the "edit static page" action
-			import('lib.pkp.classes.linkAction.request.AjaxModal');
-			$this->addAction(
-				new LinkAction(
-					'editStaticPage',
-					new AjaxModal(
-						$router->url($request, null, null, 'editStaticPage', null, array('staticPageId' => $staticPageId)),
-						__('grid.action.edit'),
-						'modal_edit',
-						true),
-					__('grid.action.edit'),
-					'edit'
-				)
-			);
-
-			// Create the "delete static page" action
-			import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
-			$this->addAction(
-				new LinkAction(
-					'delete',
-					new RemoteActionConfirmationModal(
-						$request->getSession(),
-						__('common.confirmDelete'),
-						__('grid.action.delete'),
-						$router->url($request, null, null, 'delete', null, array('staticPageId' => $staticPageId)), 'modal_delete'
-					),
-					__('grid.action.delete'),
-					'delete'
-				)
-			);
-		}
-	}
+            // Create the "delete static page" action
+            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
+            $this->addAction(
+                new LinkAction(
+                    'delete',
+                    new RemoteActionConfirmationModal(
+                        $request->getSession(),
+                        __('common.confirmDelete'),
+                        __('grid.action.delete'),
+                        $router->url($request, null, null, 'delete', null, ['staticPageId' => $staticPageId]),
+                        'modal_delete'
+                    ),
+                    __('grid.action.delete'),
+                    'delete'
+                )
+            );
+        }
+    }
 }
-
