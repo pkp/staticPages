@@ -14,7 +14,7 @@
  *
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class StaticPageForm extends Form
 {
@@ -43,12 +43,12 @@ class StaticPageForm extends Form
         $this->plugin = $staticPagesPlugin;
 
         // Add form checks
-        $this->addCheck(new FormValidatorPost($this));
-        $this->addCheck(new FormValidatorCSRF($this));
-        $this->addCheck(new FormValidator($this, 'title', 'required', 'plugins.generic.staticPages.nameRequired'));
-        $this->addCheck(new FormValidatorRegExp($this, 'path', 'required', 'plugins.generic.staticPages.pathRegEx', '/^[a-zA-Z0-9\/._-]+$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
+        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'title', 'required', 'plugins.generic.staticPages.nameRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'path', 'required', 'plugins.generic.staticPages.pathRegEx', '/^[a-zA-Z0-9\/._-]+$/'));
         $form = $this;
-        $this->addCheck(new FormValidatorCustom($this, 'path', 'required', 'plugins.generic.staticPages.duplicatePath', function ($path) use ($form) {
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'path', 'required', 'plugins.generic.staticPages.duplicatePath', function ($path) use ($form) {
             $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
             $page = $staticPagesDao->getByPath($form->contextId, $path);
             return !$page || $page->getId() == $form->staticPageId;

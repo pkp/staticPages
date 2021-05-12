@@ -13,6 +13,10 @@
  * @brief Handle static pages grid requests.
  */
 
+use PKP\linkAction\LinkAction;
+use PKP\form\Form;
+use PKP\linkAction\request\AjaxModal;
+
 import('lib.pkp.classes.controllers.grid.GridHandler');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridRow');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider');
@@ -78,7 +82,6 @@ class StaticPageGridHandler extends GridHandler
 
         // Add grid-level actions
         $router = $request->getRouter();
-        import('lib.pkp.classes.linkAction.request.AjaxModal');
         $this->addAction(
             new LinkAction(
                 'addStaticPage',
@@ -133,7 +136,6 @@ class StaticPageGridHandler extends GridHandler
     public function index($args, $request)
     {
         $context = $request->getContext();
-        import('lib.pkp.classes.form.Form');
         $form = new Form(self::$plugin->getTemplateResource('staticPages.tpl'));
         return new JSONMessage(true, $form->fetch($request));
     }

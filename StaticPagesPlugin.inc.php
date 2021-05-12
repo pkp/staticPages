@@ -12,7 +12,9 @@
  * Static pages plugin main class
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\linkAction\LinkAction;
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\request\RedirectAction;
 
 class StaticPagesPlugin extends GenericPlugin
 {
@@ -181,7 +183,6 @@ class StaticPagesPlugin extends GenericPlugin
     public function getActions($request, $actionArgs)
     {
         $dispatcher = $request->getDispatcher();
-        import('lib.pkp.classes.linkAction.request.RedirectAction');
         return array_merge(
             $this->getEnabled() ? [
                 new LinkAction(

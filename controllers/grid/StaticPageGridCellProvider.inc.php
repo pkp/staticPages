@@ -14,7 +14,9 @@
  */
 
 import('lib.pkp.classes.controllers.grid.GridCellProvider');
-import('lib.pkp.classes.linkAction.request.RedirectAction');
+
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
 
 class StaticPageGridCellProvider extends GridCellProvider
 {

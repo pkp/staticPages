@@ -15,6 +15,10 @@
 
 import('lib.pkp.classes.controllers.grid.GridRow');
 
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+
 class StaticPageGridRow extends GridRow
 {
     //
@@ -34,7 +38,6 @@ class StaticPageGridRow extends GridRow
             $router = $request->getRouter();
 
             // Create the "edit static page" action
-            import('lib.pkp.classes.linkAction.request.AjaxModal');
             $this->addAction(
                 new LinkAction(
                     'editStaticPage',
@@ -50,7 +53,6 @@ class StaticPageGridRow extends GridRow
             );
 
             // Create the "delete static page" action
-            import('lib.pkp.classes.linkAction.request.RemoteActionConfirmationModal');
             $this->addAction(
                 new LinkAction(
                     'delete',
