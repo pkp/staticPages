@@ -13,10 +13,11 @@
  * @brief Class for a cell provider to display information about static pages
  */
 
-import('lib.pkp.classes.controllers.grid.GridCellProvider');
-
+use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RedirectAction;
+use PKP\controllers\grid\GridHandler;
 
 class StaticPageGridCellProvider extends GridCellProvider
 {
@@ -32,7 +33,7 @@ class StaticPageGridCellProvider extends GridCellProvider
      *
      * @return array an array of LinkAction instances
      */
-    public function getCellActions($request, $row, $column, $position = GRID_ACTION_POSITION_DEFAULT)
+    public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
         $staticPage = $row->getData();
 

@@ -17,8 +17,9 @@ use PKP\linkAction\LinkAction;
 use PKP\form\Form;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
+use PKP\controllers\grid\GridColumn;
+use PKP\controllers\grid\GridHandler;
 
-import('lib.pkp.classes.controllers.grid.GridHandler');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridRow');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider');
 
