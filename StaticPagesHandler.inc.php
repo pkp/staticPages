@@ -70,7 +70,7 @@ class StaticPagesHandler extends Handler
 
         // Ensure that if we're previewing, the current user is a manager or admin.
         $roles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-        if (!self::$staticPage->getId() && count(array_intersect([ROLE_ID_MANAGER, ROLE_ID_SITE_ADMIN], $roles)) == 0) {
+        if (!self::$staticPage->getId() && count(array_intersect([\PKP\security\Role::ROLE_ID_MANAGER, \PKP\security\Role::ROLE_ID_SITE_ADMIN], $roles)) == 0) {
             fatalError('The current user is not permitted to preview.');
         }
 

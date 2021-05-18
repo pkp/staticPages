@@ -19,6 +19,7 @@ use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
+use PKP\security\Role;
 
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridRow');
 import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider');
@@ -45,7 +46,7 @@ class StaticPageGridHandler extends GridHandler
     {
         parent::__construct();
         $this->addRoleAssignment(
-            [ROLE_ID_MANAGER],
+            [Role::ROLE_ID_MANAGER],
             ['index', 'fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete']
         );
     }
