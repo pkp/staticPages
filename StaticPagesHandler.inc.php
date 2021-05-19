@@ -66,7 +66,7 @@ class StaticPagesHandler extends Handler
 
         AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : CONTEXT_ID_NONE;
+        $contextId = $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_ID_NONE;
 
         // Ensure that if we're previewing, the current user is a manager or admin.
         $roles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);

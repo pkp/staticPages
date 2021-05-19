@@ -137,7 +137,7 @@ class StaticPagesPlugin extends GenericPlugin
             // Look for a static page with the given path
             $context = $request->getContext();
             $staticPage = $staticPagesDao->getByPath(
-                $context ? $context->getId() : CONTEXT_ID_NONE,
+                $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_ID_NONE,
                 $path
             );
         }
