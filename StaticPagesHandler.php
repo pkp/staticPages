@@ -14,10 +14,11 @@
 
 namespace APP\plugins\generic\staticPages;
 
+use APP\core\Application;
 use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use APP\plugins\generic\staticPages\classes\StaticPage;
-use APP\i18n\AppLocale;
 use APP\template\TemplateManager;
+use PKP\security\Role;
 
 class StaticPagesHandler extends \APP\handler\Handler
 {
@@ -52,14 +53,12 @@ class StaticPagesHandler extends \APP\handler\Handler
     public function view($args, $request)
     {
         $path = array_shift($args);
-
-        AppLocale::requireComponents(LOCALE_COMPONENT_PKP_COMMON, LOCALE_COMPONENT_APP_COMMON, LOCALE_COMPONENT_PKP_USER);
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_ID_NONE;
+        $contextId = $context ? $context->getId() : Application::CONTEXT_ID_NONE;
 
         // Ensure that if we're previewing, the current user is a manager or admin.
-        $roles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-        if (!$this->staticPage->getId() && count(array_intersect([\PKP\security\Role::ROLE_ID_MANAGER, \PKP\security\Role::ROLE_ID_SITE_ADMIN], $roles)) == 0) {
+        $roles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
+        if (!$this->staticPage->getId() && count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN], $roles)) == 0) {
             fatalError('The current user is not permitted to preview.');
         }
 
