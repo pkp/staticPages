@@ -18,7 +18,6 @@ use APP\plugins\generic\staticPages\controllers\grid\StaticPageGridHandler;
 use APP\template\TemplateManager;
 use APP\core\Application;
 use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
-use PKP\core\PKPApplication;
 use PKP\core\Registry;
 use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
@@ -126,6 +125,7 @@ class StaticPagesPlugin extends GenericPlugin
         $op = & $args[1];
         $handler = & $args[3];
 
+        /** @var StaticPagesDAO */
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         if ($page == 'pages' && $op == 'preview') {
             // This is a preview request; mock up a static page to display.
@@ -147,7 +147,7 @@ class StaticPagesPlugin extends GenericPlugin
             // Look for a static page with the given path
             $context = $request->getContext();
             $staticPage = $staticPagesDao->getByPath(
-                $context ? $context->getId() : \PKP\core\PKPApplication::CONTEXT_ID_NONE,
+                $context ? $context->getId() : Application::CONTEXT_ID_NONE,
                 $path
             );
         }
@@ -194,7 +194,7 @@ class StaticPagesPlugin extends GenericPlugin
                     'settings',
                     new RedirectAction($dispatcher->url(
                         $request,
-                        PKPApplication::ROUTE_PAGE,
+                        Application::ROUTE_PAGE,
                         null,
                         'management',
                         'settings',

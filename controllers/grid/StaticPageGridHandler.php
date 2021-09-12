@@ -31,7 +31,7 @@ use PKP\security\Role;
 class StaticPageGridHandler extends GridHandler
 {
     /** @var StaticPagesPlugin The static pages plugin */
-    var $plugin;
+    public $plugin;
 
     /**
      * Constructor
