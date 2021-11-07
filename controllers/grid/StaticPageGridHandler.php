@@ -127,8 +127,8 @@ class StaticPageGridHandler extends GridHandler
     /**
      * Display the grid's containing page.
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      */
     public function index($args, $request)
     {
@@ -140,8 +140,8 @@ class StaticPageGridHandler extends GridHandler
     /**
      * An action to add a new custom static page
      *
-     * @param $args array Arguments to the request
-     * @param $request PKPRequest Request object
+     * @param array $args Arguments to the request
+     * @param PKPRequest $request Request object
      */
     public function addStaticPage($args, $request)
     {
@@ -153,8 +153,8 @@ class StaticPageGridHandler extends GridHandler
     /**
      * An action to edit a static page
      *
-     * @param $args array Arguments to the request
-     * @param $request PKPRequest Request object
+     * @param array $args Arguments to the request
+     * @param PKPRequest $request Request object
      *
      * @return string Serialized JSON object
      */
@@ -173,8 +173,8 @@ class StaticPageGridHandler extends GridHandler
     /**
      * Update a custom block
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      */
@@ -193,17 +193,16 @@ class StaticPageGridHandler extends GridHandler
             // Save the results
             $staticPageForm->execute();
             return DAO::getDataChangedEvent();
-        } else {
-            // Present any errors
-            return new JSONMessage(true, $staticPageForm->fetch($request));
         }
+        // Present any errors
+        return new JSONMessage(true, $staticPageForm->fetch($request));
     }
 
     /**
      * Delete a static page
      *
-     * @param $args array
-     * @param $request PKPRequest
+     * @param array $args
+     * @param PKPRequest $request
      *
      * @return string Serialized JSON object
      */

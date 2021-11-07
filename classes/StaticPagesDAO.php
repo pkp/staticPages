@@ -21,8 +21,8 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Get a static page by ID
      *
-     * @param $staticPageId int Static page ID
-     * @param $contextId int Optional context ID
+     * @param int $staticPageId Static page ID
+     * @param int $contextId Optional context ID
      */
     public function getById($staticPageId, $contextId = null)
     {
@@ -43,8 +43,8 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Get a set of static pages by context ID
      *
-     * @param $contextId int
-     * @param $rangeInfo Object optional
+     * @param int $contextId
+     * @param RangeInfo $rangeInfo optional
      *
      * @return DAOResultFactory
      */
@@ -61,8 +61,8 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Get a static page by path.
      *
-     * @param $contextId int Context ID
-     * @param $path string Path
+     * @param int $contextId Context ID
+     * @param string $path Path
      *
      * @return StaticPage
      */
@@ -79,7 +79,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Insert a static page.
      *
-     * @param $staticPage StaticPage
+     * @param StaticPage $staticPage
      *
      * @return int Inserted static page ID
      */
@@ -99,7 +99,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Update the database with a static page object
      *
-     * @param $staticPage StaticPage
+     * @param StaticPage $staticPage
      */
     public function updateObject($staticPage)
     {
@@ -120,7 +120,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Delete a static page by ID.
      *
-     * @param $staticPageId int
+     * @param int $staticPageId
      */
     public function deleteById($staticPageId)
     {
@@ -137,7 +137,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Delete a static page object.
      *
-     * @param $staticPage StaticPage
+     * @param StaticPage $staticPage
      */
     public function deleteObject($staticPage)
     {

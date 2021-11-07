@@ -50,7 +50,7 @@ class StaticPagesPlugin extends GenericPlugin
     /**
      * Check whether or not the TinyMCE plugin is installed.
      *
-     * @return boolean True iff TinyMCE is installed.
+     * @return bool True iff TinyMCE is installed.
      */
     public function isTinyMCEInstalled()
     {
@@ -90,10 +90,10 @@ class StaticPagesPlugin extends GenericPlugin
     /**
      * Extend the website settings tabs to include static pages
      *
-     * @param $hookName string The name of the invoked hook
-     * @param $args array Hook parameters
+     * @param string $hookName The name of the invoked hook
+     * @param array $args Hook parameters
      *
-     * @return boolean Hook handling status
+     * @return bool Hook handling status
      */
     public function callbackShowWebsiteSettingsTabs($hookName, $args)
     {
@@ -111,10 +111,10 @@ class StaticPagesPlugin extends GenericPlugin
     /**
      * Declare the handler function to process the actual page PATH
      *
-     * @param $hookName string The name of the invoked hook
-     * @param $args array Hook parameters
+     * @param string $hookName The name of the invoked hook
+     * @param array $args Hook parameters
      *
-     * @return boolean Hook handling status
+     * @return bool Hook handling status
      */
     public function callbackHandleContent($hookName, $args)
     {
@@ -168,7 +168,7 @@ class StaticPagesPlugin extends GenericPlugin
     /**
      * Permit requests to the static pages grid handler
      *
-     * @param $hookName string The name of the hook being invoked
+     * @param string $hookName The name of the hook being invoked
      */
     public function setupGridHandler($hookName, $params)
     {

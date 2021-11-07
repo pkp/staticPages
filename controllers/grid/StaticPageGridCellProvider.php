@@ -29,9 +29,9 @@ class StaticPageGridCellProvider extends GridCellProvider
     /**
      * Get cell actions associated with this row/column combination
      *
-     * @param $row \PKP\controllers\grid\GridRow
-     * @param $column GridColumn
-     * @param $position int GRID_ACTION_POSITION_...
+     * @param \PKP\controllers\grid\GridRow $row
+     * @param GridColumn $column
+     * @param int $position GRID_ACTION_POSITION_...
      *
      * @return array an array of LinkAction instances
      */
@@ -59,8 +59,8 @@ class StaticPageGridCellProvider extends GridCellProvider
      * Extracts variables for a given column from a data element
      * so that they may be assigned to template before rendering.
      *
-     * @param $row \PKP\controllers\grid\GridRow
-     * @param $column GridColumn
+     * @param \PKP\controllers\grid\GridRow $row
+     * @param GridColumn $column
      *
      * @return array
      */
