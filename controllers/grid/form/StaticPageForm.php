@@ -33,9 +33,9 @@ class StaticPageForm extends \PKP\form\Form
     /**
      * Constructor
      *
-     * @param $staticPagesPlugin StaticPagesPlugin The static page plugin
-     * @param $contextId int Context ID
-     * @param $staticPageId int Static page ID (if any)
+     * @param StaticPagesPlugin $staticPagesPlugin The static page plugin
+     * @param int $contextId Context ID
+     * @param int $staticPageId Static page ID (if any)
      */
     public function __construct($staticPagesPlugin, $contextId, $staticPageId = null)
     {

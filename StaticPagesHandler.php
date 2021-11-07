@@ -36,8 +36,8 @@ class StaticPagesHandler extends \APP\handler\Handler
     /**
      * Handle index request (redirect to "view")
      *
-     * @param $args array Arguments array.
-     * @param $request PKPRequest Request object.
+     * @param array $args Arguments array.
+     * @param PKPRequest $request Request object.
      */
     public function index($args, $request)
     {
@@ -47,8 +47,8 @@ class StaticPagesHandler extends \APP\handler\Handler
     /**
      * Handle view page request (redirect to "view")
      *
-     * @param $args array Arguments array.
-     * @param $request PKPRequest Request object.
+     * @param array $args Arguments array.
+     * @param PKPRequest $request Request object.
      */
     public function view($args, $request)
     {

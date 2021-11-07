@@ -33,7 +33,7 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Set context ID
      *
-     * @param $contextId int
+     * @param int $contextId
      */
     public function setContextId($contextId)
     {
@@ -44,8 +44,8 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Set page title
      *
-     * @param string string
-     * @param locale
+     * @param string $title
+     * @param string $locale
      */
     public function setTitle($title, $locale)
     {
@@ -55,7 +55,7 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Get page title
      *
-     * @param locale
+     * @param string $locale
      *
      * @return string
      */
@@ -77,8 +77,8 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Set page content
      *
-     * @param $content string
-     * @param locale
+     * @param string $content
+     * @param string $locale
      */
     public function setContent($content, $locale)
     {
@@ -88,7 +88,7 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Get page content
      *
-     * @param locale
+     * @param string $locale
      *
      * @return string
      */
@@ -120,7 +120,7 @@ class StaticPage extends \PKP\core\DataObject
     /**
      * Set page path string
      *
-     * @param $path string
+     * @param string $path
      */
     public function setPath($path)
     {
