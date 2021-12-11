@@ -43,8 +43,12 @@ install:
   - cp -rf datasets/${APPLICATION}/${BRANCH}/${TEST}/files/* files/
   - cat datasets/${APPLICATION}/${BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
   - ./lib/pkp/tools/travis/load-database.sh
+  # Some apps have this plugin installed as a submodule, so may already have the tables present.
+  # If so, drop them (ignoring errors if they don't already exist).
+  - php lib/pkp/tools/migration.php "\APP\plugins\generic\staticPages\StaticPagesSchemaMigration" down || true
 
 script:
+  - php lib/pkp/tools/migration.php "\APP\plugins\generic\staticPages\StaticPagesSchemaMigration" up
   - $(npm bin)/cypress run --config integrationFolder=plugins/generic/staticPages/cypress/tests
 
 after_failure:
