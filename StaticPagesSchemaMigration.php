@@ -42,4 +42,13 @@ class StaticPagesSchemaMigration extends Migration
             $table->unique(['static_page_id', 'locale', 'setting_name'], 'static_page_settings_pkey');
         });
     }
+
+    /**
+     * Reverse the migration.
+     */
+    public function down(): void
+    {
+        Schema::drop('static_page_settings');
+        Schema::drop('static_pages');
+    }
 }
