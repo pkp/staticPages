@@ -12,35 +12,24 @@
  * Find static page content and display it when requested.
  */
 
-import('classes.handler.Handler');
+namespace APP\plugins\generic\staticPages;
 
-class StaticPagesHandler extends Handler
+use APP\plugins\generic\staticPages\StaticPagesPlugin;
+use APP\plugins\generic\staticPages\classes\StaticPage;
+use APP\i18n\AppLocale;
+use APP\template\TemplateManager;
+
+class StaticPagesHandler extends \APP\handler\Handler
 {
     /** @var StaticPagesPlugin The static pages plugin */
-    public static $plugin;
+    protected $plugin;
 
     /** @var StaticPage The static page to view */
-    public static $staticPage;
+    protected $staticPage;
 
-
-    /**
-     * Provide the static pages plugin to the handler.
-     *
-     * @param $plugin StaticPagesPlugin
-     */
-    public static function setPlugin($plugin)
-    {
-        self::$plugin = $plugin;
-    }
-
-    /**
-     * Set a static page to view.
-     *
-     * @param $staticPage StaticPage
-     */
-    public static function setPage($staticPage)
-    {
-        self::$staticPage = $staticPage;
+    public function __construct(StaticPagesPlugin $plugin, StaticPage $staticPage) {
+        $this->plugin = $plugin;
+        $this->staticPage = $staticPage;
     }
 
     /**
@@ -70,14 +59,14 @@ class StaticPagesHandler extends Handler
 
         // Ensure that if we're previewing, the current user is a manager or admin.
         $roles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
-        if (!self::$staticPage->getId() && count(array_intersect([\PKP\security\Role::ROLE_ID_MANAGER, \PKP\security\Role::ROLE_ID_SITE_ADMIN], $roles)) == 0) {
+        if (!$this->staticPage->getId() && count(array_intersect([\PKP\security\Role::ROLE_ID_MANAGER, \PKP\security\Role::ROLE_ID_SITE_ADMIN], $roles)) == 0) {
             fatalError('The current user is not permitted to preview.');
         }
 
         // Assign the template vars needed and display
         $templateMgr = TemplateManager::getManager($request);
         $this->setupTemplate($request);
-        $templateMgr->assign('title', self::$staticPage->getLocalizedTitle());
+        $templateMgr->assign('title', $this->staticPage->getLocalizedTitle());
 
         $vars = [];
         if ($context) {
@@ -89,8 +78,8 @@ class StaticPagesHandler extends Handler
                 '{$supportEmail}' => $context->getData('supportEmail'),
             ];
         }
-        $templateMgr->assign('content', strtr(self::$staticPage->getLocalizedContent(), $vars));
+        $templateMgr->assign('content', strtr($this->staticPage->getLocalizedContent(), $vars));
 
-        $templateMgr->display(self::$plugin->getTemplateResource('content.tpl'));
+        $templateMgr->display($this->plugin->getTemplateResource('content.tpl'));
     }
 }

@@ -12,9 +12,19 @@
  * Static pages plugin main class
  */
 
+namespace APP\plugins\generic\staticPages;
+
+use APP\plugins\generic\staticPages\controllers\grid\StaticPageGridHandler;
+use APP\template\TemplateManager;
+use APP\core\Application;
+use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
+use PKP\core\PKPApplication;
+use PKP\core\Registry;
 use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\RedirectAction;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
 class StaticPagesPlugin extends GenericPlugin
 {
@@ -60,7 +70,6 @@ class StaticPagesPlugin extends GenericPlugin
         if (parent::register($category, $path, $mainContextId)) {
             if ($this->getEnabled($mainContextId)) {
                 // Register the static pages DAO.
-                import('plugins.generic.staticPages.classes.StaticPagesDAO');
                 $staticPagesDao = new StaticPagesDAO();
                 DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
@@ -115,6 +124,7 @@ class StaticPagesPlugin extends GenericPlugin
 
         $page = & $args[0];
         $op = & $args[1];
+        $handler = & $args[3];
 
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         if ($page == 'pages' && $op == 'preview') {
@@ -149,12 +159,7 @@ class StaticPagesPlugin extends GenericPlugin
             $op = 'view';
 
             // It is -- attach the static pages handler.
-            define('HANDLER_CLASS', 'StaticPagesHandler');
-            $this->import('StaticPagesHandler');
-
-            // Allow the static pages page handler to get the plugin object
-            StaticPagesHandler::setPlugin($this);
-            StaticPagesHandler::setPage($staticPage);
+            $handler = new StaticPagesHandler($this, $staticPage);
             return true;
         }
         return false;
@@ -168,10 +173,10 @@ class StaticPagesPlugin extends GenericPlugin
     public function setupGridHandler($hookName, $params)
     {
         $component = & $params[0];
+        $componentInstance = & $params[2];
         if ($component == 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler') {
             // Allow the static page grid handler to get the plugin object
-            import($component);
-            StaticPageGridHandler::setPlugin($this);
+            $componentInstance = new StaticPageGridHandler($this);
             return true;
         }
         return false;
@@ -210,7 +215,6 @@ class StaticPagesPlugin extends GenericPlugin
      */
     public function getInstallMigration()
     {
-        $this->import('StaticPagesSchemaMigration');
         return new StaticPagesSchemaMigration();
     }
 

@@ -13,8 +13,9 @@
  * @brief Handle custom blocks grid row requests.
  */
 
-import('lib.pkp.classes.controllers.grid.GridRow');
+namespace APP\plugins\generic\staticPages\controllers\grid;
 
+use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RemoteActionConfirmationModal;

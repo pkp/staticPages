@@ -14,9 +14,12 @@
  *
  */
 
-use PKP\form\Form;
+namespace APP\plugins\generic\staticPages\controllers\grid\form;
 
-class StaticPageForm extends Form
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+
+class StaticPageForm extends \PKP\form\Form
 {
     /** @var int Context (press / journal) ID */
     public $contextId;

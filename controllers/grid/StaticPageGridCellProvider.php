@@ -13,6 +13,9 @@
  * @brief Class for a cell provider to display information about static pages
  */
 
+namespace APP\plugins\generic\staticPages\controllers\grid;
+
+use PKP\core\PKPApplication;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\linkAction\LinkAction;

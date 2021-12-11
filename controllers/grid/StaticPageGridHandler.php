@@ -13,42 +13,37 @@
  * @brief Handle static pages grid requests.
  */
 
+namespace APP\plugins\generic\staticPages\controllers\grid;
+
+use APP\plugins\generic\staticPages\StaticPagesPlugin;
+use APP\plugins\generic\staticPages\controllers\grid\form\StaticPageForm;
+use PKP\security\authorization\ContextAccessPolicy;
 use PKP\linkAction\LinkAction;
 use PKP\form\Form;
+use PKP\db\DAORegistry;
+use PKP\db\DAO;
 use PKP\linkAction\request\AjaxModal;
 use PKP\core\JSONMessage;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\security\Role;
 
-import('plugins.generic.staticPages.controllers.grid.StaticPageGridRow');
-import('plugins.generic.staticPages.controllers.grid.StaticPageGridCellProvider');
-
 class StaticPageGridHandler extends GridHandler
 {
     /** @var StaticPagesPlugin The static pages plugin */
-    public static $plugin;
-
-    /**
-     * Set the static pages plugin.
-     *
-     * @param $plugin StaticPagesPlugin
-     */
-    public static function setPlugin($plugin)
-    {
-        self::$plugin = $plugin;
-    }
+    var $plugin;
 
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct(StaticPagesPlugin $plugin)
     {
         parent::__construct();
         $this->addRoleAssignment(
             [Role::ROLE_ID_MANAGER],
             ['index', 'fetchGrid', 'fetchRow', 'addStaticPage', 'editStaticPage', 'updateStaticPage', 'delete']
         );
+        $this->plugin = $plugin;
     }
 
 
@@ -60,7 +55,6 @@ class StaticPageGridHandler extends GridHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextAccessPolicy');
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         return parent::authorize($request, $args, $roleAssignments);
     }
@@ -139,7 +133,7 @@ class StaticPageGridHandler extends GridHandler
     public function index($args, $request)
     {
         $context = $request->getContext();
-        $form = new Form(self::$plugin->getTemplateResource('staticPages.tpl'));
+        $form = new Form($this->plugin->getTemplateResource('staticPages.tpl'));
         return new JSONMessage(true, $form->fetch($request));
     }
 
@@ -171,9 +165,7 @@ class StaticPageGridHandler extends GridHandler
         $this->setupTemplate($request);
 
         // Create and present the edit form
-        import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
-        $staticPagesPlugin = self::$plugin;
-        $staticPageForm = new StaticPageForm(self::$plugin, $context->getId(), $staticPageId);
+        $staticPageForm = new StaticPageForm($this->plugin, $context->getId(), $staticPageId);
         $staticPageForm->initData();
         return new JSONMessage(true, $staticPageForm->fetch($request));
     }
@@ -193,9 +185,7 @@ class StaticPageGridHandler extends GridHandler
         $this->setupTemplate($request);
 
         // Create and populate the form
-        import('plugins.generic.staticPages.controllers.grid.form.StaticPageForm');
-        $staticPagesPlugin = self::$plugin;
-        $staticPageForm = new StaticPageForm(self::$plugin, $context->getId(), $staticPageId);
+        $staticPageForm = new StaticPageForm($this->plugin, $context->getId(), $staticPageId);
         $staticPageForm->readInputData();
 
         // Check the results
