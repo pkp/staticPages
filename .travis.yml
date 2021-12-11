@@ -41,8 +41,7 @@ install:
   - cp datasets/${APPLICATION}/${BRANCH}/${TEST}/config.inc.php .
   - cp -rf datasets/${APPLICATION}/${BRANCH}/${TEST}/public/* public/
   - cp -rf datasets/${APPLICATION}/${BRANCH}/${TEST}/files/* files/
-  - cat datasets/${APPLICATION}/${BRANCH}/${TEST}/database.sql | gzip > ${DATABASEDUMP}
-  - ./lib/pkp/tools/travis/load-database.sh
+  - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${BRANCH}/${TEST}/database.sql
   # Some apps have this plugin installed as a submodule, so may already have the tables present.
   # If so, drop them (ignoring errors if they don't already exist).
   - php lib/pkp/tools/migration.php "\APP\plugins\generic\staticPages\StaticPagesSchemaMigration" down || true
