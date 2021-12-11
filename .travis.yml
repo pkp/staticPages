@@ -35,7 +35,7 @@ install:
   - npm i g -npm && npm install && npm run build
   # Make sure we're using the current checkout of this repo rather than the built-in OJS/OMP version
   - rm -rf ~/${APPLICATION}/plugins/generic/staticPages
-  - ln -s ${TRAVIS_BUILD_DIR} ~/${APPLICATION}/plugins/generic/staticPages
+  - mv ${TRAVIS_BUILD_DIR} ~/${APPLICATION}/plugins/generic/staticPages
   # Install OJS/OMP & prep data environment
   - git clone https://github.com/pkp/datasets
   - cp datasets/${APPLICATION}/${BRANCH}/${TEST}/config.inc.php .
