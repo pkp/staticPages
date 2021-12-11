@@ -12,7 +12,9 @@
  * Data object representing a static page.
  */
 
-class StaticPage extends DataObject
+namespace APP\plugins\generic\staticPages\classes;
+
+class StaticPage extends \PKP\core\DataObject
 {
     //
     // Get/set methods

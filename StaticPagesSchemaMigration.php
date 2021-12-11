@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/StaticPagesSchemaMigration.inc.php
+ * @file StaticPagesSchemaMigration.inc.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2000-2020 John Willinsky
@@ -10,6 +10,8 @@
  * @class StaticPagesSchemaMigration
  * @brief Describe database table structures.
  */
+
+namespace APP\plugins\generic\staticPages;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
