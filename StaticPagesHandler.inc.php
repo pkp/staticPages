@@ -12,9 +12,7 @@
  * Find static page content and display it when requested.
  */
 
-import('classes.handler.Handler');
-
-class StaticPagesHandler extends Handler
+class StaticPagesHandler extends \APP\handler\Handler
 {
     /** @var StaticPagesPlugin The static pages plugin */
     public static $plugin;

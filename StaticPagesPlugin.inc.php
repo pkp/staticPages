@@ -12,9 +12,14 @@
  * Static pages plugin main class
  */
 
+use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
+use PKP\core\PKPApplication;
+use PKP\core\Registry;
 use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\RedirectAction;
+use PKP\db\DAORegistry;
+use PKP\plugins\HookRegistry;
 
 class StaticPagesPlugin extends GenericPlugin
 {
@@ -60,7 +65,6 @@ class StaticPagesPlugin extends GenericPlugin
         if (parent::register($category, $path, $mainContextId)) {
             if ($this->getEnabled($mainContextId)) {
                 // Register the static pages DAO.
-                import('plugins.generic.staticPages.classes.StaticPagesDAO');
                 $staticPagesDao = new StaticPagesDAO();
                 DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 

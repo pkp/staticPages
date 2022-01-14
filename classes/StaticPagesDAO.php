@@ -12,7 +12,9 @@
  * Operations for retrieving and modifying StaticPages objects.
  */
 
-import('plugins.generic.staticPages.classes.StaticPage');
+namespace APP\plugins\generic\staticPages\classes;
+
+use PKP\db\DAOResultFactory;
 
 class StaticPagesDAO extends \PKP\db\DAO
 {
