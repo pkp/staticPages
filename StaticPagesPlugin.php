@@ -226,3 +226,7 @@ class StaticPagesPlugin extends GenericPlugin
         return $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js';
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\plugins\generic\staticPages\StaticPagesPlugin', '\StaticPagesPlugin');
+}
