@@ -1,9 +1,11 @@
 # @file
 # .travis.yml - PKP Plugins Integration
 
+dist: bionic
 language: php
 
 addons:
+  postgresql: "9.5"
   apt:
     update: true
 
@@ -12,6 +14,7 @@ sudo: required
 php:
   - 7.3
   - 7.4
+  - 8.0
 env:
   - APPLICATION=ojs BRANCH=stable-3_3_0 TEST=mysql
   - APPLICATION=ojs BRANCH=stable-3_3_0 TEST=pgsql
