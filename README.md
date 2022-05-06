@@ -11,7 +11,7 @@
 This plugin is intended to provide very simple content management. It allows
 for the creation of static content pages with the assistance of an HTML editor.
 
-[![Build Status](https://travis-ci.org/pkp/staticPages.svg?branch=main)](https://travis-ci.org/pkp/staticPages)
+[![Build Status](https://travis-ci.org/pkp/staticPages.svg?branch=stable-3_3_0)](https://travis-ci.org/pkp/staticPages)
 
 ## License
 
