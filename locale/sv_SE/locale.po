@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-12-15 10:52+0000\n"
+"PO-Revision-Date: 2021-04-14 23:47+0000\n"
 "Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/"
 "static-pages-plugin/sv_SE/>\n"
@@ -69,3 +69,15 @@ msgstr ""
 
 msgid "plugins.generic.staticPages.displayName"
 msgstr "Plugin för statiska sidor"
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Sidan är tillgänglig via: <blockquote>{$pagesPath}</blockquote>.där %PATH%"
+"  är sökvägen som har angetts ovan. <strong>Observera:</strong> Två sidor "
+"kan inte ha samma sökväg.  Om systemets inbyggda sökvägar används kan det "
+"orsaka att du förlorar till gång till viktiga funktioner.</p>"
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Fältet för sökvägen får bara innehålla alfanumerisk tecken plus  '.', '/', '-"
+"', och '_'."

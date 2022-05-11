@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-12 09:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Non se creou ningunha páxina"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "A páxina eliminouse correctamente."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "A páxina gardouse correctamente."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Esta ruta xa existe para outra páxina estática."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Esta páxina será accesible en: <blockquote>{$pagesPath}</blockquote>... "
+"onde %PATH% é a ruta introducida anteriormente. <strong>Nota:</strong> Dúas "
+"páxinas non poden ter a mesma ruta. O uso de rutas integradas no sistema "
+"pode facer que perdas o acceso a funcións importantes.</p>"
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"O campo da ruta debe conter só caracteres alfanuméricos máis '.', '/', '-' e "
+"'_'."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Utilice o seguinte formulario para engadir/editar contido da páxina."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"O seguinte formulario amosa todas as páxinas estáticas que creou. Podes "
+"editar ou eliminar as páxinas usando as ligazóns á dereita."
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Non se crearon páxinas estáticas."
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Editar unha páxina estática"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Engadir unha nova páxina"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Engadir unha páxina estática"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Editar/Engadir contido"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>O complemento TinyMCE debe estar instalado e habilitado para "
+"engadir/editar contido.</strong></p>"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Ruta"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Contido"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Título"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Páxinas estáticas"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Este complemento permite a xestión de contido estático."
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Complemento de páxinas estáticas"

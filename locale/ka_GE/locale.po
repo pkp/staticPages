@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-09 08:55+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "სტატიკური გვერდები"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "სათაური"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "შიგთავსი"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "მდებარეობა"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "ახალი გვერდის დამატება"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "სტატიკური გვერდების პლაგინი"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "ეს პპლაგინი საშუალებას გაძლევთ მართოთ სტატიკური შიგთავსი."
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>TinyMCE მოდული უნდა იყოს დაინსტალირებული და ჩართული, შინაარსის "
+"დამატება/ჩასწორების მიზნით.</strong></p>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "შინაარსის დამატება/ჩასწორება"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "სტატიკური გვერდის დამატება"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "სტატიკური გვერდის ჩასწორება"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "სტატიკური გვერდები არ შექმნილა."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"ქვემოთ მოცემული ფორმა აჩვენებს თქვენს მიერ შექმნილ ყველა სტატიკურ გვერდს. "
+"გვერდების რედაქტირება ან წაშლა შეგიძლიათ მარჯვენა მხარეს მდებარე ბმულების "
+"გამოყენებით."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "გამოიყენეთ ქვემოთ მოცემული ფორმა გვერდის შინაარსის დასამატებლად."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"გეზის ველი უნდა შეიცავდეს მხოლოდ ალფანუმერულ სიმბოლოებს, პლუს '.', '/', '-' "
+"და '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>ამ გვერდზე ხელმისაწვდომი იქნება:<blockquote> {$pagesPath}</blockquote> "
+"... სადაც %PATH% არის ზემოთ შეყვანილი გზა. <strong>შენიშვნა:</strong> ორ "
+"გვერდს არ შეიძლება ჰქონდეს იგივე გზა. სისტემაში ჩასმული ბილიკების "
+"გამოყენებამ შეიძლება დაკარგოს მნიშვნელოვან ფუნქციებზე წვდომა.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "ეს გზა უკვე არსებობს სხვა სტატიკური გვერდისთვის."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "გვერდი წარმატებით შეინახა."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "გვერდი წარმატებით წაიშალა."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "არცერთი გვერდი არ შექმნილა"
