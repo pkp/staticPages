@@ -171,16 +171,6 @@ class StaticPagesDAO extends \PKP\db\DAO
     }
 
     /**
-     * Get the insert ID for the last inserted static page.
-     *
-     * @return int
-     */
-    public function getInsertId()
-    {
-        return $this->_getInsertId('static_pages', 'static_page_id');
-    }
-
-    /**
      * Get field names for which data is localized.
      *
      * @return array
