@@ -20,6 +20,9 @@ msgstr "Plugin Halaman Statis"
 msgid "plugins.generic.staticPages.description"
 msgstr "Plugin ini menyediakan Manajemen Konten Statis."
 
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Halaman Statis"
+
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "Judul"
 
@@ -46,11 +49,30 @@ msgstr "Tambah Halaman Baru"
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "Edit Halaman Statis"
 
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Tidak ada halaman statis yang dibuat."
+
 msgid "plugins.generic.staticPages.settingInstructions"
-msgstr "Formulir di bawah ini menunjukkan Anda semua halaman statis yang dapat Anda buat. Anda dapat mengedit atau menghapus halaman dengan menggunakan link di sisi tangan kanan."
+msgstr ""
+"Formulir di bawah ini menunjukkan Anda semua halaman statis yang dapat Anda "
+"buat. Anda dapat mengedit atau menghapus halaman dengan menggunakan link di "
+"sisi tangan kanan."
 
 msgid "plugins.generic.staticPages.editInstructions"
 msgstr "Gunakan formulir di bawah ini untuk menambah/mengedit konten."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Jalur halaman statis hanya boleh berisi karakter alfanumerik plus '.', '/', "
+"'-', dan '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Halaman ini akan dapat diakses di: <blockquote>{$pagesPath}</"
+"blockquote>... di mana% PATH% adalah jalur halaman statis yang dimasukkan di "
+"atas. <strong>Catatan: </strong> Tidak ada dua halaman yang boleh memiliki "
+"jalur sama. Menggunakan jalur yang dibangun ke dalam sistem dapat "
+"menyebabkan Anda kehilangan akses ke fungsi-fungsi penting.</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "Jalur ini sudah digunakan oleh halaman statis lain."
@@ -63,22 +85,3 @@ msgstr "Halaman berhasil dihapus."
 
 msgid "plugins.generic.staticPages.noneExist"
 msgstr "Tidak ada halaman yang dibuat"
-
-msgid "plugins.generic.staticPages.viewInstructions"
-msgstr ""
-"<p>Halaman ini akan dapat diakses di: <blockquote>{$pagesPath}</blockquote>"
-"... di mana% PATH% adalah jalur halaman statis yang dimasukkan di atas. "
-"<strong>Catatan: </strong> Tidak ada dua halaman yang boleh memiliki jalur "
-"sama. Menggunakan jalur yang dibangun ke dalam sistem dapat menyebabkan Anda "
-"kehilangan akses ke fungsi-fungsi penting.</p>"
-
-msgid "plugins.generic.staticPages.pathRegEx"
-msgstr ""
-"Jalur halaman statis hanya boleh berisi karakter alfanumerik plus '.', '/', "
-"'-', dan '_'."
-
-msgid "plugins.generic.staticPages.noneCreated"
-msgstr "Tidak ada halaman statis yang dibuat."
-
-msgid "plugins.generic.staticPages.staticPages"
-msgstr "Halaman Statis"

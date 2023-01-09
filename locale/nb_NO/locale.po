@@ -20,6 +20,9 @@ msgstr "Statiske sider"
 msgid "plugins.generic.staticPages.description"
 msgstr "Dette programtillegget lar deg administrere statiske sider."
 
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statiske sider"
+
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "Tittel"
 
@@ -46,6 +49,9 @@ msgstr "Legg til ny side"
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "Endre statisk side"
 
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Ingen statiske sider er opprettet."
+
 msgid "plugins.generic.staticPages.settingInstructions"
 msgstr ""
 "Oversikten nedenfor viser alle de statiske sidene du har laget. Du kan endre "
@@ -53,6 +59,18 @@ msgstr ""
 
 msgid "plugins.generic.staticPages.editInstructions"
 msgstr "Bruk skjemaet nedenfor for å legge til eller endre innhold."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Stien må inneholde kun tall og bokstaver, samt punktum '.', skråstrek mot "
+"høyre '/', bindestrek '-' og understrek '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Siden kan besøkes via <blockquote>{$pagesPath}</blockquote> der %STI% er "
+"stien som er lagt til over. <strong>Merk:</strong> To sider kan ikke ha "
+"samme sti. Bruker du stier som er bygget inn i systemet, kan du miste "
+"tilgang til viktige funksjoner.</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "Denne stien finnes allerede for en annen statisk side."
@@ -65,21 +83,3 @@ msgstr "Siden ble slettet."
 
 msgid "plugins.generic.staticPages.noneExist"
 msgstr "Ingen sider har blitt opprettet"
-
-msgid "plugins.generic.staticPages.viewInstructions"
-msgstr ""
-"<p>Siden kan besøkes via <blockquote>{$pagesPath}</blockquote> der %STI% er "
-"stien som er lagt til over. <strong>Merk:</strong> To sider kan ikke ha "
-"samme sti. Bruker du stier som er bygget inn i systemet, kan du miste "
-"tilgang til viktige funksjoner.</p>"
-
-msgid "plugins.generic.staticPages.pathRegEx"
-msgstr ""
-"Stien må inneholde kun tall og bokstaver, samt punktum '.', skråstrek mot "
-"høyre '/', bindestrek '-' og understrek '_'."
-
-msgid "plugins.generic.staticPages.noneCreated"
-msgstr "Ingen statiske sider er opprettet."
-
-msgid "plugins.generic.staticPages.staticPages"
-msgstr "Statiske sider"
