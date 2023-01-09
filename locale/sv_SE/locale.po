@@ -1,4 +1,3 @@
-# Viveka Svensson <viveka.svensson@lnu.se>, 2022.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-12-22 11:02+0000\n"
@@ -10,7 +9,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.staticPages.displayName"
 msgstr "Plugin för statiska sidor"
