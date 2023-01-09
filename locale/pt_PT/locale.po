@@ -20,6 +20,9 @@ msgstr "Plugin de Páginas Estáticas"
 msgid "plugins.generic.staticPages.description"
 msgstr "Este plugin permite gerir páginas estáticas."
 
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Páginas Estáticas"
+
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "Título"
 
@@ -46,6 +49,9 @@ msgstr "Adicionar nova página"
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "Editar página estática"
 
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Nenhuma página estática foi criada."
+
 msgid "plugins.generic.staticPages.settingInstructions"
 msgstr ""
 "O formulário a seguir mostra todas as páginas estáticas já criadas.  Poderá "
@@ -53,6 +59,17 @@ msgstr ""
 
 msgid "plugins.generic.staticPages.editInstructions"
 msgstr "Use o formulário para incluir/editar o conteúdo."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"O caminho deve conter apenas caracteres alfanuméricos, e '.', '/', '-' e '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Esta página ficará acessível em: <blockquote>{$pagesPath}</blockquote>... "
+"onde %PATH% é o caminho introduzido acima. <strong>Note:</strong> Não pode "
+"ter duas páginas com o mesmo caminho. Usar caminhos já existentes no sistema "
+"pode fazê-lo perder acesso a funcionalidades importantes.</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "Este caminho já existe para outra página estática."
@@ -65,16 +82,3 @@ msgstr "Página eliminada com sucesso."
 
 msgid "plugins.generic.staticPages.noneExist"
 msgstr "Nenhuma página criada"
-
-msgid "plugins.generic.staticPages.staticPages"
-msgstr "Páginas Estáticas"
-
-msgid "plugins.generic.staticPages.noneCreated"
-msgstr "Nenhuma página estática foi criada."
-
-msgid "plugins.generic.staticPages.pathRegEx"
-msgstr ""
-"O caminho deve conter apenas caracteres alfanuméricos, e '.', '/', '-' e '_'."
-
-msgid "plugins.generic.staticPages.viewInstructions"
-msgstr "<p>Esta página ficará acessível em: <blockquote>{$pagesPath}</blockquote>... onde %PATH% é o caminho introduzido acima. <strong>Note:</strong> Não pode ter duas páginas com o mesmo caminho. Usar caminhos já existentes no sistema pode fazê-lo perder acesso a funcionalidades importantes.</p>"

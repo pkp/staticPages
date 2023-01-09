@@ -2,14 +2,20 @@ msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-04-09 08:55+0000\n"
 "Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
-"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
-"static-pages-plugin/ka_GE/>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/static-"
+"pages-plugin/ka_GE/>\n"
 "Language: ka_GE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "სტატიკური გვერდების პლაგინი"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "ეს პპლაგინი საშუალებას გაძლევთ მართოთ სტატიკური შიგთავსი."
 
 msgid "plugins.generic.staticPages.staticPages"
 msgstr "სტატიკური გვერდები"
@@ -23,15 +29,6 @@ msgstr "შიგთავსი"
 msgid "plugins.generic.staticPages.path"
 msgstr "მდებარეობა"
 
-msgid "plugins.generic.staticPages.addNewPage"
-msgstr "ახალი გვერდის დამატება"
-
-msgid "plugins.generic.staticPages.displayName"
-msgstr "სტატიკური გვერდების პლაგინი"
-
-msgid "plugins.generic.staticPages.description"
-msgstr "ეს პპლაგინი საშუალებას გაძლევთ მართოთ სტატიკური შიგთავსი."
-
 msgid "plugins.generic.staticPages.requirement.tinymce"
 msgstr ""
 "<p><strong>TinyMCE მოდული უნდა იყოს დაინსტალირებული და ჩართული, შინაარსის "
@@ -42,6 +39,9 @@ msgstr "შინაარსის დამატება/ჩასწორ�
 
 msgid "plugins.generic.staticPages.addStaticPage"
 msgstr "სტატიკური გვერდის დამატება"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "ახალი გვერდის დამატება"
 
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "სტატიკური გვერდის ჩასწორება"
@@ -65,9 +65,9 @@ msgstr ""
 
 msgid "plugins.generic.staticPages.viewInstructions"
 msgstr ""
-"<p>ამ გვერდზე ხელმისაწვდომი იქნება:<blockquote> {$pagesPath}</blockquote> "
-"... სადაც %PATH% არის ზემოთ შეყვანილი გზა. <strong>შენიშვნა:</strong> ორ "
-"გვერდს არ შეიძლება ჰქონდეს იგივე გზა. სისტემაში ჩასმული ბილიკების "
+"<p>ამ გვერდზე ხელმისაწვდომი იქნება:<blockquote> {$pagesPath}</"
+"blockquote> ... სადაც %PATH% არის ზემოთ შეყვანილი გზა. <strong>შენიშვნა:</"
+"strong> ორ გვერდს არ შეიძლება ჰქონდეს იგივე გზა. სისტემაში ჩასმული ბილიკების "
 "გამოყენებამ შეიძლება დაკარგოს მნიშვნელოვან ფუნქციებზე წვდომა.</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"

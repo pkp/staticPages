@@ -21,6 +21,9 @@ msgstr "静态页面插件"
 msgid "plugins.generic.staticPages.description"
 msgstr "该插件允许管理静态内容。"
 
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "静态页面"
+
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "标题"
 
@@ -45,11 +48,24 @@ msgstr "添加新页面"
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "编辑静态页面"
 
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "未创建静态页面。"
+
 msgid "plugins.generic.staticPages.settingInstructions"
-msgstr "下面的表显示所有您创建的静态页面。您可以使用右侧的链接来编辑或删除页面。"
+msgstr ""
+"下面的表显示所有您创建的静态页面。您可以使用右侧的链接来编辑或删除页面。"
 
 msgid "plugins.generic.staticPages.editInstructions"
 msgstr "使用下面的表单来添加/编辑页面内容。"
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "路径字段只包含字母和 '.'，'/'，'-'以及'_'。"
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>此页面可在：<blockquote>{$pagesPath}</blockquote>…… %PATH% 是上面输入的路"
+"径。<strong>注意：</strong>页面路径不能相同。使用系统内置路径可能会导致您不能"
+"使用一些重要功能。</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "该路径已经被其它静态页面使用。"
@@ -62,17 +78,3 @@ msgstr "页面已删除。"
 
 msgid "plugins.generic.staticPages.noneExist"
 msgstr "没有页面生成。"
-
-msgid "plugins.generic.staticPages.viewInstructions"
-msgstr ""
-"<p>此页面可在：<blockquote>{$pagesPath}</blockquote>…… %PATH% "
-"是上面输入的路径。<strong>注意：</strong>页面路径不能相同。使用系统内置路径可能会导致您不能使用一些重要功能。</p>"
-
-msgid "plugins.generic.staticPages.pathRegEx"
-msgstr "路径字段只包含字母和 '.'，'/'，'-'以及'_'。"
-
-msgid "plugins.generic.staticPages.noneCreated"
-msgstr "未创建静态页面。"
-
-msgid "plugins.generic.staticPages.staticPages"
-msgstr "静态页面"

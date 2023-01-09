@@ -20,6 +20,9 @@ msgstr "Páginas estáticas"
 msgid "plugins.generic.staticPages.description"
 msgstr "Este plugin permite gerenciar páginas estáticas."
 
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Páginas Estáticas"
+
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "Título"
 
@@ -46,11 +49,28 @@ msgstr "Incluir nova página"
 msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "Editar página estática"
 
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Não há páginas estáticas criadas."
+
 msgid "plugins.generic.staticPages.settingInstructions"
-msgstr "O formulário a seguir mostra todas as páginas estáticas já criadas. Você pode editar ou excluir as páginas por meio dos links disponíveis à direita."
+msgstr ""
+"O formulário a seguir mostra todas as páginas estáticas já criadas. Você "
+"pode editar ou excluir as páginas por meio dos links disponíveis à direita."
 
 msgid "plugins.generic.staticPages.editInstructions"
 msgstr "Use o formulário para incluir/editar o conteúdo."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"O campo caminho deve conter apenas caracteres alfanuméricos mais, '/', '.' "
+"'-' e '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Esta página será acessível em: <blockquote>{$pagesPath}</blockquote> ... "
+"onde %PATH% é o caminho digitado acima. <strong>Nota:</strong> Duas páginas "
+"não podem ter o mesmo caminho. Usar caminhos que já existem no sistema pode "
+"causar a perda de acesso a funções importantes.</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "Este caminho já existe para outra página estática."
@@ -63,19 +83,3 @@ msgstr "Página excluída com sucesso."
 
 msgid "plugins.generic.staticPages.noneExist"
 msgstr "Nenhuma página criada"
-
-msgid "plugins.generic.staticPages.staticPages"
-msgstr "Páginas Estáticas"
-
-msgid "plugins.generic.staticPages.noneCreated"
-msgstr "Não há páginas estáticas criadas."
-
-msgid "plugins.generic.staticPages.pathRegEx"
-msgstr "O campo caminho deve conter apenas caracteres alfanuméricos mais, '/', '.' '-' e '_'."
-
-msgid "plugins.generic.staticPages.viewInstructions"
-msgstr ""
-"<p>Esta página será acessível em: <blockquote>{$pagesPath}</blockquote> ... "
-"onde %PATH% é o caminho digitado acima. <strong>Nota:</strong> Duas páginas "
-"não podem ter o mesmo caminho. Usar caminhos que já existem no sistema pode "
-"causar a perda de acesso a funções importantes.</p>"
