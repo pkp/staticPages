@@ -12,10 +12,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.staticPages.displayName"
-msgstr "Statiske sider"
+msgstr "Programutvidelse for statiske sider"
 
 msgid "plugins.generic.staticPages.description"
 msgstr "Dette programtillegget lar deg administrere statiske sider."

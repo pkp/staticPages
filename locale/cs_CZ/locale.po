@@ -12,7 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
 
 msgid "plugins.generic.staticPages.displayName"
 msgstr "Plugin statických stránek"
@@ -62,7 +61,7 @@ msgstr "Pro přidání/editaci obsahu použijte níže dostupný formulář."
 
 msgid "plugins.generic.staticPages.pathRegEx"
 msgstr ""
-"Cesta musí obsahovat pouze alfanumerické znaky a znaky '.', '/', '-'  a '_'."
+"Cesta musí obsahovat pouze alfanumerické znaky a znaky „.“, „/“, „-“ a „_“."
 
 msgid "plugins.generic.staticPages.viewInstructions"
 msgstr ""

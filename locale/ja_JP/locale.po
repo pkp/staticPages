@@ -18,7 +18,7 @@ msgid "plugins.generic.staticPages.description"
 msgstr "このプラグインは統計のコンテンツ管理ができます。"
 
 msgid "plugins.generic.staticPages.staticPages"
-msgstr ""
+msgstr "静的ページ"
 
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "タイトル"
@@ -31,8 +31,8 @@ msgstr "パス"
 
 msgid "plugins.generic.staticPages.requirement.tinymce"
 msgstr ""
-"<strong>コンテンツを編集・追加するためには，TinyMCE プラグインがインストール"
-"されていなければなりません。</strong>"
+"<p><strong>コンテンツを編集・追加するためには，TinyMCE "
+"プラグインがインストールされていなければなりません。</strong></p>"
 
 msgid "plugins.generic.staticPages.editAddContent"
 msgstr "コンテンツの編集・追加"
@@ -47,7 +47,7 @@ msgid "plugins.generic.staticPages.editStaticPage"
 msgstr "統計ページの編集"
 
 msgid "plugins.generic.staticPages.noneCreated"
-msgstr ""
+msgstr "静的ページは作成されていません。"
 
 msgid "plugins.generic.staticPages.settingInstructions"
 msgstr ""
@@ -59,9 +59,16 @@ msgstr "ページを追加・編集するために下記のフォームを使用
 
 msgid "plugins.generic.staticPages.pathRegEx"
 msgstr ""
+"パスフィールドには、英数字に加えて、「.」、「/」、「-"
+"」や「_」を含める必要があります。"
 
 msgid "plugins.generic.staticPages.viewInstructions"
 msgstr ""
+"<p>このページは以下の場所からアクセスできます: "
+"<blockquote>{$pagesPath}</blockquote>"
+"...ここで、%PATH%は上記で入力したパスです。<strong>注:</strong>  "
+"2つのページが同じパスを持つことはできません。システムに組み込まれているパスを"
+"使用すると、重要な機能にアクセスできなくなる可能性があります。</p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
 msgstr "この path は他の統計ページで既に使用されています。"
@@ -73,4 +80,4 @@ msgid "plugins.generic.staticPages.pageDeleted"
 msgstr "ページは正常に削除されました。"
 
 msgid "plugins.generic.staticPages.noneExist"
-msgstr "ページが作成されていません。"
+msgstr "ページが作成されていません"

@@ -12,13 +12,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "plugins.generic.staticPages.displayName"
-msgstr "静态页面插件(Static Pages Plugin)"
+msgstr "静态页面插件"
 
 msgid "plugins.generic.staticPages.description"
-msgstr "该插件允许管理静态内容(This plugin allows Static Content Management.)"
+msgstr "该插件允许管理静态内容。"
 
 msgid "plugins.generic.staticPages.staticPages"
-msgstr ""
+msgstr "静态页面"
 
 msgid "plugins.generic.staticPages.pageTitle"
 msgstr "标题"
@@ -30,52 +30,49 @@ msgid "plugins.generic.staticPages.path"
 msgstr "路径"
 
 msgid "plugins.generic.staticPages.requirement.tinymce"
-msgstr ""
-"<strong>The TinyMCE Plugin must be installed and enabled in order to add/"
-"edit content.</strong>"
+msgstr "<strong>为了能够添加/编辑内容必须安装 TinyMCE 插件。</strong>"
 
 msgid "plugins.generic.staticPages.editAddContent"
 msgstr "编辑/添加内容"
 
 msgid "plugins.generic.staticPages.addStaticPage"
-msgstr "添加静态页面(Add Static Page)"
+msgstr "添加静态页面"
 
 msgid "plugins.generic.staticPages.addNewPage"
-msgstr "添加新的页面(Add New Page)"
+msgstr "添加新页面"
 
 msgid "plugins.generic.staticPages.editStaticPage"
-msgstr "编辑静态页面(Edit Static Page)"
+msgstr "编辑静态页面"
 
 msgid "plugins.generic.staticPages.noneCreated"
-msgstr ""
+msgstr "未创建静态页面。"
 
 msgid "plugins.generic.staticPages.settingInstructions"
 msgstr ""
-"下面的表格显示出所有你创建的静态页面。你可以使用右手边的链接来编辑或删除页"
-"面。(The form below shows you all the static pages you have created.  You "
-"can edit or delete the pages using the links on the right-hand side.)"
+"下面的表显示所有您创建的静态页面。您可以使用右侧的链接来编辑或删除页面。"
 
 msgid "plugins.generic.staticPages.editInstructions"
-msgstr ""
-"使用下面的表单来添加/编辑页面内容。(Use the form below to add/edit page "
-"content.)"
+msgstr "使用下面的表单来添加/编辑页面内容。"
 
 msgid "plugins.generic.staticPages.pathRegEx"
-msgstr ""
+msgstr "路径字段只包含字母和 '.'，'/'，'-'以及'_'。"
 
 msgid "plugins.generic.staticPages.viewInstructions"
 msgstr ""
+"<p>此页面可在："
+"<blockquote>{$pagesPath}</blockquote>"
+"…… %PATH% 是上面输入的路径。<strong>注意：</"
+"strong>页面路径不能相同。使用系统内置路径可能会导致您不能使用一些重要功能。</"
+"p>"
 
 msgid "plugins.generic.staticPages.duplicatePath"
-msgstr ""
-"该路径已经被其它静态页面使用。(This path already exists for another static "
-"page.)"
+msgstr "该路径已经被其它静态页面使用。"
 
 msgid "plugins.generic.staticPages.pageSaved"
-msgstr "页面已保存(Page successfully saved.)"
+msgstr "页面已保存。"
 
 msgid "plugins.generic.staticPages.pageDeleted"
-msgstr "页面已删除(Page successfully deleted.)"
+msgstr "页面已删除。"
 
 msgid "plugins.generic.staticPages.noneExist"
-msgstr "没有页面被生成(No pages have been created)"
+msgstr "没有页面生成。"
