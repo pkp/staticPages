@@ -39,7 +39,7 @@ install:
 
 script:
   - $(npm bin)/cypress run --spec "cypress/tests/data/10-Installation.cy.js,cypress/tests/data/20-CreateContext.cy.js"
-  - $(npm bin)/cypress run --config integrationFolder=plugins/generic/staticPages/cypress/tests
+  - $(npm bin)/cypress run --config '{"specPattern":["plugins/generic/staticPages/cypress/tests/functional/*.cy.js"]}'
 
 after_failure:
   - cat error.log
