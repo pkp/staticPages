@@ -31,12 +31,12 @@ describe('Static Pages plugin tests', function() {
 
 		// Create a static page
 		cy.get('a[id^="component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-"]').click();
-		cy.get('form[id="staticPageForm"] input[id^="path-"]').type('flarm');
-		cy.get('form[id^="staticPageForm"] input[id^="title-en_US-"]').type('Test Static Page');
+		cy.get('form[id="staticPageForm"] input[id^="path-"]').type('flarm', { delay: 0});
+		cy.get('form[id^="staticPageForm"] input[id^="title-en_US-"]').type('Test Static Page', { delay: 0});
 		cy.get('textarea[id^="content-en_US-"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), 'Here is my new static page.');
 		});
-		cy.get('form[id="staticPageForm"] button[id^="submitFormButton-"]').click();
+		cy.get('form[id="staticPageForm"] button[id^="submitFormButton-"]').click({force: true});
 		cy.waitJQuery();
 
 		// View the static page
