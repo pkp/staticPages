@@ -31,6 +31,7 @@ describe('Static Pages plugin tests', function() {
 
 		// Create a static page
 		cy.get('a[id^="component-plugins-generic-staticpages-controllers-grid-staticpagegrid-addStaticPage-button-"]').click();
+		cy.waitJQuery(2000); // Wait for form to settle
 		cy.get('form[id="staticPageForm"] input[id^="path-"]').type('flarm');
 		cy.get('form[id^="staticPageForm"] input[id^="title-en_US-"]').type('Test Static Page');
 		cy.get('textarea[id^="content-en_US-"]').then(node => {
