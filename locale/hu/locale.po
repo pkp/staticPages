@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
+"PO-Revision-Date: 2020-02-21 13:36+0000\n"
+"Last-Translator: Gabor Klinger <ojshelp@konyvtar.mta.hu>\n"
+"Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/hu/>\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Statikus oldalak plugin"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Ezzel a bővítménnyel tud statikus tartalmakat kezelni."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statikus oldalak"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Cím"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Tartalom"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Útvonal"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr "<p><strong>A TinyMCE bővítményt telepíteni és engedélyezni kell a tartalom hozzáadása/szerkesztése érdekében.</strong></p>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Tartalom hozzáadása/szerkesztése"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Statikus oldal hozzáadása"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Új oldal hozzáadása"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Statikus oldal szerkesztése"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Nem lett statikus oldal létrehozva."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr "A lenti űrlapon láthatóak az eddig létrehozott statikus oldalak. A jobb oldalon található linkek segítségével tudja szerkeszteni vagy törölni az oldalakat."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Használja a lenti űrlapot oldaltartalom hozzáadásához/szerkesztéséhez."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr "Az útvonalmező csak alfanumerikus karaktereket valamint '.', '/', '-', és '_' karaktereket tartalmazhat."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr "<p>Ez az oldal elérhető lesz: <blockquote>{$pagesPath}</ blockquote> ... ahol a %PATH% a fent megadott elérési út. <strong> Megjegyzés:</strong> Nem lehet két oldalnak ugyanaz az útvonala. A rendszerbe épített útvonalak használatával elveszítheti a fontos funkciókhoz való hozzáférést.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Ez az útvonal már létezik egy másik statikus oldalhoz."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Az oldal sikeresen mentve."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Az oldal sikeresen törölve."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Nem lettek oldalak létrehozva"

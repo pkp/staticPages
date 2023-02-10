@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-12-22 11:02+0000\n"
+"Last-Translator: Viveka Svensson <viveka.svensson@lnu.se>\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/plugins/static-"
+"pages-plugin/sv_SE/>\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Plugin för statiska sidor"
+
+msgid "plugins.generic.staticPages.description"
+msgstr ""
+"Detta plugin gör det möjligt att administrera innehållet på statiska sidor."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Statiska sidor"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Titel"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Innehåll"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Sökväg"
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>TinyMCE pluginet måste vara installerat för att det ska vara "
+"möjligt att lägga till/redigera innehåll.</strong></p>"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Redigera/lägg till innehåll"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Lägg till en statisk sida"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Lägg till en ny sida"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Redigera en statisk sida"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Inga statiska sidor har skapats."
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Formuläret nedan visar alla statiska sidor du har skapat. Du kan redigera "
+"eller ta bort sidor genom att använda länken på höger sida."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Använd formuläret nedan för att lägga till/redigera innehåll."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Fältet för sökvägen får bara innehålla alfanumerisk tecken plus '.', '/', "
+"'-', och '_'."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Sidan är tillgänglig via: <blockquote>{$pagesPath}</blockquote>.där %PATH"
+"% är sökvägen som har angetts ovan. <strong>Observera:</strong> Två sidor "
+"kan inte ha samma sökväg. Om systemets inbyggda sökvägar används kan det "
+"orsaka att du förlorar till gång till viktiga funktioner.</p>"
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Sökvägen finns redan för en annan statisk sida."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Sidan sparades."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Sidan har tagits bort."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Inga sidor har skapats"
