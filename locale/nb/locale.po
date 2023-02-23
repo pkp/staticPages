@@ -1,11 +1,12 @@
+# Eirik Hanssen <eirikh@oslomet.no>, 2023.
+# FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:24+00:00\n"
-"PO-Revision-Date: 2021-01-30 11:53+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-info@journals.uio."
-"no>\n"
+"PO-Revision-Date: 2023-02-17 03:02+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
 "plugins/static-pages-plugin/nb_NO/>\n"
 "Language: nb\n"
@@ -13,6 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.staticPages.displayName"
 msgstr "Programutvidelse for statiske sider"
