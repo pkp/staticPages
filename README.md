@@ -23,8 +23,6 @@ COPYING for the complete terms of this license.
 This plugin is compatible with OJS, OMP, and OPS. A compatible version ships
 with each application.
 
-This plugin will NOT currently work with "path_info_disabled = On" in config.inc.php.
-
 ## Management
 
 New pages can be added/edited/deleted through the Plugin Management interface.

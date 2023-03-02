@@ -23,7 +23,7 @@ use PKP\linkAction\LinkAction;
 use PKP\plugins\GenericPlugin;
 use PKP\linkAction\request\RedirectAction;
 use PKP\db\DAORegistry;
-use PKP\plugins\HookRegistry;
+use PKP\plugins\Hook;
 
 class StaticPagesPlugin extends GenericPlugin
 {
@@ -72,15 +72,15 @@ class StaticPagesPlugin extends GenericPlugin
                 $staticPagesDao = new StaticPagesDAO();
                 DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
-                HookRegistry::register('Template::Settings::website', [$this, 'callbackShowWebsiteSettingsTabs']);
+                Hook::add('Template::Settings::website', [$this, 'callbackShowWebsiteSettingsTabs']);
 
                 // Intercept the LoadHandler hook to present
                 // static pages when requested.
-                HookRegistry::register('LoadHandler', [$this, 'callbackHandleContent']);
+                Hook::add('LoadHandler', [$this, 'callbackHandleContent']);
 
                 // Register the components this plugin implements to
                 // permit administration of static pages.
-                HookRegistry::register('LoadComponentHandler', [$this, 'setupGridHandler']);
+                Hook::add('LoadComponentHandler', [$this, 'setupGridHandler']);
             }
             return true;
         }
