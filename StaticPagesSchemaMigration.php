@@ -33,6 +33,7 @@ class StaticPagesSchemaMigration extends Migration
 
         // Static Page settings.
         Schema::create('static_page_settings', function (Blueprint $table) {
+            $table->bigIncrements('static_page_setting_id');
             $table->bigInteger('static_page_id');
             $table->foreign('static_page_id', 'static_page_settings_static_page_id')->references('static_page_id')->on('static_pages')->onDelete('cascade');
             $table->index(['static_page_id'], 'static_page_settings_static_page_id');
