@@ -15,6 +15,7 @@
 
 namespace APP\plugins\generic\staticPages\controllers\grid;
 
+use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
 use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use APP\plugins\generic\staticPages\controllers\grid\form\StaticPageForm;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -74,6 +75,7 @@ class StaticPageGridHandler extends GridHandler
         $this->setEmptyRowText('plugins.generic.staticPages.noneCreated');
 
         // Get the pages and add the data to the grid
+        /** @var StaticPagesDAO */
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         $this->setGridDataElements($staticPagesDao->getByContextId($context->getId()));
 
@@ -212,6 +214,7 @@ class StaticPageGridHandler extends GridHandler
         $context = $request->getContext();
 
         // Delete the static page
+        /** @var StaticPagesDAO */
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         $staticPage = $staticPagesDao->getById($staticPageId, $context->getId());
         $staticPagesDao->deleteObject($staticPage);

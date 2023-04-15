@@ -138,7 +138,7 @@ class StaticPagesPlugin extends GenericPlugin
             // Construct a path to look for
             $path = $page;
             if ($op !== 'index') {
-                $path .= "/${op}";
+                $path .= "/{$op}";
             }
             if ($ops = $request->getRequestedArgs()) {
                 $path .= '/' . implode('/', $ops);

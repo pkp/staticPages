@@ -16,6 +16,7 @@
 
 namespace APP\plugins\generic\staticPages\controllers\grid\form;
 
+use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 
@@ -52,6 +53,7 @@ class StaticPageForm extends \PKP\form\Form
         $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'path', 'required', 'plugins.generic.staticPages.pathRegEx', '/^[a-zA-Z0-9\/._-]+$/'));
         $form = $this;
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'path', 'required', 'plugins.generic.staticPages.duplicatePath', function ($path) use ($form) {
+            /** @var StaticPagesDAO */
             $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
             $page = $staticPagesDao->getByPath($form->contextId, $path);
             return !$page || $page->getId() == $form->staticPageId;
@@ -65,6 +67,7 @@ class StaticPageForm extends \PKP\form\Form
     {
         $templateMgr = TemplateManager::getManager();
         if ($this->staticPageId) {
+            /** @var StaticPagesDAO */
             $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
             $staticPage = $staticPagesDao->getById($this->staticPageId, $this->contextId);
             $this->setData('path', $staticPage->getPath());
@@ -113,7 +116,7 @@ class StaticPageForm extends \PKP\form\Form
     public function execute(...$functionParams)
     {
         parent::execute(...$functionParams);
-
+        /** @var StaticPagesDAO */
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
         if ($this->staticPageId) {
             // Load and update an existing page
