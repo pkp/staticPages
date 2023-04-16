@@ -1,13 +1,14 @@
 <?php
 
 /**
- * @file controllers/grid/StaticPageGridCellProvider.inc.php
+ * @file controllers/grid/StaticPageGridCellProvider.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2000-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StaticPageGridCellProvider
+ *
  * @ingroup controllers_grid_staticPages
  *
  * @brief Class for a cell provider to display information about static pages
@@ -15,9 +16,9 @@
 
 namespace APP\plugins\generic\staticPages\controllers\grid;
 
-use PKP\core\PKPApplication;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridHandler;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RedirectAction;
 

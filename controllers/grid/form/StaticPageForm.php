@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file controllers/grid/form/StaticPageForm.inc.php
+ * @file controllers/grid/form/StaticPageForm.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StaticPageForm
+ *
  * @ingroup controllers_grid_staticPages
  *
- * Form for press managers to create and modify sidebar blocks
- *
+ * @brief Form for press managers to create and modify sidebar blocks
  */
 
 namespace APP\plugins\generic\staticPages\controllers\grid\form;

@@ -1,21 +1,22 @@
 <?php
 
 /**
- * @file StaticPagesHandler.inc.php
+ * @file StaticPagesHandler.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.staticPages
+ *
  * @class StaticPagesHandler
- * Find static page content and display it when requested.
+ *
+ * @brief Find static page content and display it when requested.
  */
 
 namespace APP\plugins\generic\staticPages;
 
 use APP\core\Application;
-use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use APP\plugins\generic\staticPages\classes\StaticPage;
 use APP\template\TemplateManager;
 use PKP\security\Role;
@@ -28,7 +29,8 @@ class StaticPagesHandler extends \APP\handler\Handler
     /** @var StaticPage The static page to view */
     protected $staticPage;
 
-    public function __construct(StaticPagesPlugin $plugin, StaticPage $staticPage) {
+    public function __construct(StaticPagesPlugin $plugin, StaticPage $staticPage)
+    {
         $this->plugin = $plugin;
         $this->staticPage = $staticPage;
     }

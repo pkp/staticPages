@@ -1,28 +1,30 @@
 <?php
 
 /**
- * @file StaticPagesPlugin.inc.php
+ * @file StaticPagesPlugin.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @package plugins.generic.staticPages
+ *
  * @class StaticPagesPlugin
- * Static pages plugin main class
+ *
+ * @brief Static pages plugin main class
  */
 
 namespace APP\plugins\generic\staticPages;
 
-use APP\plugins\generic\staticPages\controllers\grid\StaticPageGridHandler;
-use APP\template\TemplateManager;
 use APP\core\Application;
 use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
+use APP\plugins\generic\staticPages\controllers\grid\StaticPageGridHandler;
+use APP\template\TemplateManager;
 use PKP\core\Registry;
-use PKP\linkAction\LinkAction;
-use PKP\plugins\GenericPlugin;
-use PKP\linkAction\request\RedirectAction;
 use PKP\db\DAORegistry;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RedirectAction;
+use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
 class StaticPagesPlugin extends GenericPlugin

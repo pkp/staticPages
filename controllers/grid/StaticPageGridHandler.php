@@ -1,13 +1,14 @@
 <?php
 
 /**
- * @file controllers/grid/StaticPageGridHandler.inc.php
+ * @file controllers/grid/StaticPageGridHandler.php
  *
  * Copyright (c) 2014-2020 Simon Fraser University
  * Copyright (c) 2003-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StaticPageGridHandler
+ *
  * @ingroup controllers_grid_staticPages
  *
  * @brief Handle static pages grid requests.
@@ -16,17 +17,17 @@
 namespace APP\plugins\generic\staticPages\controllers\grid;
 
 use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
-use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use APP\plugins\generic\staticPages\controllers\grid\form\StaticPageForm;
-use PKP\security\authorization\ContextAccessPolicy;
-use PKP\linkAction\LinkAction;
-use PKP\form\Form;
-use PKP\db\DAORegistry;
-use PKP\db\DAO;
-use PKP\linkAction\request\AjaxModal;
-use PKP\core\JSONMessage;
+use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
+use PKP\form\Form;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
 class StaticPageGridHandler extends GridHandler
