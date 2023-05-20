@@ -14,6 +14,7 @@
 
 namespace APP\plugins\generic\staticPages;
 
+use APP\core\Application;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -30,6 +31,7 @@ class StaticPagesSchemaMigration extends Migration
             $table->bigInteger('static_page_id')->autoIncrement();
             $table->string('path', 255);
             $table->bigInteger('context_id');
+            $table->foreign('context_id', 'static_pages_context_id')->references(Application::getContextDAO()->primaryKeyColumn)->on(Application::getContextDAO()->tableName)->onDelete('cascade');
         });
 
         // Static Page settings.
