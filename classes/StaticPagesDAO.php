@@ -131,10 +131,6 @@ class StaticPagesDAO extends \PKP\db\DAO
             'DELETE FROM static_pages WHERE static_page_id = ?',
             [(int) $staticPageId]
         );
-        $this->update(
-            'DELETE FROM static_page_settings WHERE static_page_id = ?',
-            [(int) $staticPageId]
-        );
     }
 
     /**
