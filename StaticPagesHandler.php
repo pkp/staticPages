@@ -57,7 +57,6 @@ class StaticPagesHandler extends \APP\handler\Handler
     {
         $path = array_shift($args);
         $context = $request->getContext();
-        $contextId = $context ? $context->getId() : Application::CONTEXT_ID_NONE;
 
         // Ensure that if we're previewing, the current user is a manager or admin.
         $roles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
