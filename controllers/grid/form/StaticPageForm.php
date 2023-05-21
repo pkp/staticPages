@@ -17,6 +17,7 @@
 namespace APP\plugins\generic\staticPages\controllers\grid\form;
 
 use APP\plugins\generic\staticPages\classes\StaticPagesDAO;
+use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 

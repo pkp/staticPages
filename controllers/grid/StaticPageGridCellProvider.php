@@ -17,6 +17,7 @@
 namespace APP\plugins\generic\staticPages\controllers\grid;
 
 use PKP\controllers\grid\GridCellProvider;
+use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;

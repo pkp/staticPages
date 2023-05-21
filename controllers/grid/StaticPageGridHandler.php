@@ -22,6 +22,7 @@ use APP\plugins\generic\staticPages\StaticPagesPlugin;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
+use PKP\core\PKPRequest;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
@@ -132,10 +133,10 @@ class StaticPageGridHandler extends GridHandler
      *
      * @param array $args
      * @param PKPRequest $request
+     * @return JSONMessage
      */
     public function index($args, $request)
     {
-        $context = $request->getContext();
         $form = new Form($this->plugin->getTemplateResource('staticPages.tpl'));
         return new JSONMessage(true, $form->fetch($request));
     }
@@ -159,7 +160,7 @@ class StaticPageGridHandler extends GridHandler
      * @param array $args Arguments to the request
      * @param PKPRequest $request Request object
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function editStaticPage($args, $request)
     {
@@ -179,7 +180,7 @@ class StaticPageGridHandler extends GridHandler
      * @param array $args
      * @param PKPRequest $request
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function updateStaticPage($args, $request)
     {
@@ -207,7 +208,7 @@ class StaticPageGridHandler extends GridHandler
      * @param array $args
      * @param PKPRequest $request
      *
-     * @return string Serialized JSON object
+     * @return JSONMessage Serialized JSON object
      */
     public function delete($args, $request)
     {

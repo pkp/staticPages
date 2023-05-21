@@ -19,6 +19,7 @@ namespace APP\plugins\generic\staticPages;
 use APP\core\Application;
 use APP\plugins\generic\staticPages\classes\StaticPage;
 use APP\template\TemplateManager;
+use PKP\core\PKPRequest;
 use PKP\security\Role;
 
 class StaticPagesHandler extends \APP\handler\Handler

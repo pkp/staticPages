@@ -17,6 +17,7 @@
 namespace APP\plugins\generic\staticPages\classes;
 
 use PKP\db\DAOResultFactory;
+use PKP\db\DBResultRange;
 
 class StaticPagesDAO extends \PKP\db\DAO
 {
@@ -46,9 +47,9 @@ class StaticPagesDAO extends \PKP\db\DAO
      * Get a set of static pages by context ID
      *
      * @param int $contextId
-     * @param RangeInfo $rangeInfo optional
+     * @param DBResultRange $rangeInfo optional
      *
-     * @return DAOResultFactory
+     * @return DAOResultFactory<StaticPage>
      */
     public function getByContextId($contextId, $rangeInfo = null)
     {
