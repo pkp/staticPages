@@ -74,15 +74,15 @@ class StaticPagesPlugin extends GenericPlugin
                 $staticPagesDao = new StaticPagesDAO();
                 DAORegistry::registerDAO('StaticPagesDAO', $staticPagesDao);
 
-                Hook::add('Template::Settings::website', [$this, 'callbackShowWebsiteSettingsTabs']);
+                Hook::add('Template::Settings::website', $this->callbackShowWebsiteSettingsTabs(...));
 
                 // Intercept the LoadHandler hook to present
                 // static pages when requested.
-                Hook::add('LoadHandler', [$this, 'callbackHandleContent']);
+                Hook::add('LoadHandler', $this->callbackHandleContent(...));
 
                 // Register the components this plugin implements to
                 // permit administration of static pages.
-                Hook::add('LoadComponentHandler', [$this, 'setupGridHandler']);
+                Hook::add('LoadComponentHandler', $this->setupGridHandler(...));
             }
             return true;
         }
