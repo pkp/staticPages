@@ -1,10 +1,11 @@
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:23+00:00\n"
-"PO-Revision-Date: 2023-02-17 03:02+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-07-08 03:43+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/plugins/"
 "static-pages-plugin/da/>\n"
 "Language: da\n"
@@ -62,8 +63,7 @@ msgstr "Vælg skemaet nedenfor for at tilføje/redigere sideindhold."
 
 msgid "plugins.generic.staticPages.pathRegEx"
 msgstr ""
-"Sti-feltet må kun indeholde alfanumeriske karakterer samt '.', '/', '-', og "
-"'_'."
+"Sti-feltet må kun bestå af bogstaver, tal samt \".\", \"/\", \"-\" og \"_\"."
 
 msgid "plugins.generic.staticPages.viewInstructions"
 msgstr ""
