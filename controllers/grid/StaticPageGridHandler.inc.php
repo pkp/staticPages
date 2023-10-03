@@ -192,6 +192,8 @@ class StaticPageGridHandler extends GridHandler {
 	 * @return string Serialized JSON object
 	 */
 	function delete($args, $request) {
+		if (!$request->checkCSRF()) return new JSONMessage(false);
+
 		$staticPageId = $request->getUserVar('staticPageId');
 		$context = $request->getContext();
 
