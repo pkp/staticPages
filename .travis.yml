@@ -28,6 +28,7 @@ env:
   - APPLICATION=ops BRANCH=main TEST=pgsql
 
 install:
+  - php --version | grep "PHP 8.2" && sudo apt-get install libonig5
   # Prepare OJS/OMP environment
   - git clone -b ${BRANCH} https://github.com/pkp/${APPLICATION} ~/${APPLICATION}
   - cd ~/${APPLICATION}
