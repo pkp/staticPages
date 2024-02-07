@@ -42,13 +42,13 @@ class StaticPagesSchemaMigration extends Migration
                 ->references('static_page_id')
                 ->on('static_pages')
                 ->onDelete('cascade');
-            $table->index(['static_page_id'], 'static_page_settings_static_page_id_index');
+            $table->index(['static_page_id'], 'static_page_settings_static_page_id');
 
             $table->string('locale', 14)->default('');
             $table->string('setting_name', 255);
             $table->longText('setting_value')->nullable();
             $table->string('setting_type', 6)->comment('(bool|int|float|string|object)');
-            $table->unique(['static_page_id', 'locale', 'setting_name'], 'static_page_settings_pkey');
+            $table->unique(['static_page_id', 'locale', 'setting_name'], 'static_page_settings_unique');
         });
     }
 
