@@ -14,13 +14,13 @@
 		$('#staticPageForm').pkpHandler(
 			'$.pkp.controllers.form.staticPages.StaticPageFormHandler',
 			{ldelim}
-				previewUrl: {url|json_encode router=\PKP\core\PKPApplication::ROUTE_PAGE page="pages" op="preview"}
+				previewUrl: {url|json_encode router=PKP\core\PKPApplication::ROUTE_PAGE page="pages" op="preview"}
 			{rdelim}
 		);
 	{rdelim});
 </script>
 
-{capture assign=actionUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="updateStaticPage" existingPageName=$blockName escape=false}{/capture}
+{capture assign=actionUrl}{url router=PKP\core\PKPApplication::ROUTE_COMPONENT component="plugins.generic.staticPages.controllers.grid.StaticPageGridHandler" op="updateStaticPage" existingPageName=$blockName escape=false}{/capture}
 <form class="pkp_form" id="staticPageForm" method="post" action="{$actionUrl}">
 	{csrf}
 	{if $staticPageId}
@@ -32,7 +32,7 @@
 			{fbvElement type="text" label="plugins.generic.staticPages.pageTitle" id="title" value=$title maxlength="255" inline=true multilingual=true size=$fbvStyles.size.MEDIUM}
 		{/fbvFormSection}
 		{fbvFormSection}
-			{capture assign="exampleUrl"}{url|replace:"REPLACEME":"%PATH%" router=\PKP\core\PKPApplication::ROUTE_PAGE context=$currentContext->getPath() page="REPLACEME"}{/capture}
+			{capture assign="exampleUrl"}{url|replace:"REPLACEME":"%PATH%" router=PKP\core\PKPApplication::ROUTE_PAGE context=$currentContext->getPath() page="REPLACEME"}{/capture}
 			{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$exampleUrl}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.staticPages.content" for="content"}
