@@ -171,10 +171,8 @@ class StaticPagesDAO extends \PKP\db\DAO
 
     /**
      * Get field names for which data is localized.
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames() : array
     {
         return ['title', 'content'];
     }
