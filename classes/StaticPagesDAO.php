@@ -16,6 +16,7 @@
 
 namespace APP\plugins\generic\staticPages\classes;
 
+use Illuminate\Support\Facades\DB;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 
@@ -122,15 +123,12 @@ class StaticPagesDAO extends \PKP\db\DAO
 
     /**
      * Delete a static page by ID.
-     *
-     * @param int $staticPageId
      */
-    public function deleteById($staticPageId)
+    public function deleteById(int $staticPageId) : int
     {
-        $this->update(
-            'DELETE FROM static_pages WHERE static_page_id = ?',
-            [(int) $staticPageId]
-        );
+        return DB::table('static_pages')
+            ->where('static_page_id', '=', $staticPageId)
+            ->delete();
     }
 
     /**
