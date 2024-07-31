@@ -11,7 +11,10 @@
 This plugin is intended to provide very simple content management. It allows
 for the creation of static content pages with the assistance of an HTML editor.
 
-[![Build Status](https://travis-ci.org/pkp/staticPages.svg?branch=main)](https://travis-ci.org/pkp/staticPages)
+| main | 3.4.0 | 3.3.0
+| ---- | ---- | ----
+ | [![staticPages](https://github.com/pkp/staticPages/actions/workflows/main.yml/badge.svg)](https://github.com/pkp/staticPages/actions/workflows/main.yml)                      | [![staticPages](https://github.com/pkp/staticPages/actions/workflows/stable-3_4_0.yml/badge.svg)](https://github.com/pkp/staticPages/actions/workflows/stable-3_4_0.yml)                      | [![staticPages](https://github.com/pkp/staticPages/actions/workflows/stable-3_3_0.yml/badge.svg)](https://github.com/pkp/staticPages/actions/workflows/stable-3_3_0.yml)                |
+
 
 ## License
 
