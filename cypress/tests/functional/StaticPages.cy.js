@@ -11,7 +11,9 @@ describe('Static Pages plugin tests', function() {
 	it('Creates and exercises a static page', function() {
 		cy.login('admin', 'admin', 'publicknowledge');
 
-		cy.get('.app__nav a').contains('Website').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Website').click({ force: true });
 		cy.get('button[id="plugins-button"]').click();
 
 		// Find and enable the plugin
@@ -26,7 +28,9 @@ describe('Static Pages plugin tests', function() {
 		cy.visit('');
 		cy.get('a:contains("admin")').click();
 		cy.get('ul[id="navigationUser"] a:contains("Dashboard")').click();
-		cy.get('.app__nav a').contains('Website').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Website').click({ force: true });
 		cy.get('button[id="staticPages-button"]').click();
 
 		// Create a static page
