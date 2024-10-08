@@ -200,7 +200,7 @@ class StaticPagesPlugin extends GenericPlugin
                         null,
                         'management',
                         'settings',
-                        'website',
+                        ['website'],
                         ['uid' => uniqid()], // Force reload
                         'staticPages' // Anchor for tab
                     )),
