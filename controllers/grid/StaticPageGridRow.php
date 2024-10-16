@@ -46,7 +46,7 @@ class StaticPageGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editStaticPage', null, ['staticPageId' => $staticPageId]),
                         __('grid.action.edit'),
-                        'side-modal',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),

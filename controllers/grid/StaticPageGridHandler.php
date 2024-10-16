@@ -89,7 +89,6 @@ class StaticPageGridHandler extends GridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addStaticPage'),
                     __('plugins.generic.staticPages.addStaticPage'),
-                    'side-modal'
                 ),
                 __('plugins.generic.staticPages.addStaticPage'),
                 'add_item'
