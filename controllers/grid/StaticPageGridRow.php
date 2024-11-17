@@ -46,7 +46,7 @@ class StaticPageGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editStaticPage', null, ['staticPageId' => $staticPageId]),
                         __('grid.action.edit'),
-                        'modal_edit',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),
@@ -63,7 +63,7 @@ class StaticPageGridRow extends GridRow
                         __('common.confirmDelete'),
                         __('grid.action.delete'),
                         $router->url($request, null, null, 'delete', null, ['staticPageId' => $staticPageId]),
-                        'modal_delete'
+                        'negative'
                     ),
                     __('grid.action.delete'),
                     'delete'
