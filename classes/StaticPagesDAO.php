@@ -124,7 +124,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Delete a static page by ID.
      */
-    public function deleteById(int $staticPageId) : int
+    public function deleteById(int $staticPageId): int
     {
         return DB::table('static_pages')
             ->where('static_page_id', '=', $staticPageId)
@@ -170,7 +170,7 @@ class StaticPagesDAO extends \PKP\db\DAO
     /**
      * Get field names for which data is localized.
      */
-    public function getLocaleFieldNames() : array
+    public function getLocaleFieldNames(): array
     {
         return ['title', 'content'];
     }

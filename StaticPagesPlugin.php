@@ -100,7 +100,7 @@ class StaticPagesPlugin extends GenericPlugin
     public function callbackShowWebsiteSettingsTabs($hookName, $args)
     {
         $templateMgr = $args[1];
-        $output = & $args[2];
+        $output = &$args[2];
         $request = & Registry::get('request');
         $dispatcher = $request->getDispatcher();
 
@@ -123,9 +123,9 @@ class StaticPagesPlugin extends GenericPlugin
         $request = Application::get()->getRequest();
         $templateMgr = TemplateManager::getManager($request);
 
-        $page = & $args[0];
-        $op = & $args[1];
-        $handler = & $args[3];
+        $page = &$args[0];
+        $op = &$args[1];
+        $handler = &$args[3];
 
         /** @var StaticPagesDAO */
         $staticPagesDao = DAORegistry::getDAO('StaticPagesDAO');
@@ -174,8 +174,8 @@ class StaticPagesPlugin extends GenericPlugin
      */
     public function setupGridHandler($hookName, $params)
     {
-        $component = & $params[0];
-        $componentInstance = & $params[2];
+        $component = &$params[0];
+        $componentInstance = &$params[2];
         if ($component == 'plugins.generic.staticPages.controllers.grid.StaticPageGridHandler') {
             // Allow the static page grid handler to get the plugin object
             $componentInstance = new StaticPageGridHandler($this);
