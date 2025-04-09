@@ -44,7 +44,7 @@ class StaticPagesHandler extends \APP\handler\Handler
      */
     public function index($args, $request)
     {
-        $request->redirect(null, null, 'view', $request->getRequestedOp());
+        $request->redirect(null, null, 'view', $args);
     }
 
     /**
