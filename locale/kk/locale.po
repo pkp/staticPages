@@ -1,3 +1,63 @@
 # "Dauren S." <danek_ok@mail.ru>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-04-20 10:22+0000\n"
+"Last-Translator: \"Dauren S.\" <danek_ok@mail.ru>\n"
+"Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/kk/>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Атауы"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Жол"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Статикалық беттер"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Мазмұн"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Мазмұнды өңдеу/қосу"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Жаңа бет қосу"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Статикалық бетті өңдеу"
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Бет мазмұнын қосу/өңдеу үшін төмендегі форманы пайдаланыңыз."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Бұл жол басқа статикалық бет үшін бұрыннан бар."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Бет сәтті сақталды."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Ешқандай бет жасалмаған"
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Бет сәтті жойылды."
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Статикалық бетті қосу"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Статикалық беттер плагині"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Ешқандай статикалық бет жасалмаған."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Жол өрісінде тек әріптік-сандық таңбалар, сондай-ақ '.', '/', '-' және '_' "
+"болуы керек."
