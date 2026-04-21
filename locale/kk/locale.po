@@ -1,7 +1,7 @@
 # "Dauren S." <danek_ok@mail.ru>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-20 10:22+0000\n"
+"PO-Revision-Date: 2026-04-21 14:08+0000\n"
 "Last-Translator: \"Dauren S.\" <danek_ok@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/plugins/"
 "static-pages-plugin/kk/>\n"
@@ -61,3 +61,24 @@ msgid "plugins.generic.staticPages.pathRegEx"
 msgstr ""
 "Жол өрісінде тек әріптік-сандық таңбалар, сондай-ақ '.', '/', '-' және '_' "
 "болуы керек."
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Бұл плагин статикалық мазмұнды басқаруға мүмкіндік береді."
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>Мазмұнды қосу/өңдеу үшін TinyMCE плагинін орнату/қосу "
+"қажет.</strong></p>"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Төмендегі формада сіз жасаған барлық статикалық беттер көрсетілген. Оң "
+"жақтағы сілтемелерді пайдаланып беттерді өңдеуге немесе жоюға болады."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Бұл бет мына мекенжай бойынша қолжетімді болады: "
+"<blockquote>{$pagesPath}</blockquote>...мұндағы %PATH% - жоғарыда енгізілген "
+"жол. <strong>Ескерту:</strong> Екі беттің бірдей жолы болуы мүмкін емес. "
+"Жүйеге кіріктірілген жолдарды пайдалану маңызды функцияларға кіру "
+"мүмкіндігін жоғалтуға әкелуі мүмкін.</p>"
