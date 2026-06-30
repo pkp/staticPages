@@ -1,0 +1,86 @@
+# Informatikaria <informatikaria@ueu.eus>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-05-26 10:44+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Orri estatikoen plugina"
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Plugin honek eduki estatikoen kudeaketa ahalbidetzen du."
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Orri estatikoak"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Izenburua"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Edukia"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Bidea"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Editatu/Gehitu edukia"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Gehitu orri estatikoa"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Editatu orri estatikoa"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Ez da orri estatikorik sortu."
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr ""
+"Erabili jarraian erakusten den formularioa orriaren edukia gehitzeko/"
+"editatzeko."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Orria ondo ezabatu da."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Bide hori dagoeneko existitzen da beste orri estatiko batentzat."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Orria ondo gorde da."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Ez da orririk sortu"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Gehitu orri berri bat"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Jarraian agertzen den formularioak zuk sortutako orri estatiko guztiak "
+"erakusten ditu..  Orriak editatu edo ezabatu ditzakezu eskuinaldean "
+"erakusten diren estekak erabiliz."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Bidearen eremuak karaktere alfanumerikoak eta '.', '/', '-', eta '_' "
+"karaktereak soilik izan ditzake."
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>TinyMCE plugina instalatuta eta gaituta egon behar da edukia "
+"gehitu/editatu ahal izateko.</strong></p>"
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Orrialde hau hemen egongo da eskuragarri: <blockquote>{$pagesPath}</"
+"blockquote>...non %PATH% goian sartutako bidea den. <strong>Oharra:</strong> "
+"Bi orrialdek ezin dute bide bera izan. Sistema barnean integratutako bideak "
+"erabiltzeak funtzio garrantzitsuetarako sarbidea galtzea eragin dezake.</p>"
