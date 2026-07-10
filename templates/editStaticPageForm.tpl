@@ -36,7 +36,7 @@
 			{translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$exampleUrl}
 		{/fbvFormSection}
 		{fbvFormSection label="plugins.generic.staticPages.content" for="content"}
-			{fbvElement type="textarea" multilingual=true name="content" id="content" value=$content rich=true height=$fbvStyles.height.TALL variables=$allowedVariables}
+			{fbvElement type="textarea" multilingual=true name="content" id="content" value=$content rich="full" height=$fbvStyles.height.TALL variables=$allowedVariables}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormSection class="formButtons"}
