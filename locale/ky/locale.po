@@ -1,3 +1,84 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-07-12 11:38+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/plugins/"
+"static-pages-plugin/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.staticPages.staticPages"
+msgstr "Статикалык баракчалар"
+
+msgid "plugins.generic.staticPages.pageTitle"
+msgstr "Аталышы"
+
+msgid "plugins.generic.staticPages.content"
+msgstr "Мазмуну"
+
+msgid "plugins.generic.staticPages.path"
+msgstr "Жол"
+
+msgid "plugins.generic.staticPages.editAddContent"
+msgstr "Мазмунду түзөтүү/кошуу"
+
+msgid "plugins.generic.staticPages.addNewPage"
+msgstr "Жаңы баракча кошуу"
+
+msgid "plugins.generic.staticPages.addStaticPage"
+msgstr "Статикалык баракча кошуу"
+
+msgid "plugins.generic.staticPages.editInstructions"
+msgstr "Баракчанын мазмунун кошуу/түзөтүү үчүн төмөнкү форманы колдонуңуз."
+
+msgid "plugins.generic.staticPages.duplicatePath"
+msgstr "Бул жол башка статикалык баракча үчүн мурунтан эле бар."
+
+msgid "plugins.generic.staticPages.pageSaved"
+msgstr "Баракча ийгиликтүү сакталды."
+
+msgid "plugins.generic.staticPages.pageDeleted"
+msgstr "Баракча ийгиликтүү жоюлду."
+
+msgid "plugins.generic.staticPages.noneExist"
+msgstr "Эч кандай баракча түзүлгөн эмес"
+
+msgid "plugins.generic.staticPages.displayName"
+msgstr "Статикалык баракчалар плагини"
+
+msgid "plugins.generic.staticPages.editStaticPage"
+msgstr "Статикалык баракчаны түзөтүү"
+
+msgid "plugins.generic.staticPages.noneCreated"
+msgstr "Эч кандай статикалык баракча түзүлгөн эмес."
+
+msgid "plugins.generic.staticPages.description"
+msgstr "Бул плагин статикалык мазмунду башкарууга мүмкүндүк берет."
+
+msgid "plugins.generic.staticPages.requirement.tinymce"
+msgstr ""
+"<p><strong>Мазмунду кошуу/түзөтүү үчүн TinyMCE плагини орнотулуп, иштетилиши "
+"керек.</strong></p>"
+
+msgid "plugins.generic.staticPages.settingInstructions"
+msgstr ""
+"Төмөнкү форма сиз түзгөн бардык статикалык баракчаларды көрсөтөт. Оң жактагы "
+"шилтемелерди колдонуп баракчаларды түзөтө же жоё аласыз."
+
+msgid "plugins.generic.staticPages.pathRegEx"
+msgstr ""
+"Жол талаасында алфавиттик-цифралык белгилер, ошондой эле '.', '/', '-' жана "
+"'_' гана болушу керек."
+
+msgid "plugins.generic.staticPages.viewInstructions"
+msgstr ""
+"<p>Бул баракча төмөнкү дарек боюнча жеткиликтүү болот: "
+"<blockquote>{$pagesPath}</blockquote>...бул жерде %PATH% жогоруда "
+"киргизилген жол. <strong>Эскертүү:</strong> Эки баракчанын жолу бирдей боло "
+"албайт. Системага орнотулган жолдорду колдонуу маанилүү функцияларга кирүү "
+"мүмкүнчүлүгүн жоготууга алып келиши мүмкүн.</p>"
