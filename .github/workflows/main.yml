@@ -2,7 +2,7 @@ on: [push, pull_request]
 name: staticpages
 jobs:
   staticpages:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
@@ -25,7 +25,7 @@ jobs:
       - uses: pkp/pkp-github-actions@v1
         with:
          node_version: 20
-         branch: main
+         branch: stable-3_5_0
          repository: pkp
          plugin: true
 
